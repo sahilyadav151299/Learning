@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+
+        <!-- Users will see a drop-down list of the pre-defined options as they input data -->
+        <!-- list attribute of the <input> element, must refer to the id attribute of the <datalist> -->
+        <!-- list attribute refers to a <datalist> element that contains pre-defined options for an <input> element -->    
+        <label for="actor">Choose an actor</label><br/>   
+        <input list="actor">
+        
+        <datalist id="actor">
+
+            <option value="Salva">Salva</option>
+            <option value="Tokyo">Tokyo</option>
+            <option value="Denver">Denver</option>
+            <option value="Rio">Rio</option>
+            <option value="Oslo">Oslo</option>
+            <option value="Helsinki">Helsinki</option>
+            <option value="Berlin">Berlin</option>
+
+        </datalist>
+    
+    </form>
+    
+</body>
+</html>

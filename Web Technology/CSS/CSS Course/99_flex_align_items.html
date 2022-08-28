@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Flex Justify Content</title>
+
+    <!-- 1D Layout -->
+    <!-- Replaces Float Layout -->
+    <!-- Use all the avialabe space to the best -->
+    <!-- Easy alignment ( direction + orders ) -->
+
+    <style>
+        .container{
+            background: #eeeeee;
+            width: 600px;
+            height: 100px;
+            margin: 30px;
+            border: 2px solid black;
+            /* Flexbox configuration */
+            display: flex;
+        }
+
+        .items{ 
+            padding: 10px;
+            color: white;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        /* align-items : for vertical alignment, single row only */
+        .c1{ align-items: stretch; }
+        .c2{ align-items: flex-start; }
+        .c3{ align-items: flex-end; }
+        .c4{ align-items: center; }
+        /* Align according to text-line */
+        .c5{ align-items: baseline; }
+        .c5 > .item3 { font-size: 30px; }
+
+        .c6{ 
+            align-items: flex-end; 
+            height: 200px; 
+            flex-direction: row-reverse;
+        }
+        .c6 > .item1 { height: 100px; }
+        .c6 > .item2 { height: 80px; }
+        .c6 > .item3 { height: 60px; }
+        .c6 > .item4 { height: 150px; }
+        .c6 > .item5 { height: 100px; }
+        .c6 > .item6 { height: 50px; }
+
+        .item1{ background-color: tan; }
+        .item2{ background-color: teal; }
+        .item3{ background-color: crimson; }
+        .item4{ background-color: midnightblue; }
+        .item5{ background-color: burlywood; }
+        .item6{ background-color: mediumseagreen; }
+
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="container c1">
+        <div class="items item1">One</div>
+        <div class="items item2">Two</div>
+        <div class="items item3">Three</div>
+        <div class="items item4">Four</div>
+        <div class="items item5">Five</div>
+        <div class="items item6">Six</div>
+    </div>
+
+    <div class="container c2">
+        <div class="items item1">One</div>
+        <div class="items item2">Two</div>
+        <div class="items item3">Three</div>
+        <div class="items item4">Four</div>
+        <div class="items item5">Five</div>
+        <div class="items item6">Six</div>
+    </div>
+
+    <div class="container c3">
+        <div class="items item1">One</div>
+        <div class="items item2">Two</div>
+        <div class="items item3">Three</div>
+        <div class="items item4">Four</div>
+        <div class="items item5">Five</div>
+        <div class="items item6">Six</div>
+    </div>
+
+    <div class="container c4">
+        <div class="items item1">One</div>
+        <div class="items item2">Two</div>
+        <div class="items item3">Three</div>
+        <div class="items item4">Four</div>
+        <div class="items item5">Five</div>
+        <div class="items item6">Six</div>
+    </div>
+
+    <div class="container c5">
+        <div class="items item1">One</div>
+        <div class="items item2">Two</div>
+        <div class="items item3">Three</div>
+        <div class="items item4">Four</div>
+        <div class="items item5">Five</div>
+        <div class="items item6">Six</div>
+    </div>
+
+    <div class="container c6">
+        <div class="items item1">One</div>
+        <div class="items item2">Two</div>
+        <div class="items item3">Three</div>
+        <div class="items item4">Four</div>
+        <div class="items item5">Five</div>
+        <div class="items item6">Six</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Mix Blend Mode</title>
+
+    <style>
+        .box{
+            width: 280px;
+            height: 150px;
+            border: 2px solid black;
+            margin: 10px;
+            color: white;
+            float: left;
+            background-color: red;
+        }
+
+        .newbox{
+            width: 280px;
+            height: 150px;
+            border: 2px solid black;
+            margin: 10px;
+            color: white;
+            float: left;
+            background-image: linear-gradient(red, yellow, green, blue);
+        }
+
+        img{
+            width: 280px;
+            height: 150px;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .box1{
+            mix-blend-mode: screen;
+        }
+
+        .box2{
+            mix-blend-mode: darken;
+        }
+
+        .box3{
+            mix-blend-mode: hard-light;
+        }
+
+        .box4{
+            mix-blend-mode: lighten;
+        }
+
+        .box5{
+            mix-blend-mode: difference;
+        }
+
+        .box6{
+            mix-blend-mode: exclusion;
+        }
+
+        .box7{
+            mix-blend-mode: saturation;
+        }
+
+        .box8{
+            mix-blend-mode: luminosity;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="box">
+        <img src="./images/bruce3.jpg" class="box1">
+    </div>
+
+    <div class="box">
+        <img src="./images/bruce3.jpg" class="box2">
+    </div>
+
+    <div class="box">
+        <img src="./images/bruce3.jpg" class="box3">
+    </div>
+
+    <div class="box">
+        <img src="./images/bruce3.jpg" class="box4">
+    </div>
+
+    <div class="box">
+        <img src="./images/bruce3.jpg" class="box5">
+    </div>
+
+    <div class="box">
+        <img src="./images/bruce3.jpg" class="box6">
+    </div>
+
+    <div class="box">
+        <img src="./images/bruce3.jpg" class="box7">
+    </div>
+
+    <div class="box">
+        <img src="./images/bruce3.jpg" class="box8">
+    </div>
+
+
+    <div class="newbox">
+        <img src="./images/bruce3.jpg" class="box1">
+    </div>
+
+    <div class="newbox">
+        <img src="./images/bruce3.jpg" class="box2">
+    </div>
+
+    <div class="newbox">
+        <img src="./images/bruce3.jpg" class="box3">
+    </div>
+
+    <div class="newbox">
+        <img src="./images/bruce3.jpg" class="box4">
+    </div>
+
+    <div class="newbox">
+        <img src="./images/bruce3.jpg" class="box5">
+    </div>
+
+    <div class="newbox">
+        <img src="./images/bruce3.jpg" class="box6">
+    </div>
+
+    <div class="newbox">
+        <img src="./images/bruce3.jpg" class="box7">
+    </div>
+
+    <div class="newbox">
+        <img src="./images/bruce3.jpg" class="box8">
+    </div>
+
+</body>
+</html>

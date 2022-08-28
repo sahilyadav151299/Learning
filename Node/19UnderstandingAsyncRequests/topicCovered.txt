@@ -1,0 +1,25 @@
+Deleteing JSON data without redirecting
+
+
+
+MongoDB 
+U : sahilyadav
+P : xZ6xgy4Qys6TjcS
+
+npm init
+npm install nodemon --save-dev                      Development dependency
+npm install express --save                          Production dependency
+npm install body-parser --save 
+npm install --save ejs pug express-handlebars       (3 templating engine pkg at once) 
+npm install --save mysql2
+npm install --save sequelize                        Needs mysql2 as a driver
+npm install --save mongodb                          This installs mongodb driver to connect with mongoDB
+npm install --save mongoose                         
+npm install --save express-session                  
+npm install --save connect-mongodb-session          To let our exp session pkg stores data in database
+npm install --save bcryptjs                         Helps in encryption of password
+npm install --save csurf                            Pkg for NodeExp allow us to generate csrf token 
+npm install --save connect-flash                    Used to work with errors arround website
+npm install --save nodemailer                       Makes sending email from inside node js   
+npm install --save nodemailer-sendgrid-transport    To interact with sendgrid
+npm install --save express-validator                Used for user input validation

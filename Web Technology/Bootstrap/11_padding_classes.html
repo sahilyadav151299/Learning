@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+    
+    <style>
+        .container, .row{ border: 2px solid black; }
+        .first{ background-color: royalblue; }
+        .second{ background-color: palevioletred; }
+        .third{ background-color: teal; }
+        .fourth{ background-color: darkgoldenrod; }
+    </style>
+</head>
+<body>
+
+    <!--
+
+        Fixed Size Padding --------------------
+
+        Padding          -   .p-n    (n : 0-5)   1 : 0.25 rem
+        Padding-right    -   .pr-n   (n : 0-5)   2 : 0.50 rem
+        Padding-left     -   .pl-n   (n : 0-5)   3 : 1 rem  
+        Padding-top      -   .pt-n   (n : 0-5)   4 : 1.5 rem
+        Padding-bottom   -   .pb-n   (n : 0-5)   5 : 3 rem
+
+        Responsive Padding --------------------
+
+        Extra Large     -   .p-xl-n   .pt-xl-n   .pr-xl-n   .pb-xl-n    .pl-xl-n
+        Large           -   .p-lg-n   .pt-lg-n   .pr-lg-n   .pb-lg-n    .pl-lg-n
+        Medium          -   .p-md-n   .pt-md-n   .pr-md-n   .pb-md-n    .pl-md-n 
+        Small           -   .p-sm-n   .pt-sm-n   .pr-sm-n   .pb-sm-n    .pl-sm-n
+
+    -->
+
+    <div class="container">
+        <h6>Fixed Size Padding</h6>
+        <div class="row">
+            <div class="col-md-4 first p-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, expedita.</div>
+            <div class="col-md-4 second pl-5 pr-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla nisi laboriosam laudantium incidunt dicta reprehenderit! Labore numquam veniam earum unde.</div>
+            <div class="col-md-4 third pl-0">Lorem, ipsum dolor.</div>
+        </div>
+    </div>
+
+    <div class="container p-md-5">
+        <h6>Responsive Padding</h6>
+        <div class="row p-md-3">
+            <div class="col-md-4 first p-md-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, expedita.</div>
+            <div class="col-md-4 second pl-md-5 pr-md-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla nisi laboriosam laudantium incidunt dicta reprehenderit! Labore numquam veniam earum unde.</div>
+            <div class="col-md-4 third pl-md-0">Lorem, ipsum dolor.</div>
+        </div>
+    </div>
+   
+
+</body>
+</html>

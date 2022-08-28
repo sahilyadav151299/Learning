@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid MinMax Function</title>
+
+    <style>
+        .container{
+            width: 50%;
+            margin: 20px 50px 20px 20px;
+    
+            display: grid;
+            /* col : max-content - no line break, responsive width */
+            /* row : min-content - no data overflow, responsive height */
+            /* minmax(100px, min-content) : min height 100px, max height content-height */
+            /* minmax(100px, 500px) : min height 100px, max height 500px */
+            grid-template-columns: max-content 1fr 1fr;
+            grid-template-rows: repeat(2, min-content) minmax(100px, min-content);
+            grid-gap: 20px;
+        }
+
+        .items{
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bolder;
+            color: white;
+        }
+
+        .items1{
+            background-color: orangered;
+        }
+
+        .items2{
+            background-color: teal;
+        }
+
+        .items3{
+            background-color: tan;
+        }
+
+        .items4{
+            background-color: steelblue;
+        }
+
+        .items5{
+            background-color: slategrey;
+        }
+
+        .items6{
+            background-color: hotpink;
+        }
+
+        .items7{
+            background-color: mediumpurple;
+        }
+
+        .items8{
+            background-color: midnightblue;
+        }
+
+        .items9{
+            background-color: darkred;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container container1">
+        <!-- Type Lorem or Lorem4-->
+        <div class="items items1">1 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <div class="items items2">2</div>
+        <div class="items items3">3 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <div class="items items4">4</div>
+        <div class="items items5">5</div>
+        <div class="items items6">6</div>
+        <div class="items items7">7</div>
+        <div class="items items8">8 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <div class="items items9">9</div>
+
+    </div>
+
+</body>
+</html>

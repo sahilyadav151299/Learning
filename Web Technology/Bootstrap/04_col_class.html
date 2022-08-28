@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+    
+    <style>
+        .container{ border: 2px solid black; }
+        .row{ border: 2px solid darkred; }
+        .col{ border: 2px solid royalblue; }
+        .col-md{ border: 2px solid royalblue; }
+    </style>
+</head>
+<body>
+
+    <!-- 
+        .col class
+            - To make div tag of equal width
+            - Use inside the row class  
+    -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col">This is col 1 div</div>
+            <div class="col">This is col 2 div</div>
+        </div>
+        
+        <div class="row">
+            <div class="col">This is col 1.1 div</div>
+            <div class="col">This is col 2.1 div</div>
+            <div class="col">This is col 3.1 div</div>
+            <div class="col">This is col 4.1 div</div>
+        </div>
+
+        <div class="row">
+            <div class="col">This is col div</div>
+        </div>
+
+        <div class="row">
+            <div class="col">This is col 1.1 div</div>
+            <div class="col">This is col 2.1 div</div>
+            <div class="col">This is col 3.1 div</div>
+            <!-- Col break or col with 100% width -->
+            <div class="w-100">This is col 4.1 div</div>
+            <div class="col">This is col 5.1 div</div>
+            <div class="col">This is col 6.1 div</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!--
+        .row-cols-2 
+            - to make a row with only 2 column
+        
+        .row-cols-n 
+            - to make a row with only n column
+    -->
+    
+    <div class="container">
+        <div class="row row-cols-2">
+            <div class="col">This is col 1 div : Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, atque.</div>
+            <div class="col">This is col 2 div : Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum deserunt corporis officia sequi quos magni ipsum sit quibusdam illo soluta!</div>
+            <div class="col">This is col 3 div</div>
+            <div class="col">This is col 4 div</div>
+            <div class="col">This is col 5 div</div>
+            <div class="col">This is col 6 div</div>
+            <div class="col">This is col 7 div</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- 
+        col with different breakpoints 
+            - col-xl    after 1200px col width will be with 100%
+            - col-lg    after 992px col width will be with 100%
+            - col-md    after 768px col width will be with 100%
+            - col-sm    after 576px col width will be with 100%
+    -->
+    <div class="container">
+        <div class="row">
+            <!-- After medium size or 768px col width will be with 100% -->
+            <div class="col-md">Col 1 div</div>
+            <div class="col-md">Col 2 div</div>
+            <div class="col-md">Col 3 div</div>
+        </div>
+    </div>
+
+</body>
+</html>

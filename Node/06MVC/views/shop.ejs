@@ -1,0 +1,29 @@
+<%- include('includes/head.ejs') %>  <!-- renders key=value also -->
+</head>
+
+<body>
+    
+    <%- include('includes/navigation.ejs') %>
+
+    <main>
+
+        <% if (prods.length > 0 ) { %>
+
+            <h1>My Products</h1>
+            <p>List of all added Products</p>
+
+            <% for(let product of prods) { %>
+
+                <%= product.title %> <br>
+
+            <% } %>    
+
+        <% } else { %>
+            
+            <h1>No Products Listed</h1>
+
+        <% } %>        
+
+    </main>
+    
+<%- include('includes/end.ejs') %>

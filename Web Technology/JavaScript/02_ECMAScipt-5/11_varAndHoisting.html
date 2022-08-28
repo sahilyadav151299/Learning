@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    
+        
+        // global variable
+        var num1 = 45
+
+        function foo(){
+
+            // Variable hoisting : at the begining of function itself
+            // all var definitions are available
+
+            // undefined not error
+            alert("Access num2 before declaration " + num2)
+
+            // local variable
+            var num2 = 75 
+
+            // global variable 
+            // 'use strict' at top of the script
+            // use to avoid declaring these kind of variable
+            num3 = 95
+            alert("Value of num3 " + num3)
+
+            // block level scope
+
+            {
+                // using var keyword there is no block level scope
+                var var1 = "var1"
+                alert("Can access within a block " + var1)
+
+                // using let keyboard there a block level scope
+                let var2 = "var2"
+                alert("Can access within a block only " + var2)
+            }
+
+            
+            alert("Can access outside of block " + var1)
+            // alert("Can't access outside a block " + var2)
+        }
+
+        foo()
+
+        alert("Value of num3 " + num3)  // Value of num3 95
+        alert("Value of num1 " + num1)  // Value of num1 45
+        alert("Value of num2 " + num2)  // Uncaught ReferenceError: num2 is not defined
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+    
+    <style>
+        .container, .row{ border: 2px solid black;}
+        .col-md-3{ padding: 20px; }
+        .first{ background-color: royalblue; }
+        .second{ background-color: palevioletred; }
+        .third{ background-color: teal; }
+        .fourth{ background-color: darkgoldenrod; }
+    </style>
+</head>
+<body>
+
+    <!-- 
+        Fixed Horizonntal Alignment : Y axis
+
+        .justify-content-start      :   align items from start
+        .justify-content-center     :   align items in center
+        .justify-content-end        :   align items at the end
+        .justify-content-between    :   equal space among items
+        .justify-content-around     :   equal space around items
+
+        Responsive Horizonntal Alignment : Y axis
+
+        Extra Large     -   .justify-content-xl-start   .justify-content-xl-end    .justify-content-xl-center    .justify-content-xl-between     .justify-content-xl-around  
+        Large           -   .justify-content-lg-start   .justify-content-lg-end    .justify-content-lg-center    .justify-content-lg-between     .justify-content-lg-around 
+        Medium          -   .justify-content-md-start   .justify-content-md-end    .justify-content-md-center    .justify-content-md-between     .justify-content-md-around
+        Small           -   .justify-content-sm-start   .justify-content-sm-end    .justify-content-sm-center    .justify-content-sm-between     .justify-content-sm-around 
+
+    -->
+
+    <div class="container">
+        <h6>justify-content-start</h6>
+        <div class="row justify-content-start">
+            <div class="col-md-3 first">Col 1</div>
+            <div class="col-md-3 second">Col 2</div>
+            <div class="col-md-3 third">Col 3</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>justify-content-center</h6>
+        <div class="row justify-content-center">
+            <div class="col-md-3 first">Col 1</div>
+            <div class="col-md-3 second">Col 2</div>
+            <div class="col-md-3 third">Col 3</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>justify-content-end</h6>
+        <div class="row justify-content-end">
+            <div class="col-md-3 first">Col 1</div>
+            <div class="col-md-3 second">Col 2</div>
+            <div class="col-md-3 third">Col 3</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>justify-content-between</h6>
+        <div class="row justify-content-between">
+            <div class="col-md-3 first">Col 1</div>
+            <div class="col-md-3 second">Col 2</div>
+            <div class="col-md-3 third">Col 3</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>justify-content-around</h6>
+        <div class="row justify-content-around">
+            <div class="col-md-3 first">Col 1</div>
+            <div class="col-md-3 second">Col 2</div>
+            <div class="col-md-3 third">Col 3</div>
+        </div>
+    </div>
+
+</body>

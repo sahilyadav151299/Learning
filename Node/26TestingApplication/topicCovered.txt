@@ -1,0 +1,29 @@
+Automated testing : Write code that tests application code
+
+Testing Tools & Setup
+
+Running the Tests       : Mocha
+Assertion Results       : Chai  
+External Dependencies   : Sinon  
+
+npm init
+npm install --save express                For creating application  
+npm install --save-dev nodemon            For live server  
+npm install --save body-parser            For parsing req 
+Postman API postman.com                   API development tool
+Codepen                                   Used for writing HTML/CSS/JS snippets or projects that can be shared                             
+CORS (Cross Origin Resource Sharing)      Client localhost:4000  ----->  Server localhost:3000  
+We can only solve the error on the server
+npm install --save express-validator
+npm install --save mongodb
+npm install --save mongoose
+npm install --save multer                 For file upload download  
+npm install --save jsonwebtoken
+npm install --save socket.io              Backend  
+npm install --save socket.io-client       Frontend  
+npm install --save-dev mocha              Responsible for running our test  
+npm install --save-dev chai               Responsible for defining our success condition  
+npm install --save-dev sinon                
+npm run 'script name
+npm run build   Frontend creating optimized production bundle as it downloaded in browswe to speed up we did it 
+npm install --save express can not work in Frontend with Reactjs

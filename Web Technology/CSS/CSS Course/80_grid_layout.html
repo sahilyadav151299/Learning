@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid Layout</title>
+
+    <!-- 2D Grid System -->
+    <!-- Replaces Float Layout -->
+    <!-- Fast & Clean Code -->
+    <!-- No Need of CSS Framworks (Bootstrap, Material UI) -->
+
+    <style>
+        .container{
+            background: #eeeeee;
+            width: 600px;
+            margin: 20px;
+
+            /* configure parent */
+            display: grid;
+            /* 3 col with the width size % or px or auto or 1fr (fraction)  */
+            grid-template-columns: 200px 200px 200px;
+            /* 2 row with the height size % or px or auto */
+            grid-template-rows: 150px 100px;
+            /* margin among items */
+           
+        }
+
+        .container1{
+            grid-template-columns: 200px auto 150px;
+            grid-template-rows: 100px 100px;
+            grid-gap: 20px;
+        }
+
+        .container2{
+            grid-template-columns: 50% repeat(5, 150px);
+            grid-template-rows: 100px;
+        }
+
+        .container3{
+            grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr;
+            grid-template-rows: 100px;
+        }
+
+        .items1{
+            background-color: orangered;
+        }
+
+        .items2{
+            background-color: teal;
+        }
+
+        .items3{
+            background-color: tan;
+        }
+
+        .items4{
+            background-color: khaki;
+        }
+
+        .items5{
+            background-color: slategrey;
+        }
+
+        .items6{
+            background-color: hotpink;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <!-- div.items.items$*6 -->
+        <div class="items items1">First</div>
+        <div class="items items2">Second</div>
+        <div class="items items3">Third</div>
+        <div class="items items4">Fourth</div>
+        <div class="items items5">Fifth</div>
+        <div class="items items6">Sixth</div>
+    </div>
+
+    <hr>
+
+    <div class="container container1">
+        <div class="items items1">First</div>
+        <div class="items items2">Second</div>
+        <div class="items items3">Third</div>
+        <div class="items items4">Fourth</div>
+        <div class="items items5">Fifth</div>
+        <div class="items items6">Sixth</div>
+    </div>
+
+    <hr>
+
+    <div class="container container2">
+        <div class="items items1">First</div>
+        <div class="items items2">Second</div>
+        <div class="items items3">Third</div>
+        <div class="items items4">Fourth</div>
+        <div class="items items5">Fifth</div>
+        <div class="items items6">Sixth</div>
+    </div>
+    
+    <hr>
+    
+    <div class="container container3">
+        <div class="items items1">First</div>
+        <div class="items items2">Second</div>
+        <div class="items items3">Third</div>
+        <div class="items items4">Fourth</div>
+        <div class="items items5">Fifth</div>
+        <div class="items items6">Sixth</div>
+    </div>
+
+</body>
+</html>

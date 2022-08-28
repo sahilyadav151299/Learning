@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Object Fit</title>
+
+    <style>
+        .wrapper{
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .container{
+            width: 250px;
+            height: 350px;
+            float: left;
+            box-sizing: border-box;
+            margin: 10px;
+            border: 1px solid black;
+        }
+
+        .container img{
+            /* old way of making image responsive : not a proper way */
+            width: 100%;
+            height: 250px;
+        }
+
+        /* new way */
+        .img1{
+            /* crop to align height and width */
+            object-fit: cover;
+
+            /* from where to crop while making responsive */
+            /* center : default, top, bottom, left, right, L-% T-% */
+            object-position: bottom;
+        }
+
+        .img2{
+            /* show complete image */
+            object-fit: contain;
+        }
+
+        .img3{
+            /* strech and skew image to align with height & width */
+            object-fit: fill;
+        }
+
+        .img4{
+            /* original size if adjustable, for large image same as cover */
+            object-fit: scale-down;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="container">
+            <img src="./images/bruce1.jpg" class="img1">
+            
+            <p class="p1">
+                This is a long paragraph This is a long paragraph
+                This is a long paragraph This is a long paragraph
+            </p>
+        </div>
+    
+        <div class="container">
+            <img src="./images/bruce2.jpg" class="img1">
+            
+            <p class="p1">
+                This is a long paragraph This is a long paragraph
+                This is a long paragraph This is a long paragraph
+            </p>
+        </div>
+    
+        <div class="container">
+            <img src="./images/smiley.jpg" class="img1">
+            
+            <p class="p1">
+                This is a long paragraph This is a long paragraph
+                This is a long paragraph This is a long paragraph
+            </p>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="container">
+            <img src="./images/bruce1.jpg" class="img2">
+            
+            <p class="p1">
+                This is a long paragraph This is a long paragraph
+                This is a long paragraph This is a long paragraph
+            </p>
+        </div>
+    
+        <div class="container">
+            <img src="./images/bruce2.jpg" class="img2">
+            
+            <p class="p1">
+                This is a long paragraph This is a long paragraph
+                This is a long paragraph This is a long paragraph
+            </p>
+        </div>
+    
+        <div class="container">
+            <img src="./images/smiley.jpg" class="img2">
+            
+            <p class="p1">
+                This is a long paragraph This is a long paragraph
+                This is a long paragraph This is a long paragraph
+            </p>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="container">
+            <img src="./images/bruce1.jpg" class="img3">
+            
+            <p class="p1">
+                This is a long paragraph This is a long paragraph
+                This is a long paragraph This is a long paragraph
+            </p>
+        </div>
+    
+        <div class="container">
+            <img src="./images/bruce2.jpg" class="img3">
+            
+            <p class="p1">
+                This is a long paragraph This is a long paragraph
+                This is a long paragraph This is a long paragraph
+            </p>
+        </div>
+    
+        <div class="container">
+            <img src="./images/smiley.jpg" class="img3">
+            
+            <p class="p1">
+                This is a long paragraph This is a long paragraph
+                This is a long paragraph This is a long paragraph
+            </p>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="container">
+            <img src="./images/bruce1.jpg" class="img4">
+            
+            <p class="p1">
+                This is a long paragraph This is a long paragraph
+                This is a long paragraph This is a long paragraph
+            </p>
+        </div>
+    
+        <div class="container">
+            <img src="./images/bruce2.jpg" class="img4">
+            
+            <p class="p1">
+                This is a long paragraph This is a long paragraph
+                This is a long paragraph This is a long paragraph
+            </p>
+        </div>
+    
+        <div class="container">
+            <img src="./images/smiley.jpg" class="img4">
+            
+            <p class="p1">
+                This is a long paragraph This is a long paragraph
+                This is a long paragraph This is a long paragraph
+            </p>
+        </div>
+    </div>
+
+    
+</body>
+</html>

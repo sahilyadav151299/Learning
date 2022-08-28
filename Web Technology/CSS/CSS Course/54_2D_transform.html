@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 2D Transform</title>
+
+    <style>
+        .box{
+            width: 80px;
+            height: 80px;
+            background-color: brown;
+            margin: 50px;
+            padding: 10px;
+            color: white;
+            float: left;
+        }
+
+        .box1{
+            /* - 360deg to + 360 deg */
+            /* rotate from origin : center */
+            /* rotate 45 deg right */
+            transform: rotate(45deg);
+        }
+
+        .box2{
+            /* rotate from origin : center */
+            /* rotate 45 deg left */
+            transform: rotate(-45deg);
+        }
+
+        .box3{
+            /* parallel x-axis horizontal */
+            /* rotate from origin : center */
+            transform: skewX(30deg);
+        }
+
+        .box4{
+            /* parallel y-axis vertical*/
+            /* rotate from origin : center */
+            transform: skewY(30deg);
+        }
+
+        .box5{
+            /* rotate from origin : center */
+            transform: skew(15deg, 15deg);
+        }
+
+        .box6{
+            transform: rotate(30deg);
+            /* rotate from origin left top */
+            transform-origin: left top;
+        }
+
+        .box7{
+            transform: rotate(20deg);
+            /* rotate from origin x(left)-10% y(top)-20% */
+            transform-origin: 10% 20%;
+        }
+
+        .box8{
+            width: 200px;
+            height: 100px;
+            background-color: violet;
+
+            /* From X(left) : 10%, From Y(top) : 30% */
+            transform: translate(10%, 30%);
+            opacity: 0.4;
+            /* transform: translateX();
+            transform: translateY();
+            transform: translateZ(); */
+        }
+
+        .box9{
+            /* 2 : width 2 times = 160px 
+               1 : height 1 time = 80px*/
+            transform: scale(2, 1);
+            /* transform: scaleX();
+            transform: scaleY();
+            transform: scaleZ(); */
+        }
+
+        .box10{
+            transform: matrix(1, -0.3, 0, 1, 0, 0)
+        }
+
+        .box11{
+            background: tomato;
+            transform: scaleX(1);
+            transition: transform 1s;
+        }
+
+        .box11:hover{
+            transform: scaleX(2);
+        }
+
+        .box12{
+            transform: rotate(0deg);
+            transition: all 1s;
+        }
+
+        .box12:hover{
+            border-radius: 50%;
+            transform: rotate(calc(360deg * 10));
+            background: radial-gradient(violet, indigo, blue, green, yellow, orange, red);
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="box box1">rotate +45d</div>
+
+    <div class="box box2">rotate -45d</div>
+
+    <div class="box box3">Skew X +30d</div>
+
+    <div class="box box4">Skew Y +30d</div>
+
+    <div class="box box5">Skew X:15d Y:15d</div>
+
+    <div class="box box6">Rotate +30d from Origin left top</div>
+
+    <div class="box box7">Rotate +30d from Origin x(left)-10% y(top)-20%</div>
+
+    <div class="box box8"></div>
+
+    <div class="box box9"></div>
+
+    <div class="box box10">matrix(scaleX, skewY, skewX, scaleY, translateX, translateY)</div>
+
+    <div class="box box11">Animation : Hover Me</div>
+
+    <div class="box box12"></div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery with CDN</title>
+
+    <!-- CDN : Content Delivery Network -->
+    <!-- Bring jQuery file from another server for every request -->
+    <!-- This server is called as CDN server -->
+    <!-- This reduces the load on our server, file downloads from CDN -->
+    
+
+    <!-- 
+        Use jQuery with a CDN
+        - jQuery.com
+        - Download jQuery
+        - Visit https://code.jquery.com
+        - Click on minfied jQuery 3.x
+        - Copy script code
+    -->
+
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous">
+    </script>
+
+</head>
+<body>
+    
+    <h1>Yahoo Baba : jQuery</h1>
+
+    <!-- Go live -->
+    <!-- View page source -->
+    <!-- Click on jQuery.js -->
+    <!-- If opened, then included successfully -->
+
+    <script>
+        $(document).ready(function(){
+
+            alert("Hey There !!!");
+        });
+    </script>
+
+</body>
+</html>

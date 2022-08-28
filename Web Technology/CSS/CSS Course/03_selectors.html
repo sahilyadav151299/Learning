@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Selectors</title>
+
+    <style>
+        /* Tag Selector : Target All Tag of Same Type */
+        h1{ color: midnightblue; }
+
+        /* Class Selector : Sharable Class */
+        .header{ color: red; }
+        .header-title{ color: darkslateblue; }
+        .side_text{ color: green; }
+        .footerText{ color: goldenrod; }
+
+        /* ID Selector : Unique For Every Tag */
+        #unique{ color: teal; }
+
+        /* Descendent Selector : Parent child {} */
+        div p{ font-weight: bolder; }
+        ul#menu li{ color: red; }
+    </style>
+
+</head>
+<body>
+
+    <!-- Tag Selector -->
+    <h1>Yahoo Baba</h1>
+    
+    <!-- Class Selector -->
+    <p class="header">Yahoo Baba</p>
+    <p class="header-title">Yahoo Baba</p>
+    <p class="side_text">Yahoo Baba</p>
+    <p class="footerText">Yahoo Baba</p>
+
+    <!-- ID Selector -->
+    <p id="unique">Yahoo Baba</p>
+
+    <!-- Descendent Selector -->
+    <div>
+        <p>Yahoo Baba</p>
+
+        <div>
+            <p>Yahoo Baba</p>
+        </div>
+    </div>
+
+    <ul id=menu>
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+    </ul>
+
+
+</body>
+</html>

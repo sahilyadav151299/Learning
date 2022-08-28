@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Web Storage 
+        1. window.localStorage  - no expiry - noOfPageLoads
+        2. window.SessionStorage - per session - noPfPageLoadsPerSession
+    
+    -->
+    <script>
+        function setCounter(){
+           // localStorage.clear();
+            //sessionStorage.clear();
+            if(!localStorage.getItem("noOfPageLoads")){
+                localStorage.setItem("noOfPageLoads",0);
+            }
+
+            localStorage.setItem("noOfPageLoads",
+                parseInt(localStorage.getItem("noOfPageLoads")) + 1);
+            
+            document.getElementById('counter').innerHTML =
+            localStorage.getItem("noOfPageLoads");
+
+
+            if(!sessionStorage.getItem("noOfPageLoadsPerSession")){
+                sessionStorage.setItem("noOfPageLoadsPerSession",0);
+             }
+
+             sessionStorage.setItem("noOfPageLoadsPerSession",
+                 parseInt(sessionStorage.getItem("noOfPageLoadsPerSession")) + 1);
+            
+             document.getElementById('scounter').innerHTML =
+             sessionStorage.getItem("noOfPageLoadsPerSession");
+        }    
+        // In console under Application Tab there is storage which it shows 
+        //this data
+        window.addEventListener("load", setCounter, false); 
+
+    </script>
+    <form id='form1'>
+        <p>
+            You have viewed this page <span id='counter'></span> times.
+        </p>
+        <br/><br/>
+        <p>
+            In the current session you have viewed this page <span id='scounter'></span> times.
+        </p>
+        
+
+
+    </form>
+</body>
+</html>

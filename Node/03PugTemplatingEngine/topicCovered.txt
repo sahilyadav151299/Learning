@@ -1,0 +1,14 @@
+Sharing Data Across Requests & Users        Products Array
+Templating Engines                          For dynamic content
+Installing & Implementing Pug               views engine, views, render
+Outputting Dynamic Content                  #{ key name }
+Converting HTML Files to Pug                div can be omitted
+Adding a Layout                             extends common layout
+Finishing the Pug Template                  class(path) ? active, title #{ pageTitle }
+
+ 
+npm init
+npm install nodemon --save-dev          development dependency
+npm install express --save              production dependency
+npm install body-parser --save 
+npm install --save ejs pug express-handlebars   (3 pkg at once) 

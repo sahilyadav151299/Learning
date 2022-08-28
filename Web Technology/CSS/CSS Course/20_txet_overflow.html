@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Text Overflow</title>
+
+    <style>
+        .box{
+            width: 400px;
+            padding: 10px;
+            border: 2px solid black;
+            margin: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .box1{
+            text-overflow: ellipsis;
+        }
+
+        .box2{
+            /* only spported in firefox */
+            text-overflow: " etc. ";
+        }
+
+        .box3{
+            /* default property */
+            text-overflow: clip;
+        }
+    </style>    
+
+</head>
+<body>
+
+    <!-- Used with white space property -->
+
+    <div class="box">
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </div>
+
+    <div class="box box1">
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </div>
+
+    <div class="box box2">
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </div>
+
+    <div class="box box3">
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </div>
+
+
+</body>
+</html>

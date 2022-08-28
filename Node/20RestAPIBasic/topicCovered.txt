@@ -1,0 +1,29 @@
+Not every UI required HTML pages example
+Mobile App (Twitter)
+Single Page Web Apps (Udemy Course Player) Don't loads/page refresh
+Service APIs (Google Maps APIs)
+
+REST stands for Representational State Transfer
+(Transfer data instead of user interfaces)
+(Only req, res data changes not the general sever-side logic)
+Decoupled Frontend
+
+Java for andriod
+Swift objective C for IOS
+UI Libraries and widgets by Apple/Google
+
+Endpoint = HTTP method + respective path
+
+MongoDB 
+U : sahilyadav
+P : xZ6xgy4Qys6TjcS
+
+
+npm init
+npm install --save express                For creating application  
+npm install --save-dev nodemon            For live server  
+npm install --save body-parser            For parsing req 
+Postman API postman.com                   API development tool
+Codepen                                   Used for writing HTML/CSS/JS snippets or projects that can be shared                             
+CORS (Cross Origin Resource Sharing)      Client localhost:4000  ----->  Server localhost:3000  
+We can only solve the error on the server

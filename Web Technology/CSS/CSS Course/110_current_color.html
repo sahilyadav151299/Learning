@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Current Color</title>
+
+    <style>
+        h1{
+            text-align: center;
+        }
+
+        #test{
+            color: darkred;
+            width: 500px;
+            padding: 10px;
+            margin: 0 auto;
+            border: 2px solid black;
+        }
+
+        #test h1{
+            border-bottom: 2px solid currentColor;
+        }
+        
+        .readmore{
+            color: currentColor;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div id="test">
+        <h1>Yahoo Baba</h1>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste praesentium ipsum unde nesciunt ducimus ipsam exercitationem culpa adipisci repellendus alias quod quia aliquam, sint mollitia eaque veritatis quibusdam. Aperiam, ipsa.
+        </p>
+        
+        <a class="readmore" href="">Read More</a>
+    </div>
+
+</body>
+</html>

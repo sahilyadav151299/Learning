@@ -1,0 +1,24 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "10_noSQL.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mathjs": "^10.0.0",
+    "mongoose": "^6.0.12",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon 10_noSQL.js",
+    "server": "nodemon 10_noSQL.js"
+  },
+  "author": "Sahil Yadav",
+  "license": "ISC"
+}

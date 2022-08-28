@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event stopPropogation()</title>
+
+    <style>
+        #box{
+            background-color: peru;
+            width: 400px;
+            height: 200px;
+            padding: 5px 20px;
+            color: white;
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">
+        <h1>Yahoo Baba</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <button>Click</button>
+    </div>
+
+    <!-- jQuery Included -->
+    <script src="./jQuery.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            
+           $('#box').click(function(){
+               alert('div tag is clicked !')
+           })
+
+           $('h1').click(function(){
+               alert('h1 tag is clicked !')
+           })
+
+           $('p').click(function(e){
+               e.stopPropagation();
+               alert('p tag is clicked !');
+               alert('Propagation stop : ' + e.isPropagationStopped());
+           })
+
+           $('button').click(function(e){
+               alert('button tag is clicked !')
+               alert('Propagation stop : ' + e.isPropagationStopped());
+           })
+        });
+    </script>
+
+</body>
+</html>

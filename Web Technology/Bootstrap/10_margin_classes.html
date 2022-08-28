@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+    
+    <style>
+        .container, .row{ border: 2px solid black; }
+        .first{ background-color: royalblue; }
+        .second{ background-color: palevioletred; }
+        .third{ background-color: teal; }
+        .fourth{ background-color: darkgoldenrod; }
+    </style>
+</head>
+<body>
+
+    <!--
+        Fixed Size Margin --------------------
+
+        .m-auto     Center div : margin from all 4 sides
+        .ml-auto    Right div  : margin from left 
+        .mr-auto    Left Div   : margin from right 
+
+        Responsive Margin --------------------
+
+        Extra Large     -   .m-xl-auto
+        Large           -   .m-lg-auto
+        Medium          -   .m-md-auto
+        Small           -   .m-sm-auto
+
+        Fixed Size Margin --------------------
+
+        Margin          -   .m-n    (n : 0-5)   1 : 0.25 rem
+        Margin-right    -   .mr-n   (n : 0-5)   2 : 0.50 rem
+        Margin-left     -   .ml-n   (n : 0-5)   3 : 1 rem  
+        Margin-top      -   .mt-n   (n : 0-5)   4 : 1.5 rem
+        Margin-bottom   -   .mb-n   (n : 0-5)   5 : 3 rem
+
+        Responsive Margin --------------------
+
+        Extra Large     -   .m-xl-n   .mt-xl-n   .mr-xl-n   .mb-xl-n    .ml-xl-n
+        Large           -   .m-lg-n   .mt-lg-n   .mr-lg-n   .mb-lg-n    .ml-lg-n
+        Medium          -   .m-md-n   .mt-md-n   .mr-md-n   .mb-md-n    .ml-md-n 
+        Small           -   .m-sm-n   .mt-sm-n   .mr-sm-n   .mb-sm-n    .ml-sm-n
+
+        Negative Margin --------------------
+
+        Extra Large     -   .m-xl-n*   .mt-xl-n*   .mr-xl-n*   .mb-xl-n*   .ml-xl-n*
+        Large           -   .m-lg-n*   .mt-lg-n*   .mr-lg-n*   .mb-lg-n*   .ml-lg-n*
+        Medium          -   .m-md-n*   .mt-md-n*   .mr-md-n*   .mb-md-n*   .ml-md-n* 
+        Small           -   .m-sm-n*   .mt-sm-n*   .mr-sm-n*   .mb-sm-n*   .ml-sm-n*
+
+        Ex  .m-xl-n5  : -5 margin
+    -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, voluptatum!</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 m-auto second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, voluptatum!</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 m-auto third">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, voluptatum!</div>
+            <div class="col-md-3 fourth">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, voluptatum!</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, voluptatum!</div>
+            <div class="col-md-3 m-auto third">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, voluptatum!</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 mr-auto second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, voluptatum!</div>
+            <div class="col-md-3 fourth">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, voluptatum!</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 third">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, voluptatum!</div>
+            <div class="col-md-3 ml-auto second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, voluptatum!</div>
+        </div> 
+    </div>
+
+    <br> <!-- Margin from 0 to 5 -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 ml-3 first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, voluptatum!</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 ml-5 second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, voluptatum!</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 m-3 third">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, voluptatum!</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 mt-2 fourth">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, voluptatum!</div>
+        </div>
+    </div>
+
+</body>
+</html>

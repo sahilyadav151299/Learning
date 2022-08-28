@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid Area Naming</title>
+
+    <style>
+        .container{
+            background: #eeeeee;
+            width: 720px;
+            display: grid;
+           
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 120px 60px 100px 400px 50px;
+            grid-gap: 10px;
+
+            /* 3 way of positioning : recommended for small project : not professional way */
+            grid-template-areas: 'header header header'
+                                 'menu menu menu'
+                                 'box1 box2 sidebar'
+                                 'content content sidebar'
+                                 'footer footer .';
+        }
+
+        .items{
+            font-size: 20px;
+            font-weight: bolder;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .header{
+            background: coral;
+            grid-area: header;
+        }
+
+        .menu{
+            background: yellowgreen;
+            grid-area: menu;
+        }
+
+        .box1{
+            background: mediumvioletred;
+            grid-area: box1;
+        }
+
+        .box2{
+            background: mediumslateblue;
+            grid-area: box2;
+        }
+
+        .content{
+            background: teal;
+            grid-area: content;
+        }
+
+        .sidebar{
+            background: tan;
+            grid-area: sidebar;
+        }
+
+        .footer{
+            background: darkred;
+            grid-area: footer;
+        }
+
+    </style>
+    
+</head>
+<body>
+    
+    <div class="container">
+        <div class="items header">Header</div>
+        <div class="items menu">Menu</div>
+        <div class="items box1">Box 1</div>
+        <div class="items box2">Box 2</div>
+        <div class="items sidebar">Sidebar</div>
+        <div class="items content">Content</div>
+        <div class="items footer">Footer</div>
+    </div>
+</body>
+</html>

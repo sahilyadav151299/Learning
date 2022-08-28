@@ -1,0 +1,23 @@
+<h2>List of Products</h2>
+<table border="1">
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Image</th>
+        <th colspan="2">Action</th>
+    </thead>
+    <tbody>
+        <tr *ngFor='let product of productList'>
+            <!-- Interpolation -->
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price | currency : 'INR'}}</td>
+            <!-- Property binding -->
+            <td><img [src]="product.imgPath"></td>
+            <td><button>Add To Cart</button></td>
+            <td *ngIf='isAdmin'><button (click)="delete(product.id)">Remove</button></td>
+        </tr>
+    </tbody>
+    
+</table>

@@ -1,0 +1,8 @@
+API : An interface used by s/w components to communicate with each other
+
+Restful API : web application which deals with data
+
+Java app <--> Data Transfer (REST API) <--> Python app
+
+mux : Third-party package for more control over routing
+go get github.com/gorilla/mux

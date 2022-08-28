@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    
+    // 1) Create a direct instance of object class
+
+    var personObj = new Object()
+
+    personObj.Fname = "Sahil"
+    personObj.Lname = "Yadav"
+
+    personObj.getData = function() {
+
+        return this.Fname + " " + this.Lname
+    }  
+    
+    alert(personObj.Fname)
+    alert(personObj.Lname)
+    alert(personObj.getData())
+
+
+    // 2) Empty object : {}
+
+    var person = {}
+    
+    person.name = "VK"
+    person.age = 23
+
+    person.getInfo = function() {
+
+        return "Name : " + this.name + "\nAge : " + this.age
+    }
+
+    alert(person.getInfo())
+    
+
+    // 3) Object literal syntax
+
+    var person = {
+
+        Id      : 101,
+        Fname   : "Sahil Yadav",
+
+        getInfo : function() {
+
+            return "Name : " + this.Fname + "\nAge : " + this.Age
+        }
+    }
+
+    person.Age = 23
+    alert(person.getInfo())
+
+
+    // 4) Using class : to avoid creating obj each time with properties
+    // As per ECMAS-5 Standard : function syntax is used for creating a class
+    // Way of using a function defines whether it is a function or a class
+
+
+    // define member at class level
+    function Employee(fName, Lname, city) {
+
+        this.FirstName = fName
+        this.LastName = Lname
+
+        // if not passed : undefined
+        this.City = city
+
+        this.getFullName = function() {
+
+            return this.FirstName + " " + this.LastName
+        }
+    }
+
+    var emp1 = new Employee("Rohit", "Mehra", "Pune")
+    alert(emp1.getFullName())
+
+    var emp2 = new Employee("KD", "Pathak", "Patne")
+
+    // can define members at object level
+    emp2.age = 29
+    // fucntion overridded at object level
+    emp2.getFullName = function() {
+        return this.FirstName + " : " + this.LastName
+    }
+
+    alert(emp2.age)
+    alert(emp2.getFullName())
+
+    </script>
+
+</body>
+</html>

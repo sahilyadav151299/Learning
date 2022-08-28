@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid Nesting</title>
+
+    <style>
+        .container{
+            width: 600px;
+            margin: 40px;
+            background: #eeeeee;
+
+            display: grid;
+            grid-template-columns:repeat(2, 1fr);
+            grid-template-rows: repeat(2, 150px);
+
+            grid-gap: 10px;
+        }   
+
+        .items{ 
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bolder;
+            color: white;
+        }
+
+        .items1{
+            background-color: orangered;
+        }
+
+        .items2{
+            background-color: teal;
+        }
+
+        .items3{
+            /* nested grid */
+            background-color: tan;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .items3 > div{
+            background-color: cornsilk;
+            color: crimson
+        }
+
+        .items4{
+            background-color: steelblue;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="items items1">1</div>
+        <div class="items items2">2</div>
+        <div class="items items3">
+            <div class="items">3.1</div>
+            <div class="items">3.2</div>
+            <div class="items">3.3</div>
+        </div>
+        <div class="items items4">4</div>
+    </div>
+
+</body>
+</html>

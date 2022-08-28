@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // 1) Prototype Chaining
+
+        function Parent(relation) {
+
+            this.relation = relation
+            this.jobs = ["Service", "Bussiness"]
+
+            this.show = function() {
+
+                alert(this.relation)
+            }
+        }
+
+        console.log(Parent.prototype)           // Inherited Object Class
+        console.log(Child.prototype)            // Inherited Object Class
+
+        // Prototype Chaining
+        Child.prototype = new Parent("Mother")  // Inherited Parent Class 
+
+        function Child(rel) {
+
+            // Inherited Parent Class Members
+        }
+
+        console.log(Child.prototype)
+
+        var child1 = new Child("Son")           // A
+        var child2 = new Child("Daughter")      // A
+
+        child1.show() 
+        child2.show() 
+
+        child1.jobs.push("IT")                  // B
+
+        document.write(child1.jobs + "<br/>")
+        document.write(child2.jobs + "<br/>")
+
+        // Drawback of Protype Chaining
+        // A) Child can't pass arguments to Parent Class
+        // B) Parent Class properties become prototype properties
+    
+    </script>
+
+</body>
+</html>

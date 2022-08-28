@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Color Modes</title>
+
+    <style>
+        /* Color name */
+        .box1{
+            color: tomato;
+        }
+
+        /* hexa decimal value 00-ff */
+        .box2{
+            color: #00ff00;
+        }       
+
+        /* rgb value 0-255 */
+        .box3{
+            color: rgb(160, 160, 160);
+        }
+
+        /* hsl : hue(0-360) saturation(0-100%) lightnes(0-100%)
+           0 : Red,   
+           120 : Green,    
+           240 : Blue
+        */
+        .box4{
+            color: hsl(0, 100%, 70%);
+        }
+
+        /* rgba : Alpha - Opacity 0 to 1*/
+        .box5{
+            background: url('./images/border.png') no-repeat;
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+        .box6{
+            background: url('./images/border.png') no-repeat;
+            color: hsla(360, 0%, 0%, 0.4);
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h1 class="box1">Yahoo Baba</h1>
+
+    <h1 class="box2">Yahoo Baba</h1>
+
+    <h1 class="box3">Yahoo Baba</h1>
+
+    <h1 class="box4">Yahoo Baba</h1>
+
+    <h1 class="box5">Yahoo Baba</h1>
+
+    <h1 class="box6">Yahoo Baba</h1>
+
+</body>
+</html>

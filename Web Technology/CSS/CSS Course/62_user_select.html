@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS User Select</title>
+
+    <style>
+        .box{
+            width: 300px;
+            height: 150px;
+            box-sizing: border-box;
+            text-align: center;
+            padding-top: 50px;
+            margin: 20px;
+            float: left;
+            background-color: tan;
+        }
+
+        .box1{
+            /* default : if js allowed */
+            user-select: auto;
+        }
+
+        .box2{
+            user-select: none;
+        }
+
+        .box3{
+            /* always allowed whether browser allow or not */
+            user-select: text;
+        }
+
+        .box4{
+            user-select: all;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box box1"> 
+        Auto : You can select & copy text
+    </div>
+
+    <div class="box box2"> 
+        None : You can't select & copy text
+    </div>
+
+    <div class="box box3"> 
+        Text : You can select & copy text
+    </div>
+
+    <div class="box box4"> 
+        All : You can select text with single click
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Animation</title>
+
+    <style>
+
+        .card{
+            width: 140px;
+            height: 140px;
+            margin: 40px;
+            text-align: center;
+            line-height: 140px;
+            font-size: 20px;
+            color: white;
+            background-color: teal;
+            float: left;
+        }
+
+        .box1{
+            /* animation settings */
+            animation-name: demo1;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        .box2{
+            animation-direction: alternate-reverse;
+        }
+
+        .box3{
+            animation-direction: reverse;
+        }
+
+        .box4{
+            animation-direction: normal;
+        }
+
+        @keyframes demo1{
+            from{ border-radius: 0%; }
+            to{ border-radius: 50%; }
+        }
+
+        .box5{
+            /* animation settings */
+            animation-name: demo2;
+            animation-duration: 2s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            /* Animation Shorthand  */
+            /* animation: demo2 2s infinite alternate-reverse; */
+        }
+
+        @keyframes demo2{
+            0%   { border-radius: 0%;   background-color: teal;}
+            20%  { border-radius: 20%;  background-color: tomato;}
+            40%  { border-radius: 40%;  background-color: steelblue;}
+            60%  { border-radius: 60%;  background-color: tan;}
+            50%  { border-radius: 50%;  background-color: crimson;}
+            100% { border-radius: 100%; background-color: darkgoldenrod;}
+        }
+
+        .container{
+            padding-top: 200px;
+        }
+
+        .box{
+            width: 100px;
+            height: 30px;
+            margin: 10px;
+            background-color: crimson;
+            float: none;
+            color: white;
+            /* animation settings */
+            animation: demo3;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes demo3 {
+            from { width: 100px; }
+            to   { width: 300px; background-color: sandybrown; }
+        }
+
+        .box11{
+            animation-timing-function: ease;
+        }
+
+        .box12{
+            animation-timing-function: ease-in;
+        }
+
+        .box13{
+            animation-timing-function: ease-in-out;
+        }
+
+        .box14{
+            animation-timing-function: ease-out;
+        }
+
+        .box15{
+            animation-timing-function: linear;
+        }
+        
+        .box16{
+            animation-timing-function: step-start(2);
+        }
+
+        .box17{
+            animation-timing-function: step-end(2);
+        }
+
+        .box18{
+            animation-timing-function: steps(6);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="card box1">Yahoo Baba</div>
+
+    <div class="card box1 box2">Yahoo Baba</div>
+
+    <div class="card box1 box3">Yahoo Baba</div>
+
+    <div class="card box1 box4">Yahoo Baba</div>
+
+    <div class="card box5">Yahoo Baba</div>
+
+    <div class="container">
+        <div class="box box11">ease</div>
+
+        <div class="box box12">ease-in</div>
+
+        <div class="box box13">ease-in-out</div>
+
+        <div class="box box14">ease-out</div>
+
+        <div class="box box15">linear</div>
+
+        <div class="box box16">step start()</div>
+
+        <div class="box box17">step end()</div>
+
+        <div class="box box18">steps()</div>
+    </div>
+
+</body>
+</html>

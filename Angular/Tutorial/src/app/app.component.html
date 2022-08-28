@@ -1,0 +1,295 @@
+<!---------------------------- Header & Footer ------------------------------->
+
+<app-header></app-header>
+<!-- <app-footer></app-footer> -->
+
+<!---------------------------- Property & Funtcions --------------------------->
+
+<!-- Accessing app component class property
+<h3>App : {{ title }}</h3>
+
+<!-- Accessing app component class function -->
+<h3>Function : {{ getName() }}</h3>
+
+<!-- Accessing app component class object -->
+<h3>Object : {{ obj1 }}</h3>
+
+<!-- Accessing app component object property -->
+<h3>Obj Property : {{ obj1.name }} {{ obj1.age }}</h3>
+
+<!-- Accessing app component class array -->
+<h3>Array : {{ arr }}</h3>
+
+<!-- Accessing app component array values -->
+<h3>Array Values :</h3>
+<h3>{{ arr[0] }} {{ arr[1] }}</h3>
+<h3>{{ arr[2] }} {{ arr[3] }}</h3>
+
+<!-- Accessing app component array length -->
+<h3>Length : {{ arr.length }}</h3>
+
+<!-- Hardcoded expression -->
+<h3>10 * 10 = {{ 10 * 10 }}</h3>
+
+<!-- Operation on app component class property -->
+<h3>n1 + n2 = {{ n1 + n2 }}</h3>
+
+<!-- Accessing app url -->
+<h3>URL : {{ siteUrl }}</h3>
+
+<!-- <h3>{{ window.location.href }}</h3>
+Property 'window' does not exist on type 'AppComponent' -->
+
+<!-- Accessing app component function with click event -->
+
+<button (click) = 'getAge()'>Get my age</button>
+<button (click) = 'greet("Sahil")'>Click me!</button>
+
+<!---------- user-list component selector defined inside user-list.component.ts file ---------->
+
+<app-user-list></app-user-list>
+
+<!-- <h2>This is a user module component</h2>
+<app-login></app-login> -->
+
+<!-------------------------- Important events in angular --------------------------->
+
+<button (click)="myEvent('click event')">Click Me</button>
+<br><br>
+<input type="text" (keyup)="myEvent('keyup event')" placeholder='count at each click'>
+<br><br>
+<input type="text" #var1 (keyup)="myEvent(var1.value)" placeholder='print without pressing up key'>
+<br><br>
+<input type="text" #var2 (keyup.enter)="myEvent(var2.value)" placeholder='print on enter'>
+<br><br>
+<input type="text" #var3 (keyup.space)="myEvent(var3.value)" placeholder='print on clicking space'>
+<br><br>
+<input type="text" #var4 (keydown)="myEvent(var4.value)" placeholder='print after pressing down click'>
+<br><br>
+<input type="text" (blur)="myEvent('blur event')" placeholder='blur when you move out of the box'>
+<br><br>
+<div (mouseover)="myEvent('mouseover event')" style='background-color: grey; color: white;'>
+    <h3>Mouse Over Event</h3>
+</div>
+<div (mouseleave)="myEvent('mouseleave event')" style='background-color: grey; color: white;'>
+    <h3>Mouse Leave Event</h3>
+</div>
+
+<div (mouseleave)="myEvent('mouseleave event')" (mouseover)="myEvent('mouseover event')" style='background-color: grey; color: white;'>
+    <h3>Mouse Over Event</h3>
+    <h3>Mouse Leave Event</h3>
+</div>
+
+
+<h2>Get Values As A Input </h2>
+<input type="text" (keyup)="setName1($event)" placeholder="enter value">
+<br><br>
+<input type="text" #var5 placeholder="enter value">
+<br><br>
+<button (click)="setName2(var5.value)">Set Name</button>
+
+
+<!--------------------- Property Binding In Angular ---------------------------->
+
+<h2>Property Binding In Angular</h2>
+<!-- Values can be populated again in property binding -->
+<input type="text" [disabled]="disabledBox" [value]="title">
+<br><br>
+<!-- Value can be populated only once + togather  -->
+<input type="text" disabled={{disabledBox}} value={{title}}>
+<br><br>
+<button (click)="enableBox()">Enable Textbox</button>
+
+
+<!----------------------- Conditional Statement ------------------------------------>
+
+<h2>Conditional Statement</h2>
+
+<!-- Simple if -->
+<p *ngIf="show">If Block</p>
+
+<!-- If with else-->
+<p *ngIf="data=='yes' else elseBlock">If with Else</p>
+
+<ng-template #elseBlock>
+    <p>Else Block</p>
+</ng-template>
+
+<!-- If with else with template-->
+<p *ngIf="data=='yes'; then ifBlock else elseBlock"></p>
+
+<ng-template #ifBlock>
+    <p>If Block</p>
+</ng-template>
+<ng-template #elseBlock>
+    <p>Else Block</p>
+</ng-template>
+
+<!-- If with property binding -->
+
+<ng-template [ngIf]="color=='red'">
+    <p style="color: red;">Red Color</p>
+</ng-template>
+<ng-template [ngIf]="color=='blue'">
+    <p style="color: blue;">Blue Color</p>
+</ng-template>
+<ng-template [ngIf]="color=='green'">
+    <p style="color: green;">Green Color</p>
+</ng-template>
+
+<!-- Switch case default -->
+
+<h3>Switch Case</h3>
+
+<div [ngSwitch]="color">
+    <p *ngSwitchCase=" 'red' ">Red Color</p>
+    <p *ngSwitchCase=" 'green' ">Green Color</p>
+    <p *ngSwitchCase=" 'blue' ">Blue Color</p>
+    <p *ngSwitchDefault>Black Color</p>
+</div>
+
+
+<!---------------------------- Iterative Statement ------------------------------>
+
+<!-- for loop over array -->
+
+<p *ngFor="let item of brr">
+    Hi, {{item}}
+</p>
+
+<!-- for loop over array of objects -->
+
+<p *ngFor="let item of arrObj">
+    Hi, {{item.name}} with Age {{item.age}}
+</p>
+
+<!-- Populate data in table with for loop -->
+
+<table border="1px solid black">
+    <tr>
+        <td>Name</td>
+        <td>Age</td>
+    </tr>
+    <tr *ngFor="let item of arrObj">
+        <td>{{item.name}}</td>
+        <td>{{item.age}}</td>
+    </tr>
+</table>
+
+<!---------------------------- Style Binding ----------------------------------->
+
+<h2 style="color: red;">Header 1</h2>
+<h2 [style.color]=" 'green' ">Header 2</h2>
+<h2 [style.backgroundColor]=" 'grey' " [style.color]=" 'white' ">Header 3</h2>
+<h2 [style.color]="err ? 'red' : 'black'">Header 4</h2>
+<h2 [style.color]="setColor">Header 5</h2>
+<button (click)="updateColor()">Update Color</button>
+
+
+<!-------------------- Date Transfer B/W Parent & Child ------------------->
+
+
+<!-- Parent to child data passing -->
+
+<app-child-component [info]="parentToChild"></app-child-component>
+
+<app-child-component [info]="parentToChildObj"></app-child-component>
+
+<!-- Child to Parent data passing -->
+
+<app-child-component (childToParent)="childToParent($event)"></app-child-component>
+
+
+<!-------------------- Pipe In Angular ------------------->
+
+<p>{{ pipeVar }}</p>
+<p>{{ pipeVar | uppercase }}</p>
+<p>{{ pipeVar | lowercase }}</p>
+<p>{{ pipeVar | titlecase }}</p>
+
+<p>{{ dateVar }}</p>
+<p>{{ dateVar | date }}</p>
+<p>{{ dateVar | date : 'fullDate' }}</p>
+
+<p>{{ charVar }}</p>
+<p>{{ charVar | slice : 4 }}</p>
+<p>{{ charVar | slice : 4 : 9 }}</p>
+
+<p>{{ currVar }}</p>
+<p>{{ currVar | currency }}</p>
+<p>{{ currVar | currency : 'USD'}}</p>
+<p>{{ currVar | currency : 'INR'}}</p>
+<p>{{ currVar | currency : 'CAD'}}</p>
+
+
+<!---------------------------- Custom Directives ------------------------------->
+
+<h3>Deafult Heading</h3>
+
+<h3 appCustomDirective >Custom Heading</h3>
+
+<!------------------------------ API Service --------------------------------->
+
+<table border='1px solid black'>
+    <tr>
+        <td>Id</td>
+        <td>Title</td>
+        <td>User Id</td>
+    </tr>
+    <!-- <tr *ngFor="let item of userDataArray">
+        <td>{{item.id}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.userId}}</td>
+    </tr> -->
+</table>
+
+<!-------------------------------Module Components------------------------------->
+
+<app-my-login></app-my-login>
+<app-my-sign-up></app-my-sign-up>
+
+
+<!-------------------------------Lazy Component------------------------------->
+
+<button (click)="loadLazyComponent()">Load Lazy Component</button>
+
+<!---------------------------- Form In Angular --------------------------->
+
+<form #demoForm="ngForm" (ngSubmit)="getUserData(demoForm.value)">
+    <br><br>
+    <input type="text" ngModel name="username" placeholder="enter username">
+    <br><br>
+    <input type="text" ngModel name="age" placeholder="enter age">
+    <br><br>
+    <input type="text" ngModel name="address" placeholder="enter address">
+    <br><br>
+    <button>Submit Data</button>
+    <br><br>
+</form>
+
+<!-------------------------------Template Driven Form------------------------------->
+
+<h3>Template Driven Form</h3>
+
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+    <input type="text" name="email" placeholder="email" ngModel>
+    <br><br>
+    <input type="password" name="password" placeholder="password" ngModel>
+    <br><br>
+    <button type="submit">Login</button>
+</form>
+
+<!-------------------------------Reactive Form------------------------------->
+
+<h3>Reactive Form</h3>
+
+<!-- <form formGroupName="loginForm">
+    <input type="text" formControlName="email" placeholder="email">
+    <br><br>
+    <span class="error" *ngIf="email.invalid">Email is required</span>
+    <input type="password" formControlName="password" placeholder="password">
+    <br><br>
+    <button type="submit">Login</button> -->
+    <!-- <button type="submit" [disabled] = "!loginForm.valid" >Submit</button> -->
+<!-- 
+</form> -->

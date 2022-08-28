@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .set{
+            border: 2px solid black;
+            font-size: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form autocomplete="off">
+
+        <!-- <fieldset> element is used to group related data in a form -->
+        <!-- <legend> element defines a caption for the <fieldset> element -->
+
+        <fieldset style="width: 400px; height: 250px; background-color: cornflowerblue; border: 2px solid black;">
+
+            <legend><span style="background-color:red; font-size: 20px;">&nbsp;Account Create&nbsp;</span></legend>
+
+            <label for="name">Name</label> <br/>
+            <input type="text" id="name" name="name" class="set"> <br/>
+
+            <label for="username">Username</label> <br/>
+            <input type="text" id="username" name="username" class="set"> <br/>
+
+            <label for="password">Password</label> <br/>
+            <input type="password" id="password" name="password" class="set"> <br/>
+
+            <label for="contact">Contact No.</label> <br/>
+            <input type="number" id="contact" name="contact" class="set"> <br/>
+
+            <br/>
+            <input type="submit" value="Create Account" class="set">
+
+        </fieldset>    
+    </form>
+
+</body>
+</html>

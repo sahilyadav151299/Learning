@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS List Style</title>
+
+    <style>
+        ul{
+            border: 2px solid red;
+
+            /* none : no type
+               disc : defualt
+               square, circle, string  */
+
+            list-style-type: disc;
+            list-style-position: inside;
+        }
+
+        ol{
+            border: 2px solid red;
+            
+            /* none : no type
+               decimal : default */
+            list-style-type: lower-roman;
+            /* default value */
+            list-style-position: outside;
+        }
+
+        #ul1{ list-style-image: url('./images/check_sign_icon.png'); }
+
+        #ul2{ list-style-type: '-: ';}
+
+        #ul3{ list-style-type: '★ '; }
+
+        #ul4{ list-style-type: '⚡ '; }
+
+    </style>
+
+</head>
+<body>
+    
+    <ul>
+        <li>Orange</li>
+        <li>Banana</li>
+        <li>Mango</li>
+        <li>Apple</li>
+        <li>Guava</li>
+    </ul>
+
+    <ol>
+        <li>Orange</li>
+        <li>Banana</li>
+        <li>Mango</li>
+        <li>Apple</li>
+        <li>Guava</li>
+    </ol>
+
+    <ul id='ul1'>
+        <li>Orange</li>
+        <li>Banana</li>
+        <li>Mango</li>
+        <li>Apple</li>
+        <li>Guava</li>
+    </ul>
+
+    <ul id='ul2'>
+        <li>Orange</li>
+        <li>Banana</li>
+        <li>Mango</li>
+        <li>Apple</li>
+        <li>Guava</li>
+    </ul>
+
+    <ul id='ul3'>
+        <li>Orange</li>
+        <li>Banana</li>
+        <li>Mango</li>
+        <li>Apple</li>
+        <li>Guava</li>
+    </ul>
+
+    <ul id='ul4'>
+        <li>Orange</li>
+        <li>Banana</li>
+        <li>Mango</li>
+        <li>Apple</li>
+        <li>Guava</li>
+    </ul>
+
+</body>
+</html>

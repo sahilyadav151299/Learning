@@ -1,0 +1,104 @@
+1) Require extension for HTML5
+	1.1) view in browser	 
+	1.2) open in browser	 
+	1.3) html snippets	
+
+2) Media query helps as like in print out
+
+3) For using SASS use NodeJS cmd:
+	3.1) Install npm (node required)	
+	3.2) Install sass using nodejs cmd
+
+	npm i -g node-sass
+	node-sass src_filename.scss target_filename.css
+
+------------------- Useful Extensions ------------------
+
+1)  Live server
+2)  Open in browser
+3)  Node-snippets
+4)  HTML snippets
+5)  Angular files
+6)  Angular 10 snippets
+7)  Material Icon theme
+8)  Auto import
+9)  Gitlens
+10) Eslint
+11) Project Manager
+
+------------------- HTML Shortcut -------------
+
+1)  Lorem2				-		Lorem, ipsum.
+2)  div#header 			-		<div id = 'header'></div>
+3)  div.header   		- 		<div class = 'header'></div>	
+4)  div#id1.class1		-		<div id = 'id1' class = 'class1'></div>
+5)  p.class1.class2  	-		<p class = 'class1 class2'></p>
+6)  ul>li*2				-		<ul>
+									<li></li> 
+									<li></li>
+								</ul
+7)  nav>ul>li			-		<nav>
+									<ul><li></li></ul>
+								</nav>
+8)	div+p+a				-		<div></div>
+								<p></p>
+								<a></a>
+9)  a{Click Me}			-		<a href = '#'>Click Me</a>
+10) ul>.class			-		<ul>
+									<li class = 'class'></li>
+								</ul>
+11)	table>.row>.col     -		<table>
+									<tr class = 'row'>
+										<td class = 'col'></td>
+									</tr>
+								</table>
+12)	ul>li.item$*5		-		<ul>
+									<li class = 'item1'></li>
+									<li class = 'item2'></li>
+									<li class = 'item3'></li>
+									<li class = 'item4'></li>
+									<li class = 'item5'></li>
+								</ul>		
+
+-------------------JavaScript--------------
+
+1) Using ECMAS 5 standard
+2) DOM - In memory representation of HTML
+3) DOM Manipulation : Changing structure of HTML
+4) AJAX : Asynchronous JS & XML
+5) Library Vs Framework
+6) NodeJS is a runtime : JS based so no need to leanr new PL
+   JS for server side in NodeJS
+   To run JS program need NodeJS
+   JVM for JAVA ---- NodeJS for JS
+
+7) Install 2 extensions -
+	HTML Snippets : Type html -> html5 or ! -> enter
+	Open In Browser
+
+8) When to write <script> in head or body tag
+
+<body> : if js wants to modify dom elements, put script before ending of nody tag
+
+9) pasreInt('123abc') : 123
+   Number('123abc')   : NaN
+
+--------Query----------
+
+5th edition was used till 2015
+why we are learning 5th when have 10th edition 2019			
+
+when to use interactive vs complete
+
+That last code day-2 : object.define propert n all
+
+References material and codes ??
+
+Assignments ??
+
+getting undefined in dom traversing : if ul not at same line
+
+
+BOM manipulation
+
+qunit_test.html

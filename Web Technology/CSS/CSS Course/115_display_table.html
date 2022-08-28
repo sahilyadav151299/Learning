@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Display Table</title>
+
+    <style>
+        .table{
+            display: table;
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        .row{
+            display: table-row;
+        }
+
+        .col{
+            padding: 4px;
+            display: table-cell;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .heading{
+            display: table-header-group;
+            background: lightblue;
+            font-weight: bolder;
+        }
+
+        .footer{
+            display: table-footer-group;
+            background: lightcoral;
+        }
+
+        /* .row-odd{
+            display: table-row-group;
+            color: white;
+            background-color: darkred;
+        }
+
+        .row-even{
+            display: table-row-group;
+            color: white;
+            background-color: midnightblue;
+        } */
+
+        .table-col-grp{
+            display: table-column-group;
+        }
+
+        .col-grp{
+            display: table-column;
+        }
+        
+        .col1{ 
+            /* only these 2 properties can be used here */
+            background-color: teal; 
+            width: 50px;
+        }
+
+        .caption{
+            display: table-caption;
+            text-align: center;
+            border: 1.5px solid black;
+            text-transform: uppercase;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="table">
+
+        <div class="caption">
+            Yahoo Baba
+        </div>
+
+        <div class="table-col-grp">
+             <div class="col-grp col1">1</div>
+             <div class="col-grp col2">2</div>
+             <div class="col-grp col3">3</div>
+             <div class="col-grp col4">4</div>
+        </div>
+
+        <div class="heading">
+            <div class="col">ID</div>
+            <div class="col">Name</div>
+            <div class="col">Age</div>
+            <div class="col">Gender</div>
+        </div>
+
+        <div class="row row-odd">
+            <div class="col">101</div>
+            <div class="col">Sahil</div>
+            <div class="col">22</div>
+            <div class="col">Male</div>
+        </div>
+
+        <div class="row row-even">
+            <div class="col">102</div>
+            <div class="col">Vishal</div>
+            <div class="col">24</div>
+            <div class="col">Male</div>
+        </div>
+
+        <div class="row row-odd">
+            <div class="col">103</div>
+            <div class="col">Suresh</div>
+            <div class="col">22</div>
+            <div class="col">Male</div>
+        </div>
+
+        <div class="row row-even">
+            <div class="col">104</div>
+            <div class="col">Viskas</div>
+            <div class="col">22</div>
+            <div class="col">Male</div>
+        </div>
+
+        <div class="footer">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col">Total Emp</div>
+            <div class="col">4</div>
+        </div>
+    </div>
+
+</body>
+</html>

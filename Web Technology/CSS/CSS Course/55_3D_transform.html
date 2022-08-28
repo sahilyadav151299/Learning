@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 3D Transform</title>
+
+    <style>
+        .base{
+            width: 200px;
+            height: 100px;
+            background-color: burlywood;
+            margin: 20px;
+            float: left;
+        }
+
+        .box{
+            width: 200px;
+            height: 100px;
+            color: white;
+            text-align: center;
+            background-color: slategrey;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        .box1{
+            /* use perspective to see the affect 
+               500px : distance to see that box*/
+            transform: perspective(500px) rotateX(70deg);
+        }
+
+        .box2{
+            transform-origin: right bottom;
+            transform: perspective(500px) rotateX(70deg);
+        }
+
+        .box3{
+            transform: perspective(500px) rotateY(70deg);
+        }
+
+        .box4{
+            transform-origin: right center;
+            transform: perspective(500px) rotateY(-70deg);
+        }
+
+        .box5{
+            transform: rotateZ(-5deg);
+        }
+
+        .box6{
+            transform: perspective(500px) rotateY(70deg) translateZ(30px);
+        }
+
+        .box7{
+            transform: perspective(500px) rotateY(60deg) translate3d(10px, 20px, 30px);
+        }
+
+        .box8{
+            transform: perspective(500px) scaleZ(4) rotateX(60deg);
+        }
+
+        .box9{
+            transform: perspective(500px) scale3d(1, 2, 2) rotateX(60deg);
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="base">
+        <div class="box box1">Yahoo Baba</div>
+    </div>
+
+    <div class="base">
+        <div class="box box2">Yahoo Baba</div>
+    </div>
+
+    <div class="base">
+        <div class="box box3">Yahoo Baba</div>
+    </div>
+
+    <div class="base">
+        <div class="box box4">Yahoo Baba</div>
+    </div>
+
+    <div class="base">
+        <div class="box box5">Yahoo Baba</div>
+    </div>
+
+    <div class="base">
+        <div class="box box6">Yahoo Baba</div>
+    </div>
+
+    <div class="base">
+        <div class="box box7">Yahoo Baba</div>
+    </div>
+
+    <div class="base">
+        <div class="box box8">Yahoo Baba</div>
+    </div>
+
+    <div class="base">
+        <div class="box box9">Yahoo Baba</div>
+    </div>
+</body>
+</html>

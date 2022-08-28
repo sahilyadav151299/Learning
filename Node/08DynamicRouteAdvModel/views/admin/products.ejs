@@ -1,0 +1,41 @@
+<%- include('../includes/head.ejs') %>  <!-- renders key=value also -->
+</head>
+
+<body>
+    
+    <%- include('../includes/navigation.ejs') %>
+
+    <main>
+
+        <% if (prods.length > 0 ) { %>
+
+            <h1>My Products</h1>
+            <p>List of all added Products</p>
+
+            <% for(let product of prods) { %>
+
+                <div style="border: 1px solid black; width: 150px; height: 200px; text-align: center;float: left; margin: auto;">
+                    <p>Title : <%= product.title %></p>
+                    <p>Image : <%= product.imageURL %></p>
+                    <p>Price : $<%= product.price %></p>
+                    <p>Destn : <%= product.description %></p>
+
+                    <a href="/admin/edit-product/<%= product.id %>?edit=true">Edit</a>
+                    
+                    <form action="/admin/edit-product" method="POST">
+                        <input type="hidden" value="<%= product.id %>" name="productID">
+                        <button type="submit">Delete</button>
+                    </form>
+                </div>
+
+            <% } %>    
+
+        <% } else { %>
+            
+            <h1>No Products Listed</h1>
+
+        <% } %>        
+
+    </main>
+    
+<%- include('../includes/end.ejs') %>

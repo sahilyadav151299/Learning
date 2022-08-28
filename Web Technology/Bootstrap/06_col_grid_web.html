@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+
+    <style>
+        .container{ border: 2px solid black; }
+
+        .col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+        .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+            border: 1px solid black;
+        }
+
+        #header{
+            background-color: palevioletred;
+            text-align: center;
+            color: white;
+        }
+
+        #menu{
+            background-color: beige;
+        }
+
+        #menu ul, #sidebar ul{
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu ul li a, #sidebar ul li a{
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #menu ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 8px;
+        }
+
+        #content{
+            background-color: #eeeeee;
+        }
+
+        #sidebar{
+            background-color: powderblue;
+        }
+
+        #sidebar ul li{
+            list-style: none;
+            display: block;
+            margin: 8px auto;
+        }
+
+        #footer{
+            background-color: #666666;
+            color: white;
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Website layout using grid system -->
+    <div class="container">
+
+        <!-- Header -->
+        <div class="row">
+            <div class="col-12" id="header">
+                <h1>Website Name</h1>
+            </div>
+        </div>
+
+        <!-- Menu -->
+        <div class="row">
+            <div class="col-12" id="menu">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Content & Sidebar -->
+        <div class="row">
+            
+             <!-- Responsiveness for mobile size -->
+            <div class="col-lg-8 col-sm-4" id="content">
+                <h2>Website Content</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum reprehenderit blanditiis sed, quae sequi saepe nisi quam doloribus nihil eius cum, sit itaque aperiam mollitia, explicabo odit adipisci repellendus tempore obcaecati minima voluptas. Laudantium, quaerat expedita. Corrupti repudiandae, officia veniam ex sunt suscipit provident perferendis animi porro cupiditate, quas delectus et? Sequi illo praesentium id ipsa quas distinctio, reprehenderit tempora enim in delectus labore dolor non, aspernatur, nam magnam a! Qui cum est delectus, nulla, pariatur minus facilis numquam consectetur modi, ducimus consequuntur. Cum sunt, commodi suscipit aspernatur vel cupiditate aliquid exercitationem natus, nihil excepturi sequi dolorum. Odio, vero tenetur, voluptatibus nobis dicta consequatur modi labore voluptatum minima quibusdam eos! Vitae, facere nam. Optio neque consequatur error exercitationem perferendis perspiciatis minus similique voluptatibus reiciendis suscipit!</p>
+            </div>
+            <!-- Responsiveness for mobile size -->
+            <div class="col-lg-4 col-sm-8" id="sidebar">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+         <!-- Footer -->
+         <div class="row">
+            <div class="col-12" id="footer">
+                @copyright 20202&copy;
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

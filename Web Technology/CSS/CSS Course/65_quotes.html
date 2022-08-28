@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Quotes</title>
+
+    <style>
+        div{
+            background-color: tan;
+            width: 600px;
+            padding: 2px;
+            font-size: 18px;
+            margin: 10px;
+        }
+
+        .q1{
+            /* start end */
+            quotes: '$' '?';
+        }
+
+        .q2{
+            /* start end, inside start end */
+            quotes: '$' '?' '{' '}';
+        }
+
+        .q3{
+            quotes: '\00AB' '\00BB' '--' '--';
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <q> Google LLC is an American multinational technology company </q>
+    </div>
+
+    <div>
+        <q> Google LLC is an <q>American multinational technology</q> company </q>
+    </div>
+
+    <div>
+        <q class="q1"> Google LLC is an American multinational technology company </q>
+    </div>
+
+    <div>
+        <q class="q2"> Google LLC is an <q>American multinational technology</q> company </q>
+    </div>
+
+    <div>
+        <q class="q3"> Google LLC is an <q>American multinational technology</q> company </q>
+    </div>
+</body>
+</html>

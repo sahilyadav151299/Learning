@@ -1,0 +1,337 @@
+Developer        -   Google
+First release    -   14 Sept, 2016    
+
+AngularJS   -   Older version
+Angular     -   All Version after V2
+
+Angular is open source (free-of-cost + self-contributaion) 
+wep application framework led by Angular team at Google.
+
+Angular has MVC based architecture for application development.
+
+Angular can be used with NPM | CMD & without NPM | CMD, easy with NPM.
+
+Angular is mainly used for SPA (Single Page Application)
+    - Page loads at once
+    - Dynamic data changes using AJAX call
+    
+Plugin
+    -  Angular 10 Snippets
+    -  Angular Files
+    -  Auto Import
+
+-------------------- Angular CLI & Projcet Setup --------------------
+
+1)  Install Node + npm (comes along with node)
+        -  node -v
+        -  npm -v
+
+2)  Install Angular using Node CMD
+        -  npm install -g @angular/cli
+        -  -g indicates it will be installed as a command line tool 
+        -  ng version 
+        -  npm install --global @angular/cli@next (run if version is less than v10)
+
+3)  Projcet Setup using Node CMD
+        -  ng new <PROJECT-NAME>
+
+        -  cd <PROJECT-NAME>  
+        -  ng serve    
+        -  default port 4200
+        
+        -  ng serve --host 0.0.0.0 --port 4201  
+
+
+------------------- Generate other Angular constructs ------------------
+
+Component                       ng g component my-new-component
+Directive                       ng g directive my-new-directive
+Pipe                            ng g pipe my-new-pipe
+Service                         ng g service my-new-service
+Class                           ng g class my-new-class
+Guard                           ng g guard my-new-guard
+Interface                       ng g interface my-new-interface
+Enum                            ng g enum my-new-enum
+Module                          ng g module my-module
+Module + Component              ng g c my-module/my-new-component
+Routing Module                  ng g m module-name --routing
+
+g can be replaced with generate  
+c can be replaced with component
+s can be replaced with service
+
+--------------------- Files & Configuration --------------------
+
+package.json
+    -   First file to be created when we create a projcet
+    -   Holds project name, ng serve/build, dependencies, version
+
+node_modules
+    -   Holds all dependencies, npm packages, built-in packages
+
+src folder
+    -   Project workspace
+    -   Holds actual implementation/code of the project
+
+src/environments folder
+    -   prod : production
+    -   ts : typescript
+    -   developement/testing/production : different api url for each env
+
+src/assets folder 
+    -   Holds pdublic files, important but can be public
+    -   Can be images, icons, fonts, css
+
+src/index.html
+    -   HtML entry point of application
+    -   First file to be load
+
+src/main.ts
+    -   JS first file to be load
+    -   Interact index.html with javascript    
+
+src/style.css
+    -   Holds global css style
+
+src/app folder
+    -   Root folder
+    -   Holds modules, components, routing things
+
+.editorconfig
+    -   Holds editor setting
+
+karma.conf.js    
+    -   For unit testing purpose
+
+package-lock.json
+    -   Holds details about installed packages
+
+tslint.json
+    -   Where to use var or let
+    -   When to use arrow function
+    -   Indentaion etc  
+
+tsconfig.spec.json
+    -   For testing configuration purpose
+
+tsconfig.app.json
+    -   To controlling app configuration
+
+e2e folder
+    -   End-to-end testing purpose
+
+
+-------------------------- Start Coding & Concept --------------------------
+
+app/app.component.html
+    -   Replace html with your code
+    -   <h1>{{ title }} app is running!</h1>
+    -   Title property can be found in app.component.ts
+    -   Title is same as the project name but can change it
+
+-------------------------Interpolation | One Way Data Binding ---------------
+
+Accessing data from component.ts file to component.html is called as Interpolation
+
+    -   <h1>{{ title }} app is running!</h1>
+    -   <h1>{{ getName() }} app is running!</h1>
+
+-------------------------- Component --------------------------------------
+
+Component are made up for a specific task
+    -   login, sign up, header, navbar, item list etc
+    -   They can be reused, header & footer common for each page
+    -   4 files in each component
+    -   html, css, ts, spec.ts
+    -   ng generate component my-new-component
+    -   ng g c my-new-component
+    -   Every component has M(variable)-V(HTML)-C(functions)
+
+-------------------------- Module --------------------------------------
+
+A module is a mechanism to group
+    -   Components
+    -   Directives
+    -   Services
+    -   Pipes
+
+User Module
+    -   Login component
+    -   Signup component
+    -   Profile component
+    -   Reset password component
+
+Module with components
+    -   ng g module my-module
+    -   ng g module my-module/my-component
+    -   Import module name in app.module.ts file 
+    -   Export component name from module-name.module.ts file
+
+Routing Module 
+    -   loading routes only when required
+    -   speed up performance
+    -   Admin Module / Admin route 
+    -   User Module / User route    
+    -   ng g m adimin --routing
+
+Group Routing
+    -   admin/login
+    -   user/login
+    -   admin/products
+    -   user/products
+
+-------------------------- Event Binding --------------------------------------
+
+Events could be
+    -   Click
+    -   Key up/down
+    -   Key up with enter and space
+    -   Blur
+    -   Mouseover
+    -   Mouseleave
+    -   Get value on input change
+    -   Get value on button click
+
+------------------------------ Property Binding ------------------------------
+
+-   Property binding is only used to set the values
+-   Cannot read back from it
+
+-------------------------- Conditional Statements ----------------------------
+
+-   if
+-   if else 
+-   if else with template
+-   if else with property binding
+-   switch case default
+
+-------------------------- Iterative Statement ----------------------------
+
+-   For over array
+-   For over array of objects
+-   Populate data in table with for loop
+
+-------------------------- Header & Footer -------------------------------
+
+-------------------------- Style Binding ---------------------------------
+
+-------------------------- Bootstrap In Angular 10 ----------------------
+
+Install Bootstrap
+    -   ng add @ng-bootstrap/ng-bootstrap
+    -   Import inside app.module.ts file
+    -   import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+
+-------------------------- Material UI -----------------------------
+
+Install Material UI
+    -   ng add @angular/material
+    -   Import inside app.module.ts file
+    -   import { MatButtonModule } from '@angular/material/button';
+
+------------------ Date Transfer B/W Parent & Child -----------------
+
+Parent to Child 
+    -   @Input() 
+        info : any
+
+Child to Parent 
+    -   @Output()
+        childToParent : EventEmitter<any> = new EventEmitter()
+        this.childToParent.emit('Hello There')
+
+Child to Child
+    -   Using Services with Subject, Observable from 'rxjs';
+    -   Subject = new Subject<string>()
+    -   Used for keep tracking continuous value change
+    
+-------------------------- Pipe In Angular -----------------------------
+
+-   Pipe with string
+-   Pipe with date
+-   Pipe with slice
+-   Pipe with currency
+
+
+-------------------------- Routing In Angular -----------------------------
+
+If you haven't selected Routing as Yes, at the time of Project-Setup
+
+    -   ng generate module app-routing --flat --module=app
+
+
+-------------------------- Custom Directives -----------------------------
+
+-   Use for DOM manipulation
+-   ng g directive my-new-directive
+-   Default directive
+-   Custom directive
+
+---------------------------- Services -------------------------------
+
+Service
+    -   used share data among components
+    -   can be used in any module or component
+    -   API data in service
+        -   import { HttpClientModule } from '@angular/common/http' in app.module.ts
+        -   import { HttpClient } from '@angular/common/http' in service
+    -   API data in table
+
+---------------------------- Model -------------------------------
+
+Model defines data structure and validates data
+Model is part of typescript
+
+    -   How to make model
+    -   How to use model
+    -   How to import from external file
+    -   Use model with component file
+    -   Use model with service file
+
+
+---------------------------- Lazy Loading ------------------------------
+
+Lazy loading is a routing technique in which the JavaScript components 
+load in the browser only when their corresponding route is activated. 
+
+    -   Applies on Routing
+    -   Load a route when a component link is clicked
+    -   Performance increase
+    -   Lazy loading with module
+    -   Lazy loading with component A-9 Feature
+        -   ViewContainerRef in app.component.ts constructor : makes container to load dynamic component
+        -   ComponentFactoryResolver in app.component.ts constructor : convert container dynamic code into component
+
+
+-------------------------- Form In Angular -------------------------------
+
+-   Template driven form
+    -   Import FormsModule in app.module.ts
+    -   Used for simple form with no custom validation
+    -   Code in html
+    -   ngModel binds form data value and gives some validation properties
+        # Boolean properties
+        # .valid        correct email  : valid    
+        # .invalid      no value       : invalid    
+        # .pristine     unmodified     : clean state  
+        # .dirty        enter one char : dirty state
+        # .touched      set on blur
+        # .untouched    
+
+
+-   Reactive form 
+    -   Import ReactiveFormsModule in app.module.ts
+    -   import { FormControl, FormGroup, Validators } from '@angular/forms' in app.component.ts
+    -   Useful in custom form validation
+    -   Can write unit test cases with it
+    -   Code in ts
+
+
+-------------------------- Testing Spec Files In Angular -------------------------------
+
+Angular user Jasmine (Unit testing framework) and Karma (Tool 
+compiles and re-run test cases after change) for unit testing
+
+ng test    -   run all the spec files in the project
+
+Add 'f' in spec file as fdescribe to run specific test case

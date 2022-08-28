@@ -1,0 +1,75 @@
+<!-- Template driven forms -->
+<!-- 
+<div class="container">
+
+    <h2>Sign up form</h2>
+
+    <form #signup="ngForm">
+      <div class="form-group">
+        <label for="useremail">Email:</label>
+        
+        <input type="email" ngModel #useremail="ngModel" id="useremail" placeholder="Enter email" name="email" required>
+      </div>
+
+      <div *ngIf="useremail.invalid && useremail.dirty">
+        Email is invalid
+      </div>
+
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" ngModel #pwd="ngModel" id="pwd" placeholder="Enter password" name="pwd" required minlength="6">
+      </div>
+
+      <div *ngIf="pwd.invalid && pwd.touched">
+        <div *ngIf="pwd.errors?.['required']">Password is mandotory</div>
+        <div *ngIf="pwd.errors?.['minlength']">Password has to be min 6 chars</div>
+      </div>
+
+
+      <button type="submit" class="btn btn-default" [disabled]='signup.invalid'>Submit</button>
+    </form>
+
+    {{signup.value | json }}
+
+</div> -->
+
+
+<!-- Reactive Forms -->
+
+<div class="container">
+
+  <h2>Sign up form</h2>
+
+  <form [formGroup]='signupForm'>
+
+    <div class="form-group">
+      <label for="emailInput">Email:</label>
+      <input type="email" id="emailInput" placeholder="Enter email" name="email" formControlName="email">
+    </div>
+
+    <div class="form-group">
+      <label for="passwordInput">Password:</label>
+      <input type="password" id="passwordInput" placeholder="Enter password" name="password" formControlName="password">
+    </div>
+
+    <div *ngIf="signupForm.controls['password'].invalid && signupForm.controls['password'].dirty">
+      <div *ngIf="signupForm.controls['password'].errors?.['required']">Password is mandotory</div>
+      <div *ngIf="signupForm.controls['password'].errors?.['minlength']">Password has to be min 6 chars</div>
+    </div>
+
+    <div class="form-group">
+      <label for="codeInput">Code:</label>
+      <input type="text" id="codeInput" placeholder="Enter code" name="code" formControlName="code">
+    </div>
+
+    <div *ngIf="signupForm.controls['code'].errors?.['invalidCode'] && signupForm.controls['code'].dirty">Code is invalid</div>
+
+    <div class="form-group">
+      <label for="countryInput">Country:</label>
+      <input type="text" id="countryInput" placeholder="Enter country" name="country" formControlName="country">
+    </div>
+    
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+
+</div>

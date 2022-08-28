@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Pseudo Selectors</title>
+
+    <style>
+
+        /* ---------------- ::first-line ---------------- */
+        .p1::first-line{
+            color: saddlebrown;
+        }
+
+        /* ---------------- ::first-letter ---------------- */
+        .ul1 li::first-letter {
+            color: red;
+            font-size: 25px;
+            font-weight: bolder;
+        }
+
+        /* ---------------- ::selection ---------------- */
+        div::selection{
+            /* Change default bhaviour of slecting text */
+            color: white;
+            background-color: darkred;
+        }
+
+        ::selection{
+            /* Change default bhaviour of slecting text inside whole page */
+            color: white;
+            background-color: darkslateblue;
+        }
+
+        /* ---------------- ::placeholder ---------------- */
+        input{
+            margin: 10px 10px;
+        }
+
+        ::placeholder{
+            color: red;
+        }
+
+
+        /* ---------------- ::before : not visible on developer tool ---------------- */
+        .pre1{
+            border: 1px solid black;
+        }
+
+        .pre1::before{
+            background-color: rosybrown;
+            font-size: 20px;
+            content: "This is before pre tag"
+        }
+
+        /* ---------------- ::after : not visible on developer tool ---------------- */
+        .pre1::after{
+            content: url('./images/smiley.jpg');
+        }
+
+        .pre1:hover::after{
+            content: url('./images/bruce3.jpg');
+        }
+
+        /* ---------------- ::marker ---------------- */
+        ul li::marker{
+            color: red;
+        }
+
+        ::marker{
+            color: teal;
+        }
+
+        /* ---------------- ::file-selector-button or ::-webkit-file-upload-button (Edge, Chrom, Safari) ---------------- */ 
+        input[type='file']::file-selector-button{
+            background-color: lightcoral;
+            border-style: none;
+            padding: 5px 15px;
+            border-radius: 10px;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>  
+
+    <!-- ::first-line -->
+    <pre class="p1">
+        This is a paragraph with first letter T
+        This is a paragraph with first letter T
+        This is a paragraph with first letter T
+    </pre> 
+
+    <hr>
+
+    <!-- ::first-letter -->
+    <ul class="ul1">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul> 
+
+    <hr>
+
+    <!-- ::selection -->
+    <div>
+        This is a paragraph with first letter T This is a paragraph with first letter T
+        This is a paragraph with first letter T This is a paragraph with first letter T
+        This is a paragraph with first letter T This is a paragraph with first letter T
+        This is a paragraph with first letter T This is a paragraph with first letter T
+        This is a paragraph with first letter T This is a paragraph with first letter T
+        This is a paragraph with first letter T This is a paragraph with first letter T
+        This is a paragraph with first letter T This is a paragraph with first letter T
+        This is a paragraph with first letter T This is a paragraph with first letter T
+        This is a paragraph with first letter T This is a paragraph with first letter T
+        This is a paragraph with first letter T This is a paragraph with first letter T
+        This is a paragraph with first letter T This is a paragraph with first letter T
+        This is a paragraph with first letter T This is a paragraph with first letter T
+    </div>
+
+    <hr>
+
+    <!-- ::placeholder -->
+    <input type="text" placeholder="Enter Your Name"><br>
+    <input type="email" placeholder="Ente Your Email Address"><br>
+    <input type="password" placeholder="Create A Password"><br>
+    
+
+    <hr>
+
+    <!-- ::before and ::after -->
+    <pre class="pre1">
+        <!-- Here is before -->
+
+        This is a paragraph with first letter T This is a paragraph with first letter T
+        This is a paragraph with first letter T This is a paragraph with first letter T
+        This is a paragraph with first letter T This is a paragraph with first letter T
+        This is a paragraph with first letter T This is a paragraph with first letter T
+        This is a paragraph with first letter T This is a paragraph with first letter T
+        This is a paragraph with first letter T This is a paragraph with first letter T
+        
+        <!-- Here is after -->
+    </pre>
+
+    <!-- ::marker -->
+
+    <ul>
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+        <li>Item4</li>
+    </ul>
+
+    <ol>
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+        <li>Item4</li>
+    </ol>
+
+    <hr>
+
+    <!-- ::file-selector-button -->
+    <form>
+        <label>Upload File</label> <br>
+        <input type="file" id="file-upload"> 
+    </form>
+
+</body>
+</html>

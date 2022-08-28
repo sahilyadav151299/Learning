@@ -1,0 +1,11 @@
+Install on that machine, to which you want to connet
+
+sudo apt-get install -y openssh-server 
+
+Copy Folder
+
+scp -r archive sahil@192.168.43.63:/home/sahil/.
+
+Copy File
+
+scp archive sahil@192.168.43.63:/home/sahil/.

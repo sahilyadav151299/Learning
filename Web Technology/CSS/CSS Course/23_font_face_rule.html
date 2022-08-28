@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Font Face Rule</title>
+
+    <style>
+        
+        @font-face {
+            font-family: openSans;
+            src: url('fonts/open-sans/OpenSans-Regular.ttf'),
+            url('fonts/open-sans/OpenSans-Bold.ttf');
+        }
+        
+        .myFont{
+            font-family: openSans;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>This is a web safe font</h1>
+
+    <h1 class="myFont">This is not a web safe font</h1>
+</body>
+</html>

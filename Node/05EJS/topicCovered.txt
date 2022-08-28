@@ -1,0 +1,12 @@
+Working with EJS
+
+Working on the "Layout" with Partials 
+(The idea here is that you have some code blocks 
+which you reuse in different parts of your templates )
+
+
+npm init
+npm install nodemon --save-dev          development dependency
+npm install express --save              production dependency
+npm install body-parser --save 
+npm install --save ejs pug express-handlebars   (3 pkg at once) 

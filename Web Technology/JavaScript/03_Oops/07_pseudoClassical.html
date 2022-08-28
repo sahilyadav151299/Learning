@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        
+        // 3) Pseudo Classical Inheritance : Prototype + Classical
+
+        function Parent(relation) {
+
+            this.relation = relation
+            this.jobs = ["Service", "Bussiness"]
+
+            this.show = function() {
+
+                alert(this.relation)
+            }
+        }
+
+
+        Parent.prototype.protoMethod = function() {
+
+            alert("Parent's prototype level method is called!")
+        }
+
+        console.log(Parent.prototype)           // Inherited Object Class
+        console.log(Child.prototype)            // Inherited Object Class
+
+        // Prototype Chaining
+        Child.prototype = new Parent("Mother")  // Inherited Parent Class 
+
+        function Child(rel) {
+
+            // Classical Inheritance
+            Parent.call(this, rel)
+
+            // Can have same method with different definition
+        }
+
+        var child1 = new Child("Son")           
+        var child2 = new Child("Daughter")      
+
+        child1.show() 
+        child2.show() 
+
+        child1.jobs.push("IT")                 
+
+        document.write(child1.jobs + "<br/>")
+        document.write(child2.jobs + "<br/>")
+
+
+        child1.protoMethod()        
+
+        // All Drawbacks are resolved now
+        
+    </script>
+    
+</body>
+</html>

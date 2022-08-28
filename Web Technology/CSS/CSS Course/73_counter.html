@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Counter</title>
+
+    <style>
+        body{
+            counter-reset: my-counter 0;
+            /* counter-reset: my-counter 2; */
+            /* counter-reset: my-counter 5; */
+        }   
+
+        li{
+            list-style: none;
+            margin: 10px;
+        }
+
+        li::before{
+            color: white;
+            padding: 2px;
+            margin-right: 10px;
+            background-color: crimson;
+
+            content: "Chapter " counter(my-counter) " : ";
+            /* content: "Chapter " counter(my-counter, upper-alpha) " : "; */
+            /* content: "Chapter " counter(my-counter, lower-alpha) " : "; */
+            /* content: "Chapter " counter(my-counter, upper-roman) " : "; */
+            /* content: "Chapter " counter(my-counter, lower-roman) " : "; */
+
+            counter-increment: my-counter 1;
+            /* counter-increment: my-counter 2; */
+            /* counter-increment: my-counter 5; */
+     
+        }
+
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li>Time & Work</li>
+        <li>Percentage</li>
+        <li>SI & CI</li>
+        <li>Problem On Trains</li>
+    </ul>
+
+    <ol>
+        <li>Time & Work</li>
+        <li>Percentage</li>
+        <li>SI & CI</li>
+        <li>Problem On Trains</li>
+    </ol>
+
+</body>
+</html>

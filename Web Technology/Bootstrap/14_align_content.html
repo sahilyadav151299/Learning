@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+    
+    <style>
+        .container, .row{ border: 2px solid black;}
+        .row{ height: 250px; }
+        .first{ background-color: royalblue; }
+        .second{ background-color: palevioletred; }
+        .third{ background-color: teal; }
+        .fourth{ background-color: darkgoldenrod; }
+    </style>
+</head>
+<body>
+
+    <!-- 
+        Fixed Vertical Alignment : X axis
+
+        Works only when we have given a hight to row
+
+        .align-content-start      
+        .align-content-center     
+        .align-content-end        
+        .align-content-between    
+        .align-content-around  
+        .align-content-stretch  
+
+        Responsive Vertical Alignment : X axis
+
+        Extra Large     :   .align-content-xl-start   .align-content-xl-center  .align-content-xl-end    .align-content-xl-stretch     .align-content-xl-between    .align-content-xl-around
+        Large           :   .align-content-lg-start   .align-content-lg-center  .align-content-lg-end    .align-content-lg-stretch     .align-content-lg-between    .align-content-lg-around
+        Medium          :   .align-content-md-start   .align-content-md-center  .align-content-md-end    .align-content-md-stretch     .align-content-md-between    .align-content-md-around
+        Small           :   .align-content-sm-start   .align-content-sm-center  .align-content-sm-end    .align-content-sm-stretch     .align-content-sm-between    .align-content-sm-around
+
+    -->
+
+    <div class="container">
+        <h6>align-content-start</h6>
+        <div class="row align-content-start">
+            <div class="col-md-3 first">Lorem ipsum dolor sit amet.</div>
+            <div class="col-md-3 second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam!</div>
+            <div class="col-md-3 third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet consequuntur perferendis similique, ut quo recusandae?</div>
+            <div class="col-md-7 fourth">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quas necessitatibus quia eligendi? Commodi, quaerat? Vitae provident officiis reiciendis libero?</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>align-content-center</h6>
+        <div class="row align-content-center">
+            <div class="col-md-3 first">Lorem ipsum dolor sit amet.</div>
+            <div class="col-md-3 second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam!</div>
+            <div class="col-md-3 third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet consequuntur perferendis similique, ut quo recusandae?</div>
+            <div class="col-md-7 fourth">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quas necessitatibus quia eligendi? Commodi, quaerat? Vitae provident officiis reiciendis libero?</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>align-content-end</h6>
+        <div class="row align-content-end">
+            <div class="col-md-3 first">Lorem ipsum dolor sit amet.</div>
+            <div class="col-md-3 second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam!</div>
+            <div class="col-md-3 third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet consequuntur perferendis similique, ut quo recusandae?</div>
+            <div class="col-md-7 fourth">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quas necessitatibus quia eligendi? Commodi, quaerat? Vitae provident officiis reiciendis libero?</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h6>align-content-between</h6>
+        <div class="row align-content-between">
+            <div class="col-md-3 first">Lorem ipsum dolor sit amet.</div>
+            <div class="col-md-3 second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam!</div>
+            <div class="col-md-3 third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet consequuntur perferendis similique, ut quo recusandae?</div>
+            <div class="col-md-7 fourth">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quas necessitatibus quia eligendi? Commodi, quaerat? Vitae provident officiis reiciendis libero?</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>align-content-stretch</h6>
+        <div class="row align-content-stretch">
+            <div class="col-md-3 first">Lorem ipsum dolor sit amet.</div>
+            <div class="col-md-3 second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam!</div>
+            <div class="col-md-3 third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet consequuntur perferendis similique, ut quo recusandae?</div>
+            <div class="col-md-7 fourth">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quas necessitatibus quia eligendi? Commodi, quaerat? Vitae provident officiis reiciendis libero?</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>align-content-around</h6>
+        <div class="row align-content-around">
+            <div class="col-md-3 first">Lorem ipsum dolor sit amet.</div>
+            <div class="col-md-3 second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam!</div>
+            <div class="col-md-3 third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet consequuntur perferendis similique, ut quo recusandae?</div>
+            <div class="col-md-7 fourth">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quas necessitatibus quia eligendi? Commodi, quaerat? Vitae provident officiis reiciendis libero?</div>
+        </div>
+    </div>
+</body>

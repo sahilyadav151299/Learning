@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fitering Methods</title>
+
+    <style>
+        #first{
+            background-color: teal;
+            width: 400px;
+            padding: 5px 20px;
+            border: 2px solid rgb(0, 59, 59);
+        }
+
+        #second{
+            background-color: tan;
+            width: 400px;
+            padding: 5px 20px;
+            border: 2px solid rgb(121, 104, 83);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="first">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, obcaecati?</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <ul>
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Grapes</li>
+    </ul>
+
+    <div id="second">
+        <p class="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor reiciendis obcaecati eum, dolorem laudantium voluptatibus.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, distinctio.</p>
+    </div>
+
+    <!-- jQuery Included -->
+    <script src="./jQuery.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+
+            // Target first p tag in whole page
+            $('p')
+                .first()
+                .css('font-family', 'cursive')
+        
+            $('#second p')
+                .first()
+                .css('font-family', 'cursive')
+
+            // Target last p tag in whole page
+            $('p')
+                .last()
+                .css('color', 'midnightblue')   
+
+            // Target 3 item of li from last
+            $('ul li')
+                .eq(-3)
+                .css('font-family', 'cursive')
+
+            // Target specific tag
+            $('p')
+                .filter('.test')
+                .css('background-color', 'midnightblue')
+                .css('color', 'white')   
+            
+            // Target all p having no test class
+            $('p')
+                .not('.test')
+                .css('border', '1px solid white') 
+            
+            // Target all li after from 2
+            $('ul li')
+                .slice(2)
+                .css('border', '1px solid black') 
+            
+            // Target all li from 2 to 3
+            $('ul li')
+                .slice(2, 4)
+                .css('list-style', 'none')
+
+        });
+    </script>
+
+</body>
+</html>

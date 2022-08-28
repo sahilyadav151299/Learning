@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Animation Fill Mode</title>
+
+    <style>
+        .box{
+            width: 150px;
+            height: 80px;
+            background-color: brown;
+            margin: 10px;
+            
+            animation-name: demo1;
+            animation-duration: 2s;
+            animation-delay: 1s;
+        }
+
+        @keyframes demo1{
+            0%   { background: burlywood; width: 250px; }
+            50%  { background: cadetblue; width: 350px; }
+            100% { background: crimson; width: 450px; }
+        }
+
+        .box1{
+            /* at 0% started on delay time */
+            animation-fill-mode: backwards;
+        }
+
+        .box2{
+            /* at 100% it stops */
+            animation-fill-mode: forwards;
+        }
+
+        .box3{
+            /* both backwords and forwards */
+            animation-fill-mode: both;
+        }
+
+        .box4{
+            animation-iteration-count: infinite;
+        }
+
+        .box4:hover{
+            /* animation paused when hover */
+            animation-play-state: paused;
+        }
+
+        .box5{
+            animation-play-state: paused;
+        }
+
+        .box5:hover{
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            /* animation starts when hover */
+            animation-play-state: running;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box box1"></div>  
+
+    <div class="box box2"></div> 
+
+    <div class="box box3"></div> 
+
+    <div class="box box4"></div> 
+
+    <div class="box box5"></div> 
+
+</body>
+</html>

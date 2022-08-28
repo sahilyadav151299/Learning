@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Position & Offset</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+
+        #box{
+            width: 400px;
+            height: 200px;
+            padding: 10px;
+            margin: 20px;
+            border: 1px solid black;
+            background-color: rosybrown;
+            position: relative;
+        }
+
+        
+        button{
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="box">
+       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum accusantium pariatur nesciunt, eum aliquid odit doloremque ad autem porro quaerat, nemo atque quasi consectetur ducimus officia sunt sed consequuntur nostrum doloribus obcaecati placeat eaque. Cupiditate ea accusamus nisi cumque nesciunt.</p>
+    </div>
+
+    <button id="positionBtn">Position</button>
+    <button id="offsetBtn">Offset</button>
+    <button id="setBtn">Set Offset</button>
+
+    <!-- jQuery Included -->
+    <script src="./jQuery.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            
+            // Can only be get top and left
+            // Position : relative to its parent tag
+            // position: relative;
+            
+            // Offset : relative to the document
+
+            $('#positionBtn').click(function(){
+                var arr = $('#box p').position();
+    
+                console.log(arr);
+                console.log('Top : ' + arr.top);
+                console.log('Left : ' + arr.left);
+            });
+
+            $('#offsetBtn').click(function(){
+                var arr = $('#box p').offset();
+    
+                console.log(arr);
+                console.log('Top : ' + arr.top);
+                console.log('Left : ' + arr.left);
+            });
+
+            $('#setBtn').click(function(){
+                // 10 : 10px
+                $('#box').offset({top:0, left:0});
+            });
+        });
+    </script>
+
+</body>
+</html>

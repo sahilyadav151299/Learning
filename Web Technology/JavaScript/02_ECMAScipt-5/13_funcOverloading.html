@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        // Function : are variable arguments function in JS
+        // Internally args arrays is maintained for functions
+        // arguments : in built array holding all the passed parameter
+
+        function getArgs(){
+
+            document.write("getArgs() is called!   <br/>")
+            document.write("-----------------------<br/>")
+
+            for (var i in arguments) {
+                document.write(arguments[i] + "<br/>")
+            }
+
+            document.write("-----------------------<br/>")
+        }
+
+        // default function overloading
+        getArgs()
+        getArgs(10, 20)
+        getArgs(123.34, "TTT", 78)
+
+
+        // latest function will be called 6 times if redefined
+        // no explicit function overloading availabe
+
+        function getArgs(n1, n2){
+
+            document.write("getArgs() is called!   <br/>")
+        }
+
+        getArgs()
+        getArgs(10, 20)
+        getArgs(123.34, "TTT", 78)
+
+    </script>
+</body>
+</html>

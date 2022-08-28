@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+       // 1) concatination operator
+
+       var x = 10 + 20 + 'abc' + 60 + 30        // L-R parsing
+       document.write("<br/>" + x + "<br/>")    // 30abc6030
+       document.write(typeof(x))
+
+       
+       // 2) == Vs ===
+       
+       var code = "124"
+
+       // double equality : checks only for value
+       if (code == 124)
+       alert("== If is executed")
+       else
+       alert("== Else is executed")
+    
+       // triple eqaulity : checks for dt + value
+       if (code === 124)
+       alert("=== If is executed")
+       else
+       alert("=== Else is executed")  
+       
+       
+    </script>
+</body>
+</html>

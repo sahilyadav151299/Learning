@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Obtrusive Event Handling</h2>
+
+    <div id="div1"></div>
+    <!-- Button Event -->
+    <button id="btn1" onclick="getElementById('div1').innerText = new Date()">Show DateTime</button>
+
+    <div id="div2"></div>
+    <!-- Button Event -->
+    <button id="btn2" onclick="setDate()">Show DateTime</button>
+
+
+    <h2>Unobtrusive Event Handling</h2>
+
+    <div id="div3"></div>
+    <!-- Button Event -->
+    <button id="btn3">Show DateTime</button>
+
+
+    <h2>Add Event Listener</h2>
+
+    <div id="div4"></div>
+    <!-- Button Event -->
+    <button id="btn4">Show DateTime</button>
+
+
+    <h2>Add Event Listener With Anonymous Function</h2>
+
+    <div id="div5"></div>
+    <!-- Button Event -->
+    <button id="btn5">Show DateTime</button>
+
+
+    <script>
+    
+        // Event            : Action taken by user
+        // Event Handling   : Making function to deal with that action
+
+        
+        // 1) Obtrusive Event Handling : Tag has details about event & event handler
+
+        // Event Handler
+
+        function setDate() {
+
+            document.getElementById('div2').innerText = new Date()
+        }
+
+
+        // 2) Unobtrusive Event Handling 
+
+        document.getElementById('btn3').onclick = setDateTime
+
+        function setDateTime() {
+
+            document.getElementById('div3').innerText = new Date()
+        }       
+
+
+        // 3) Add Event Listener
+
+        function setDT() {
+
+            document.getElementById('div4').innerText = new Date()
+        }   
+
+        document.getElementById('btn4').addEventListener('click', setDT)
+
+
+        // 4) Add Event Listener With Anonymous
+
+        document.getElementById('btn5').addEventListener('click', function() {
+
+            document.getElementById('div5').innerText = new Date()
+        })
+
+    </script>
+
+</body>
+</html>

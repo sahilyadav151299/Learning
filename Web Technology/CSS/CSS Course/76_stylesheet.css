@@ -1,0 +1,78 @@
+/* Relative CSS Color Import */
+@import '76_pagecolor.css';
+
+/* Relative CSS Print Media Import */
+@import '76_printstyle.css' print;
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper{
+    margin: 0 auto;
+    width: 1000px;
+    border: 1px solid black;
+}
+
+#header{
+    height: 100px;
+    border: 1px solid black;
+}
+
+#header h1{
+    text-align: center;
+    padding-top: 30px;
+    margin: 0;
+}
+
+#menu{
+    border: 1px solid black;
+}
+
+#menu ul{
+    margin: 0;
+    padding: 0;
+}
+
+#menu li{
+    display: inline-block;
+}
+
+#menu li a{
+    display: block;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+#content{
+    width: 800px;
+    padding: 10px 15px;
+    float: left;
+    height: 300px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+#sidebar{
+    width: 198px;
+    height: 300px;
+    float: right;
+    border: 1px solid black;
+}
+
+#sidebar a{
+    text-decoration: none;
+}
+
+#footer{
+    padding: 10px 10px;
+    text-align: right;
+    clear: both;
+    border: 1px solid black;
+}

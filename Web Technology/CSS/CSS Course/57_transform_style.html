@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Transform Style</title>
+
+    <style>
+        .base{
+            width: 200px;
+            height: 100px;
+            background-color: burlywood;
+            margin: 20px;
+            float: left;
+            /* in the base div */
+            perspective: 500px;
+            /* to view the backside of the child div */
+            transform: rotateY(60deg);
+            /* default : flat */
+            transform-style: preserve-3d;
+        }
+
+        .box{
+            width: 200px;
+            height: 100px;
+            color: white;
+            text-align: center;
+            background-color: slategrey;
+            box-sizing: border-box;
+            padding: 10px;
+            /* transparent div */
+            opacity: 0.7;
+        }
+
+        .box1{
+            transform: rotateX(60deg);
+            transition: all 1s;
+        }
+
+        .box1:hover{
+            transform: rotateX(120deg);
+        }
+
+        .box2{
+            transform: rotateY(60deg);
+        }
+
+        .box3{
+            transform: rotateX(60deg);
+            transition: all 1s;
+            transform-origin: bottom;
+        }
+
+        .box3:hover{
+            transform: rotateX(360deg);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="base">
+        <div class="box box1">Yahoo Baba</div>
+    </div>
+
+    <div class="base">
+        <div class="box box2">Yahoo Baba</div>
+    </div>
+
+    <div class="base">
+        <div class="box box3">Yahoo Baba</div>
+    </div>
+
+</body>
+</html>

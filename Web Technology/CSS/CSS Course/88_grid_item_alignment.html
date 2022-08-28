@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid Item Alignment</title>
+
+    <style>
+
+        /* Align : For Vertical Alignment */
+        /* Justify : For Horizontal Alignment */
+
+        /* Items : For all items alignment */
+        /* Self : For Individual Item */
+
+        .container{
+            width: 500px;
+            margin: 40px;
+            background: #eeeeee;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 80px);
+            grid-gap: 15px;
+
+            grid-auto-rows: 60px;
+            grid-auto-flow: row;
+
+            /* For all items alignment vertically */
+            align-items: stretch;
+            /* For all items alignment horizontally */
+            justify-items: auto;
+            /* Shorthand */
+            /* place-items: <align-items> <justify-items>; */
+        }
+
+        .items{ 
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bolder;
+            color: white;
+        }
+
+        .items1{
+            background-color: orangered;
+            /* For only items alignment vertically */
+            align-self: baseline;
+            /* For only items alignment horizontally */
+            justify-self: start;
+            /* Shorthand */
+            /* place-self: <align-self> <align-self>; */
+        }
+
+        .items2{
+            background-color: teal;
+        }
+
+        .items3{
+            background-color: tan;
+            grid-row: span 3;
+        }
+
+        .items4{
+            background-color: steelblue;
+        }
+
+        .items5{
+            background-color: slategrey;
+        }
+
+        .items6{
+            background-color: hotpink;
+        }
+
+        .items7{
+            background-color: mediumpurple;
+            grid-column: span 2;
+        }
+
+        .items8{
+            background-color: midnightblue; 
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container container1">
+        <div class="items items1">1</div>
+        <div class="items items2">2</div>
+        <div class="items items3">3</div>
+        <div class="items items4">4</div>
+        <div class="items items5">5</div>
+        <div class="items items6">6</div>
+        <div class="items items7">7</div>
+        <div class="items items8">8</div>
+    </div>
+
+</body>
+</html>

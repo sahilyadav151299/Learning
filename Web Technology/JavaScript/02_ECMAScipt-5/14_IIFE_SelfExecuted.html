@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        // IIFE : Immediately Invoked Function Expression
+        // Gets executed where it is defined
+        // Executed only once, no-one can call it again
+
+        // Used for one time initialization of members
+        // Or abstracting members from outside world
+
+
+        // 1) Simple IIFE
+
+        (function() {
+            alert("Self executed!")
+        })()
+
+        // 2) Func returning value instead of definition
+
+        var funcExp = function() {
+
+            return 1234567890
+        }()
+    
+        alert(funcExp)
+
+        // 3) IIFE Usecase : Closure
+
+        // Req-1 : counter should be local
+        // Req-2 : must be initialized only once
+
+        var getHist = function() {
+
+            var counter = 0
+
+            // closure/inner function
+            var addHits = function() {
+                
+                counter++
+                return counter
+            }
+
+            return addHits
+        }()
+
+        // If not self-executed above function
+        // alert(getHist)          // outer function definition
+        // alert(getHist())        // inner function definition
+        // alert(getHist()())      // call inner function
+
+        // // If above function is IIFE
+        alert(getHist)             // inner function definition
+        alert(getHist())           // call inner function
+        alert(getHist())           // call inner function
+        alert(getHist())           // call inner functions
+
+
+
+    </script>
+
+</body>
+</html>

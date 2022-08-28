@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Word Wrap & Word Break</title>
+
+    <style>
+        .box{
+            width: 300px;
+            border: 2px solid black;
+            margin: 10px;
+        }
+
+        .box1{
+            word-wrap: break-word;
+        }
+
+        .box2{
+            word-break: break-all;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- word-warp : break-word 
+         break word then letters -->
+
+    <!-- word-break : break-all 
+         break letters -->
+
+
+    <div class="box">
+        Google LLCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC is an American multinational technology company.
+    </div>
+
+    <div class="box box1">
+        Google LLCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC is an American multinational technology company.
+    </div>
+
+    <div class="box box2">
+        Google LLCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC is an American multinational technology company.
+    </div>
+
+</body>
+</html>

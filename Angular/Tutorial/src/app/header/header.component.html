@@ -1,0 +1,27 @@
+<!---------------------------- Routing In Angular ------------------------------->
+
+
+<div>
+
+    <a routerLink="">Home</a>
+    <a routerLink="login">Login</a>
+    <a routerLink="signup">SignUp</a>
+    <a routerLink="mylogin">MyLogin</a>
+    <a routerLink="mysignup">MySignUp</a>
+
+    <!-------- Module + Group routing -------->
+    <a routerLink="admin/adminlogin">Admin</a>
+    <a routerLink="admin/adminproducts">Products</a>
+    
+    <!-------- Lazy loading module routes ------->
+    <a routerLink="lazyadmin/lazylogin">Lazy Loagin</a>
+    <a routerLink="lazyadmin/lazyproducts">Lazy Products</a>
+    <a routerLink="#">PageNotFound</a>
+
+    <!-------- Lazy loading component routes ------->
+    
+</div>
+
+<router-outlet>
+<!-- decide where to load the component -->
+</router-outlet>

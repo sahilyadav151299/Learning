@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Border Image</title>
+
+    <style>
+        .box{
+            width: 250px;
+            height: 250px;
+            margin: 30px 50px;
+            padding: 10px;
+            box-sizing: border-box;
+            float: left;
+            text-align: justify;
+            border: 20px solid black;
+        }
+
+        .box1{
+            border-image-source: url(./images/smiley.jpg);
+        }
+
+        .box2{
+            border-image-source: url(./images/border2.png);
+            border-image-slice: 30;
+        }
+
+        .box3{ 
+            border-image-source: url(./images/smiley.jpg);
+            border-image-slice: 30;
+            border-image-repeat: repeat;
+        }
+
+        .box4{
+            border-image-source: url(./images/smiley.jpg);
+            border-image-slice: 30;
+            border-image-repeat: round;
+        }
+
+        .box5{
+            border-image-source: url(./images/smiley.jpg);
+            border-image-slice: 30;
+            border-image-repeat: stretch;
+        }
+
+        .box6{
+            border-image-source: url(./images/smiley.jpg);
+            border-image-slice: 30;
+            border-image-repeat: space;
+        }
+
+        .box7{
+            border-image-source: url(./images/smiley.jpg);
+            border-image-slice: 30;
+            border-image-repeat: repeat space;
+        
+        }
+
+        .box8{
+            border-image-source: url(./images/border2.png);
+            border-image-slice: 30 15;
+           
+        }
+
+        .box9{
+            border-image-source: url(./images/border2.png);
+            border-image-slice: 30;
+            border-image-repeat: space;
+            background-color: brown;
+        }
+
+        .box10{
+            border-image-source: url(./images/border2.png);
+            border-image-slice: 30;
+            border-image-repeat: space;
+            background-color: brown;
+            border-image-outset: 1;
+        }
+
+        .box11{
+            border-image-source: url(./images/border2.png);
+            border-image-slice: 30;
+            border-image-repeat: repeat;
+            background-color: brown;
+            border-image-width: 20px;
+        }
+
+        .box12{
+            border-image-source: linear-gradient(red, yellow, green);
+            border-image-slice: 30;
+            border-image-repeat: stretch;
+            border-image-width: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box box1">
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+    </div>
+
+    <div class="box box2">
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+    </div>
+
+    <div class="box box3">
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+    </div>
+
+    <div class="box box4">
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+    </div>
+
+    <div class="box box5">
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+    </div>
+
+    <div class="box box6">
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+    </div>
+
+    <div class="box box7">
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+    </div>
+
+    <div class="box box8">
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+    </div>
+
+    <div class="box box9">
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+    </div>
+
+    <div class="box box10">
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+    </div>
+
+    <div class="box box11">
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+    </div>
+
+    <div class="box box12">
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+        Google LLC is an American multinational technology company
+    </div>
+
+</body>
+</html>

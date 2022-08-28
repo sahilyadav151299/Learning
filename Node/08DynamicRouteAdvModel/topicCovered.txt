@@ -1,0 +1,11 @@
+Adding the Product ID to the Path       Math.random()
+Extracting Dynamic Params               Product Id : req.params.productID
+Loading Product Detail Data             findByID    
+Rendering the Product Detail View       AddTOCart
+
+
+npm init
+npm install nodemon --save-dev          development dependency
+npm install express --save              production dependency
+npm install body-parser --save 
+npm install --save ejs pug express-handlebars   (3 pkg at once) 

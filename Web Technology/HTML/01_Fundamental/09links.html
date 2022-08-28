@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- HTML links are hyperlinks. You can click on a link and jump to another document.
+    When you move the mouse over a link, the mouse arrow will turn into a little hand.
+    Note: A link does not have to be text. A link can be an image or any other HTML element!
+    By default, links will appear as follows in all browsers:
+
+    An unvisited link is underlined and blue
+    A visited link is underlined and purple
+    An active link is underlined and red     -->
+
+    <h3>Go on instagram by <a href="https://www.instagram.com">clicking here</a></h3>    
+
+    <!-- The target Attribute 
+    _self   : Default, Opens the document in the same window/tab
+    _blank  : Opens the document in a new window or tab
+    _parent : Opens the document in the parent frame
+    _top    : Opens the document in the full body of the window -->
+
+    <a href="https://www.instagram.com" target="_self">clicking here</a>
+    <a href="https://www.instagram.com" target="_blank">clicking here</a>
+    <a href="https://www.instagram.com" target="_parent">clicking here</a>
+    <a href="https://www.instagram.com" target="_top">clicking here</a> 
+
+    <!-- Links can be either absolute or relative 
+    Absolute : Remote Web Link 
+    Relative : Local Web Link -->
+
+    <h2>Absolute URL</h2>
+    <p><a href="https://www.google.com/">Google</a></p>
+
+    <h2>Relative URLs</h2> 
+    <p><a href="08images.html">Images</a></p>   
+
+    <!-- Email Link-->
+
+    <p><a href="mailto:sahilyadav151299@gmail.com">Eamil Now</a></p>
+
+    <!-- Button as a Link -->
+
+    <button onclick="document.location='02paragraph.html' ">Paragraph Tutorial</button>
+
+    <!-- Link Titles -->
+
+    <button title="Learning page" onclick="document.location='02paragraph.html'">Paragraph Tutorial</button>
+
+    <!-- Deep Link Puts You On The Exact Place -->
+    
+    <a href = ".\12parapage.html#deepLink">Learn HTML</a> 
+
+    <!-- Deep Link Within The Page -->
+    
+    <pre>
+    Learn <a href="#language"> CSS </a> here only.
+    </pre>
+
+    <h2>HTML</h2>
+    <pre style="font-size: 20px;">
+        Hypertext Markup Language (HTML) is the standard markup 
+        language for documents designed to be displayed in a web browser. 
+        It can be assisted by technologies such as Cascading Style Sheets 
+        (CSS) and scripting languages such as JavaScript.
+
+        Web browsers receive HTML documents from a web server or from 
+        local storage and render the documents into multimedia web pages. 
+        HTML describes the structure of a web page semantically and originally 
+        included cues for the appearance of the document.
+    </pre>
+
+    <a name="language"><h2>CSS</h2></a> 
+    <pre style="font-size: 20px;">
+        Cascading Style Sheets (CSS) is a style sheet language used for 
+        describing the presentation of a document written in a markup language 
+        such as HTML.[1] CSS is a cornerstone technology of the World Wide Web, 
+        alongside HTML and JavaScript.[2]
+
+        CSS is designed to enable the separation of presentation and content, 
+        including layout, colors, and fonts.[3] This separation can improve 
+        content accessibility, provide more flexibility and control in the 
+        specification of presentation characteristics, enable multiple web pages 
+        to share formatting by specifying the relevant CSS in a separate .css file 
+        which reduces complexity and repetition in the structural content as well 
+        as enabling the .css file to be cached to improve the page load speed between 
+        the pages that share the file and its formatting.
+    </pre>
+
+</body>
+</html>

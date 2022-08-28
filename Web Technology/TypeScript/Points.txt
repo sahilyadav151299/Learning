@@ -1,0 +1,59 @@
+TypeScript is 
+	- 	An open source language
+	- 	Superste of JS
+	- 	Compiles down to regular JS
+	- 	Can be used for front-end JS as well as backwend with Node.js
+	- 	Includes most features from ES6, ES7
+	- 	Using types completely optional
+	- 	Offers additional features to JS including static types	
+
+
+Static typed language 
+	- 	Explicitly assign types to variables, function parameters, return values etc	
+	- 	Ex. Java, C, C++, Go
+
+
+Dynamic typed language	
+	- 	Types are associated with runtime values and not named explicitly in code
+	-	Ex. JavaScript, Python
+
+
+Pros	-	More robust						Cons	-	More code to write
+		-	Easily spot bugs						-	More to learn
+		-	Readability								-	Required compilation
+		-	Popular									-	Not true static typing
+
+
+Compiling TypeScript
+	-	TypeScript uses .ts and .tsx extensions
+	-	TypeScript compiler (TSC) is used to compile .ts files down to JS
+	-	Can watch files and report errors at compile time
+	-	Mant tools include TS compilation by default
+	-	Most IDE's have great support for TS
+	-	The tsconfig.json file is used to configure how TypeScript works
+
+
+Install TypeScript Compiler	
+	-	npm install -g typescript
+	-	tsc -v
+
+Compile .ts to .js
+	-	tsc file_name	
+	-	By deafult compiles to ES5 
+	-	let in .ts to var in .js
+	-	tsc : compile any .ts file in project
+
+Config TS target ES5 to ES6 
+	-	tsc --init
+	-	set "target" : "ES6"
+	-	let in .ts to let in .js with 'use strict'	
+	-	tsc file_name
+
+JS files usuallt takes place in dist folder
+	-	"outDir" : "./dist"
+	-	"rootDir" : "./src"
+	-	tsc only
+	-	tsc file_name compile in the same folder
+
+Continuously compile and problems in .ts file 
+	-	tsc --watch 

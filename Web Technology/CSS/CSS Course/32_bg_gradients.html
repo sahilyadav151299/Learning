@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Background Gradient</title>
+
+    <style>
+        .box{
+            width: 250px;
+            height: 100px;
+            border: 2px solid black;
+            margin: 5px;
+            padding: 20px;
+            float: left;
+            text-align: justify;
+        }
+
+        /* Linear Gradient : TB, LR, RL, BT, Degree */
+
+        .box1{
+            background: linear-gradient(violet, indigo, blue, green, yellow, orange, red);
+        }
+
+        .box2{
+            background: linear-gradient(to right,red, yellow);
+        }
+
+        .box3{
+            background: linear-gradient(to left,red, yellow);
+        }
+
+        .box4{
+            background: linear-gradient(to top,red, yellow);
+        }
+
+        .box5{
+            background: linear-gradient(to bottom,red, yellow);
+        }
+
+        .box6{
+            background: linear-gradient(45deg,red, yellow);
+        }
+
+        .box7{
+            background: linear-gradient(-45deg,red, yellow);
+        }
+
+        .box8{
+            background: linear-gradient(red, rgba(255,0,0,0));
+        }
+
+        /* Repeating Linear Gradient */
+
+        .box9{
+            background: repeating-linear-gradient(red, yellow 10%, green 20%);
+        }
+
+        .box10{
+            background: repeating-linear-gradient(to right, red, yellow 10%, green 20%);
+        }
+
+        /* Radial Gradient : Center, RB, LB, LT, RT */
+
+        .box11{
+            background: radial-gradient(violet, indigo, blue, green, yellow, orange, red);
+        }
+
+        .box12{
+            background: radial-gradient(red 5%, yellow 25%, green 70%);
+        }
+
+        .box13{
+            background: radial-gradient(circle, red 5%, yellow 25%, green 70%);
+        }
+
+        .box14{
+            background: radial-gradient(closest-side at 80% 50%, red 5%, yellow 25%, green 70%);
+        }
+
+        .box15{
+            background: radial-gradient(farthest-side at 90% 10%, red 5%, yellow 25%, green 70%);
+        }   
+
+        .box16{
+            background: radial-gradient(closest-corner at 5% 5%, red 5%, yellow 25%, green 70%);
+        }
+
+        .box17{
+            background: radial-gradient(farthest-corner at 5% 5%, red 5%, yellow 25%, green 70%);
+        }
+
+        /* Repeating Radial Gradient */
+
+        .box18{
+            background: repeating-radial-gradient(red 30%, yellow 30%, green 40%);
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Linear Gradient : TB, LR, RL, BT, Degree -->
+
+    <div class="box box1">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box2">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box3">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box4">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box5">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box6">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box7">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box8">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <!-- Repeating Linear Gradient -->
+
+    <div class="box box9">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box10">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <!-- Radial Gradient : Center, RB, LB, LT, RT  -->
+
+    <div class="box box11">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box12">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box13">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box14">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box15">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box16">
+        Google LLC is an American multinational technology company.
+    </div>
+   
+    <div class="box box17">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <!-- Repeating Radial Gradient -->
+
+    <div class="box box18">
+        Google LLC is an American multinational technology company.
+    </div>
+
+</body>
+</html>

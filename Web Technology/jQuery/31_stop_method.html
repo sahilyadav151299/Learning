@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stop Method</title>
+
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            margin: 20px;
+            border: 1px solid black;
+            background-color: rosybrown;
+            position: relative;
+        }
+
+        button{
+            margin-left: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="box">
+        Yahoo Baba
+    </div>    
+
+    <button id="animateBtn">Animate</button>
+    <button id="stopBtn1">Stop One</button>
+    <button id="stopBtn2">Stop All</button>
+    <button id="stopBtn3">GoTo End</button>
+
+    <!-- jQuery Included -->
+    <script src="./jQuery.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+
+            $('#animateBtn').click(function(){ 
+                $('#box').animate({left: '200px'}, 3000);
+                $('#box').animate({fontSize: '25px'}, 2000);
+            });
+
+            // stop first animation
+            $('#stopBtn1').click(function(){
+                $('#box').stop();
+            });
+
+            // Stop all animation at once
+            $('#stopBtn2').click(function(){
+                $('#box').stop(true);
+            });
+
+            // Stop animtaion immediately at the end
+            $('#stopBtn3').click(function(){
+                $('#box').stop(true, true);
+            });
+           
+            // Stop also works with slide and fade methods
+        });
+    </script>
+
+</body>
+</html>

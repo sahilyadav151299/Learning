@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event data</title>
+
+    <style>
+        #box{
+            background-color: peru;
+            width: 450px;
+            height: 200px;
+            padding: 5px 20px;
+            color: white;
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, perferendis.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt cupiditate tempora consequatur, vero asperiores dolore accusantium ratione magnam ea odit?</p>
+    </div>
+
+    <!-- jQuery Included -->
+    <script src="./jQuery.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            
+            $('p').each(function(i){
+
+                $(this).on('click', {value:i}, function(e){
+                    alert(e.data.value);
+                })
+            })
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        // 1) Function hoisting : func definition is available 
+        foo()
+
+        function foo(){
+            alert("Function foo() is called before it's declared!")
+        }
+
+
+        // 2) Variable can hold a function definition
+        
+        
+        var funExp = function() {
+            
+            return 1890
+        }                   // annonymous function
+
+        alert(funExp)       // func definition
+        alert(funExp())     // return value
+
+        // 3) Can return func() as value
+
+        function outerFun(){
+
+            var innerFun = function() {
+                return 1213
+            }
+
+            return innerFun
+        }
+
+        var returnFuc = outerFun()
+
+        alert(returnFuc)     // func definition
+        alert(returnFuc())   // return value
+
+
+        function outerFun1(){
+
+            function innerFun1() {
+                return 1213
+            }
+
+            return innerFun1
+        }
+
+        var returnF = outerFun1()
+        
+        alert(returnF)      // func definition
+        alert(returnF())    // return value
+        
+        // 4) Can pass func() as function parameter
+
+        
+
+
+    </script>
+
+</body>
+</html>

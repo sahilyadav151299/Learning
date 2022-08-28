@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var person = {
+
+            fname : "Sahil",
+            lname : "Yadav"
+        }
+
+        var customer = {
+          
+            fname : "Bheem",
+            lname : "Singh",
+            code  : 12012
+        }
+
+
+        function getFullName(address, location){
+
+            return this.fname + " " + this.lname + " " + address
+        }
+
+        // When multiple object has some common properties and
+        // some method can work on the common properties so
+        // we can call that method using call() or apply()
+
+        alert(getFullName.call(person, "Pune", "Patna"))
+
+        alert(getFullName.apply(customer, ["Pune", "Patna"]))
+ 
+        
+        
+        // 2) Classical Inheritance
+          
+        function Parent(relation) {
+
+            this.relation = relation
+            this.jobs = ["Service", "Bussiness"]
+
+            this.show = function() {
+
+                alert(this.relation)
+            }
+        }
+
+
+        Parent.prototype.protoMethod = function() {
+
+            alert("Parent's prototype level method is called!")
+        }
+
+        console.log(Parent.prototype)           // Inherited Object Class
+        console.log(Child.prototype)            // Inherited Object Class
+
+
+        function Child(rel) {
+
+            // call Parent class/constructor and pass values if required
+            // this ---> Child
+
+            Parent.call(this, rel)
+        }
+
+        var child1 = new Child("Son")           
+        var child2 = new Child("Daughter")      
+
+        child1.show() 
+        child2.show() 
+
+        child1.jobs.push("IT")                 
+
+        document.write(child1.jobs + "<br/>")
+        document.write(child2.jobs + "<br/>")
+
+
+        child1.protoMethod()        // A
+
+        // Uncaught TypeError: child1.protoMethod is not a function
+
+        // Resolve both issue A & B, But
+        
+        // Drawback of Classical Inheritance
+        // A) Child can't access members defined at parent's prototype level 
+
+    </script>
+</body>
+</html>

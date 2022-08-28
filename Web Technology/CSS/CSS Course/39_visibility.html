@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Visibility</title>
+
+    <style>
+    
+        .box1{
+            /* hide + don't leave its place */
+            visibility: hidden;
+        }
+    
+        .box2{
+            /* default value */
+            visibility: visible;
+        }
+
+        .box3{
+            /* only works on table + made for table */
+            visibility: collapse;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h2 class="box1">Yahoo Baba : List</h2>
+
+    <ul class="box2">
+        <li>Orange</li>
+        <li>Mango</li>
+        <li>Banana</li>
+        <li>Apple</li>
+    </ul>
+
+    <table border="1px solid black">
+        <tr>
+            <th class="box3">ID</th>
+            <th>NAME</th>
+        </tr>
+        <tr class="box3">
+            <td>101</td>
+            <td>Yahoo</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>Baba</td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        div{
+            margin: 5px;
+        }
+
+        p{
+            font-size: x-large;
+        }
+
+        #opener{
+            color: green;
+        }
+
+        .closer{
+            background-color: peachpuff;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <p id='opener'>First Paragraph!</p>
+
+    <p>Second Paragraph!</p>
+
+    <p class='closer'>Third Paragraph!</p>
+
+    <p class='closer'>Fourth Paragraph!</p>
+
+    <div class='closer'>This is div with class closer!</div>
+
+    <div>This is simple div!</div>
+
+    <br/>
+
+    <span>This is outer span!</span>
+
+    <div>
+        <span>This is inner span to div!</span>
+        <br />
+        <span>This is one more inner span to div!</span>
+        <br>
+    </div>
+
+    <button id='btnChange'>Change!</button>
+
+    <script>
+        
+        document.getElementById('btnChange').onclick = function() {
+
+            // return single element
+            var element = document.getElementById('opener')
+
+            // change style 
+            element.style.backgroundColor = 'grey'
+            element.style.color = 'white'
+
+            // return array of div tag
+            var element = document.getElementsByTagName('div')
+
+            for ( var i in element){
+
+                element[i].style.backgroundColor = 'red'
+                element[i].style.fontSize = '20px'
+            }
+
+            // return array of class tag
+            var element = document.getElementsByClassName('closer')
+
+            for ( var i in element){
+
+                element[i].style.backgroundColor = 'blue'
+                element[i].style.fontSize = '20px'
+            }
+
+            // select all span whose parent is div : to see the effect, comment rest code
+            var elements = document.querySelectorAll('div > span')
+
+            for ( var i in elements){
+
+                elements[i].style.backgroundColor = 'green'
+                elements[i].style.fontSize = '20px'
+            }
+
+            // add element : to see the effect, comment rest code
+            var newTag = document.createElement('div')
+
+            newTag.innerText = 'This is a new div'
+            newTag.style.background = 'palegreen'
+            newTag.style.width = '200px'
+
+            // can added at any tag    
+            document.body.appendChild(newTag)
+
+            // remove element : to see the effect, comment rest code
+            var element = document.getElementById('opener')
+
+            // remove from wherever you want    
+            document.body.removeChild(element)
+        }
+        
+    </script>
+
+</body>
+</html>

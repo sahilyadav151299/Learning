@@ -1,0 +1,14 @@
+Using Express Router        Router Module    
+Adding a 404 Error Page     At Last 
+Filtering Paths             Common Paths
+Creating HTML Pages         Views
+Serving HTML Pages          res.sendFile()
+Helper Fuctions             To get root dir
+CSS BEM Styling             A method of styling   
+Serving Files Statically
+
+
+npm init
+npm install nodemon --save-dev          development dependency
+npm install express --save              production dependency
+npm install body-parser --save 

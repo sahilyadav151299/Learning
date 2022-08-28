@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Resize</title>
+
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            color: white;
+            margin: 20px;
+            float: left;
+            background-color: cadetblue;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        .box1{
+            /* required helper property */
+            overflow: auto;
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .box2{
+            overflow: auto;
+            resize: horizontal;
+            max-width: 400px;
+        }
+
+        .box3{
+            overflow: scroll;
+            resize: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        <h2>Resize The Div</h2>
+    </div>
+
+    <div class="box box2">
+        <h2>Resize The Div</h2>
+    </div>
+
+    <div class="box box3">
+        <h2>Resize The Div</h2>
+    </div>
+
+    <textarea class="box" name="" id="" cols="30" rows="10" style="resize: none;">
+        This is a textarea having auto resize property
+        resize : none 
+        will disable the property + add overflow auto
+    </textarea>
+</body>
+</html>

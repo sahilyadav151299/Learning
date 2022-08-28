@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Mix Blend Mode</title>
+
+    <style>
+
+        .box{
+            border: 2px solid black;
+            width: 500px;
+            font-size: 30px;
+            padding-left: 60px;
+            float: left;
+            margin: 5px;
+        }
+        
+        h1.first{
+            color: red;
+        }
+
+        h1.second{
+            color: gold;
+            margin-top: -90px;
+            margin-left: 5px;
+        }
+
+        .mode1{
+            mix-blend-mode: normal;
+        }
+
+        .mode2{
+            mix-blend-mode: overlay;
+        }
+
+        .mode3{
+            mix-blend-mode: hard-light;
+        }
+
+        .mode4{
+            mix-blend-mode: difference;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="box">
+        <h1 class="first">Mix-Blend Mode</h1>
+        <h1 class="second mode1">Mix-Blend Mode</h1>
+    </div>
+
+    <div class="box">
+        <h1 class="first">Mix-Blend Mode</h1>
+        <h1 class="second mode2">Mix-Blend Mode</h1>
+    </div>
+
+    <div class="box">
+        <h1 class="first">Mix-Blend Mode</h1>
+        <h1 class="second mode3">Mix-Blend Mode</h1>
+    </div>
+
+    <div class="box">
+        <h1 class="first">Mix-Blend Mode</h1>
+        <h1 class="second mode4">Mix-Blend Mode</h1>
+    </div>
+</body>        

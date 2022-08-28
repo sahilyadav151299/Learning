@@ -1,0 +1,15 @@
+SQL (MySQL) vs NoSQL (MongoDB)
+Setting Up MySQL
+Connecting our App to the SQL Database
+Basic SQL & Creating a Table
+Retrieving Data
+Fetching Products
+Inserting Data Into the Database
+Fetching a Single Product with the 'where' Condition
+
+npm init
+npm install nodemon --save-dev          development dependency
+npm install express --save              production dependency
+npm install body-parser --save 
+npm install --save ejs pug express-handlebars   (3 pkg at once) 
+npm install --save mysql2

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Units</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            background-color: tan;
+            margin: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .box1{
+            /* fixed : scroll with window */
+            width: 1000px;
+            height: 50px;
+        }
+
+        .box2{
+            /* responsive : 70% of the parent body (or div) */
+            width: 70%;
+            height: 50px;
+        }
+
+        .box3{
+            /* 1em = 16px default in body(browser font setting)  
+               change font-size in body or browser to see the effect
+               em is relative to parent, in this case parent is body
+            */
+            font-size: 1em;
+        }
+
+        .box31{
+            font-size: 20px;   
+        }
+        
+        .box32{
+            /* em is relative to parent, in this case parent is box31 */
+            font-size: 1em;
+        }
+
+        .box4{
+            font-size: 1rem;
+            /* this works accroding to font-size */
+            width: 15rem;
+        }
+
+        .box5{
+            width: 50vw;
+            height: 50vh;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        .box6{
+            width: 70vmax;
+            height: 50vh;
+        }
+
+        .box7{
+            width: 70vmin;
+            height: 50vh;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+        Absolute or Fixed Units 
+        cm, mm, in, px (max used),   
+        pt - points, 
+        pc - picas
+    -->
+
+    <!-- 
+        Relative Units Depends on relative div, window etc
+        %, ch, ex, em - used for font size,
+        rem  - relative em
+        vw   - viewport width
+        vh   - viewport height
+        vmax - viewport maximum
+        vmin - viewport minimum 
+    -->
+
+    <div class="box box1">
+        Fixed px
+    </div>
+    
+    <div class="box box2">
+        Works according to parent
+        Responsive %
+    </div>
+
+    <div class="box box3">
+        EM Unit For Font-Size Relative to parent (in this case body or browser font-size)
+    </div>
+
+    <div class="box box31">
+        Hey Box31
+        <div class="box32">
+            EM Units Relative to parent (in this case div)
+        </div>
+    </div>
+
+    <div class="box box4">
+        REM Unit Work According To Either Root (html tag) or Browser Font Settings,
+        Not According to Parent
+    </div>
+
+    <div class="box box5">
+        Works accroding to viewport only
+        Viewport width : window width
+        Viewport height : window height
+    </div>
+
+    <div class="box box6">
+        Viewport Maximum : Works according to max-size of (w) or (h) 
+        70 of (w) or (h) whichever is max in size
+    </div>
+
+    <div class="box box7">
+        Viewport Minimum : Works according to min-size of (w) or (h) 
+        70 of (w) or (h) whichever is min in size
+    </div>
+
+</body>
+</html>

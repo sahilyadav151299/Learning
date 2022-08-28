@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid Gap</title>
+
+    <style>
+        .container{
+            background: #eeeeee;
+            width: 400px;
+            margin: 20px;
+            float: left;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px;
+           
+        }
+
+        .container1{
+            /* Row gap, Col gap */
+            grid-gap: 15px 20px;
+        }
+
+        .container2{
+            grid-row-gap: 20px;
+        }   
+
+        .container3{
+            grid-column-gap: 20px;
+            
+        }
+
+        .items{
+            text-align: center;
+            line-height: 100px;
+            color: black;
+            font-weight: bolder;
+        }
+
+        .items1{
+            background-color: orangered;
+        }
+
+        .items2{
+            background-color: teal;
+        }
+
+        .items3{
+            background-color: tan;
+        }
+
+        .items4{
+            background-color: khaki;
+        }
+
+        .items5{
+            background-color: slategrey;
+        }
+
+        .items6{
+            background-color: hotpink;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="items items1">First</div>
+        <div class="items items2">Second</div>
+        <div class="items items3">Third</div>
+        <div class="items items4">Fourth</div>
+        <div class="items items5">Fifth</div>
+        <div class="items items6">Sixth</div>
+    </div>
+
+    <div class="container container1">
+        <div class="items items1">First</div>
+        <div class="items items2">Second</div>
+        <div class="items items3">Third</div>
+        <div class="items items4">Fourth</div>
+        <div class="items items5">Fifth</div>
+        <div class="items items6">Sixth</div>
+    </div>
+
+    <div class="container container2">
+        <div class="items items1">First</div>
+        <div class="items items2">Second</div>
+        <div class="items items3">Third</div>
+        <div class="items items4">Fourth</div>
+        <div class="items items5">Fifth</div>
+        <div class="items items6">Sixth</div>
+    </div>
+    
+    <div class="container container3">
+        <div class="items items1">First</div>
+        <div class="items items2">Second</div>
+        <div class="items items3">Third</div>
+        <div class="items items4">Fourth</div>
+        <div class="items items5">Fifth</div>
+        <div class="items items6">Sixth</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+    
+    <style>
+        .container{ border: 2px solid black; }
+        .col, .col-md-5, .col-md-4, .col-md-3{ padding: 30px; }
+        .first{ background-color: royalblue; }
+        .second{ background-color: palevioletred; }
+        .third{ background-color: slategray; }
+        .fourth{ background-color: peru; }
+    </style>
+</head>
+<body>
+
+    <!--    
+            All Breakpoints  -   .order-first        .order-last
+            Extra large      -   .order-xl-first     .order-xl-last
+            Large            -   .order-lg-first     .order-lg-last  
+            Medium           -   .order-md-first     .order-md-last
+            Small            -   .order-sm-first     .order-sm-last
+    -->
+    
+    <!-- Default Order Classes For All Breakpoints -->
+    <div class="container">
+        <h6>Default Order Classes For All Breakpoints</h6>
+        <div class="row">
+            <div class="col first">Col 1 div</div>
+            <div class="col second">Col 2 div</div>
+            <div class="col third">Col 3 div</div>
+            <div class="col fourth">Col 4 div</div>
+        </div>
+    </div>
+
+    <!--  Reordering of Classes For All Breakpoints -->
+    <div class="container">
+        <h6>Reordering of Classes For All Breakpoints</h6>
+        <div class="row">
+            <div class="col order-last first">Col 1 div</div>
+            <div class="col second">Col 2 div</div>
+            <div class="col order-first third">Col 3 div</div>
+            <div class="col fourth">Col 4 div</div>
+        </div>
+    </div>
+
+    <!--  Reordering of Classes With Breakpoint -->
+    <div class="container">
+        <h6>Reordering of Classes With Breakpoint</h6>
+        <div class="row">
+            <div class="col order-md-last first">Col 1 div</div>
+            <div class="col second">Col 2 div</div>
+            <div class="col order-md-first third">Col 3 div</div>
+            <div class="col fourth">Col 4 div</div>
+        </div>
+    </div>
+
+    <!--    
+            To reorder all the cols we have .order-n
+
+            .order-0    First Place
+            .order-1    Second Place
+            .order-2    Third Place
+
+            All Breakpoints  -   .order-n       (n : 0-12)       
+            Extra large      -   .order-xl-n    (n : 0-12)  
+            Large            -   .order-lg-n    (n : 0-12)
+            Medium           -   .order-md-n    (n : 0-12)    
+            Small            -   .order-sm-n    (n : 0-12) 
+    -->
+
+    <!--  Reordering of All Col Classes For All Breakpoints -->
+    <div class="container">
+        <h6>Reordering of All Col Classes For All Breakpoints</h6>
+        <div class="row">
+            <div class="col order-2 first">Col 1 div</div>
+            <div class="col order-3 second">Col 2 div</div>
+            <div class="col order-4 third">Col 3 div</div>
+            <div class="col order-1 fourth">Col 4 div</div>
+        </div>
+    </div>
+
+    <!--  Reordering of All Col Classes With Breakpoint -->
+    <div class="container">
+        <h6>Reordering of All Col Classes With Breakpoint</h6>
+        <div class="row">
+            <div class="col order-md-2 first">Col 1 div</div>
+            <div class="col order-md-3 second">Col 2 div</div>
+            <div class="col order-md-4 third">Col 3 div</div>
+            <div class="col order-md-1 fourth">Col 4 div</div>
+        </div>
+    </div>
+
+     <!--  Reordering of All Col Classes With Breakpoint -->
+     <div class="container">
+        <h6>Reordering of All Col Classes With Breakpoint</h6>
+        <div class="row">
+            <div class="col-md-5 order-md-1 first">Col 1 div</div>
+            <div class="col-md-3 order-md-3 second">Col 2 div</div>
+            <div class="col-md-4 order-md-2 third">Col 3 div</div>
+        </div>
+    </div>
+
+    <!--  Reordering of All Col Classes With Breakpoint -->
+    <div class="container">
+        <h6>Reordering of All Col Classes With Breakpoint</h6>
+        <div class="row">
+            <div class="col-md-5 order-md-1 order-sm-3 first">Col 1 div</div>
+            <div class="col-md-3 order-md-3 order-sm-2 second">Col 2 div</div>
+            <div class="col-md-4 order-md-2 order-sm-1 third">Col 3 div</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 order-md-2 second">
+                <h1>Heading</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident molestiae non nemo rem quas id atque. Porro, aut alias? Perspiciatis, fugiat? Similique minus iusto sint cum, quam magni impedit quos eos laborum voluptate perferendis esse! Voluptatem incidunt labore optio sit sint. Aperiam modi, eum unde iste libero laudantium recusandae id repellendus impedit, in error ipsum cum, voluptatibus ad. Animi quisquam dolorem ipsum, illum nobis quod quasi ducimus in non rerum nam voluptatum delectus ipsa odio deleniti dicta perferendis inventore quaerat optio? Ipsa illum minus praesentium culpa. Voluptates eveniet totam dolor incidunt impedit libero amet ratione enim rerum id. Cupiditate, sapiente.</p>
+            </div>
+            <div class="col-md-4 order-md-1 third">
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Gallery</li>
+                    <li>Products</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

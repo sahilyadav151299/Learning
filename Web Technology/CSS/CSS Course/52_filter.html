@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Filter</title>
+
+    <style>
+        img{
+            width: 225px;
+            margin: 10px;
+        }
+
+        .box1{
+            filter: blur(5px);
+        }
+
+        .box2{
+            /* default : 100% */
+            filter: brightness(500%);
+        }
+
+        .box3{
+            /* default : 100% */
+            filter: brightness(0%);
+        }
+
+        .box4{
+            /* default : 100% */
+            filter: contrast(300%);
+        }
+
+        .box5{
+            filter: contrast(0);
+        }
+
+        .box6{
+            /* x-axis y-axis blur */
+            filter: drop-shadow(5px 5px 3px grey);
+        }
+
+        .box7{
+            /* x-axis y-axis blur */
+            filter: drop-shadow(-5px -5px 3px grey);
+        }
+
+        .box8{
+            /* default : 0, max : 100% */
+            filter: grayscale(100%);
+        }
+
+        .box9{
+            /* default : 0deg, max : 360deg */
+            filter: hue-rotate(150deg);
+        }
+
+        .box10{
+            /* default : 0, max : 100% */
+            filter: invert(100%);
+        }
+
+        .box11{
+            filter: opacity(50%);
+        }
+
+        .box12{
+            /* default : 100% */
+            filter: saturate(60%);
+        }
+
+        .box13{
+            /* default 0, max : 100% */
+            filter: sepia(100%);
+        }
+
+        .box14{
+            filter: none;
+        }
+
+        .box15{
+            filter: blur(2px) brightness(200%);
+        }
+    </style>
+</head>
+<body>
+    
+    <img src="./images/bruce3.jpg" class="box1">
+
+    <img src="./images/bruce3.jpg" class="box2">
+
+    <img src="./images/bruce3.jpg" class="box3">
+
+    <img src="./images/bruce3.jpg" class="box4">
+
+    <img src="./images/bruce3.jpg" class="box5">
+
+    <img src="./images/bruce3.jpg" class="box6">
+
+    <img src="./images/bruce3.jpg" class="box7">
+
+    <img src="./images/bruce3.jpg" class="box8">
+
+    <img src="./images/bruce3.jpg" class="box9">
+
+    <img src="./images/bruce3.jpg" class="box10">
+
+    <img src="./images/bruce3.jpg" class="box11">
+
+    <img src="./images/bruce3.jpg" class="box12">
+
+    <img src="./images/bruce3.jpg" class="box13">
+
+    <img src="./images/bruce3.jpg" class="box14">
+    
+    <img src="./images/bruce3.jpg" class="box15">
+
+</body>
+</html>

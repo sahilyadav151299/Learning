@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Attribute Function</title>
+    
+    <style>
+        p{
+            font-size: 30px;
+        }
+
+        .demo1:hover::after{
+            color: red;
+            /* get value of class attribute */
+            content: attr(class);
+        }
+
+        .demo1::before{
+            color: red;
+            /* custom attribute */
+            content: attr(data-head);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <p class="demo1" data-head="Tutorial"> Yahoo Baba </p>
+    
+</body>
+</html>

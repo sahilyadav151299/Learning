@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Var & Function</title>
+
+
+    <style>
+        /* pseudoclass variables with global scope */
+        :root{
+            /* --<idenftier> : <value> */
+            --main-color: crimson;
+            --title-color: white;
+            --font: Arial, Helvetica, sans-serif
+        }
+
+        body{
+            font-family: var(--font);
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrapper{
+            /* variable with local scope + use with any tag within the wrapper */
+            --box-width : 1000px;
+            background-color: var(--title-color);
+            margin: 0 auto;
+            width: var(--box-width);
+        }
+
+        #header{
+            background-color: var(--main-color);
+            height: 100px;
+            color: var(--title-color);
+        }
+
+        #header h1{
+            text-align: center;
+            padding-top: 30px;
+            margin: 0;
+        }
+
+        #menu{
+            background-color: lightsalmon;
+        }
+
+        #menu ul{
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu li{
+            display: inline-block;
+        }
+
+        #menu li a{
+            display: block;
+            padding: 10px 10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        #menu li a:hover{
+            background-color: var(--main-color);
+        }
+
+        #content{
+            width: 800px;
+            padding: 10px 15px;
+            float: left;
+            min-height: 400px;
+            box-sizing: border-box;
+        }
+
+        #content h2{
+            color: var(--main-color);
+        }
+
+        #sidebar{
+            background-color: lightskyblue;
+            width: 200px;
+            min-height: 400px;
+            float: right;
+        }
+
+        #sidebar a{
+            text-decoration: none;
+            color: black;
+        }
+
+        #footer{
+            background-color: var(--main-color);
+            color: var(--title-color);
+            padding: 10px 10px;
+            text-align: right;
+            clear: both;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div id='wrapper'>
+
+        <div id='header'>
+            <h1>Yahoo Baba</h1>
+        </div>
+
+        <div id='menu'>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div id='content'>
+            <h2>Basic Design HTML Layout</h2>
+
+            <p>
+                Google LLC is an American multinational technology company that specializes in 
+                Internet-related services and products, which include online advertising technologies, 
+                a search engine, cloud computing, software, and hardware.
+        
+                Google LLC is an American multinational technology company that specializes in 
+                Internet-related services and products, which include online advertising technologies, 
+                a search engine, cloud computing, software, and hardware.
+            </p>
+
+            <p>
+                Google LLC is an American multinational technology company that specializes in 
+                Internet-related services and products, which include online advertising technologies, 
+                a search engine, cloud computing, software, and hardware.
+        
+                Google LLC is an American multinational technology company that specializes in 
+                Internet-related services and products, which include online advertising technologies, 
+                a search engine, cloud computing, software, and hardware.
+            </p>
+
+        </div>
+
+        <div id='sidebar'>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div id='footer'>
+            yahoobaba@copyright2021
+        </div>
+    </div>
+
+</body>
+</html>

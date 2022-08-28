@@ -1,0 +1,57 @@
+@media (max-width: 700px){
+
+    .nav-links ul li{
+        display: block;
+    }
+
+    .nav-links{
+        /* fixed for side bar hide */
+        position: fixed; 
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+    }
+
+    .nav-links ul{
+        padding: 30px;
+    }
+
+    /* Menu + Close Icons */
+    nav .fa{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22p;
+        cursor: pointer;
+    }
+
+    .text-box h1{
+        font-size: 20px;
+    }
+
+    /* Courses */
+    .row{
+        flex-direction: column;
+    }
+
+    /* Testimonials */
+    .testimonials-col img{
+        height: 40px;
+        margin-left: 0;
+        margin-right: 15px;
+    }
+
+    /* Call To Action */
+    .cta h1{
+        font-size: 20px;
+    }
+
+    .icons{
+        margin-top: 40px;
+    } 
+}

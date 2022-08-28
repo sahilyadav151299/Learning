@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Flex Margin</title>
+
+    <style>
+        .container{
+            background: #eeeeee;
+            width: 200px;
+            height: 200px;
+            margin: 30px;
+            border: 2px solid black;
+            float: left;
+            display: flex;
+        }
+      
+        .items{ 
+            padding: 10px;
+            color: white;
+            font-size: 20px;
+            font-weight: bolder;
+            text-align: center;
+            box-sizing: border-box;
+            background-color: crimson;
+        }
+
+        .item1{ 
+            margin: auto;
+        }
+        .item2{ 
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        .item3{ 
+            margin-top: auto;
+            margin-left: auto;
+        }
+        .item4{ 
+            margin-bottom: auto;
+            margin-left: auto;
+        }
+
+        .item11{ 
+            background-color: tan;
+            margin-top: auto;
+        }
+        .item22{ 
+            background-color: teal; 
+            margin-left: auto;
+            margin-bottom: auto;
+        }
+        .item33{ 
+            background-color: midnightblue;
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="items item1">One</div>
+    </div>
+
+    <div class="container">
+        <div class="items item2">One</div>
+    </div>
+
+    <div class="container">
+        <div class="items item3">One</div>
+    </div>
+
+    <div class="container">
+        <div class="items item4">One</div>
+    </div>
+
+    <div class="container">
+        <div class="items item11">One</div>
+        <div class="items item22">Two</div>
+        <div class="items item33">Three</div>
+    </div>
+
+
+</body>
+</html>
+

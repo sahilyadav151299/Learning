@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Background Clip</title>
+
+    <style>
+        body{
+            background: slategrey;
+        }
+
+        .box{
+            width: 450px;
+            height: 200px;
+            border: 5px dashed black;
+            background-color: wheat;
+            margin: 10px;
+            padding: 20px;
+            float: left;
+            text-align: justify;
+        }
+
+        .box1{
+            background-clip: content-box;
+        }
+
+        .box2{
+            background-clip: padding-box;
+        }
+
+        /* Default value */
+        .box3{
+            background-clip: border-box;
+        }
+
+        .box4{
+            color: transparent;
+            background-image: url('./images/bruce1.jpg');
+            font-family: Impact;
+            /* -webkit-background-clip: text; */
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="box box1">
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </div>
+
+    <div class="box box2">
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </div>
+
+    <div class="box box3">
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </div>
+
+    <div class="box box4">
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </div>
+
+</body>
+</html>

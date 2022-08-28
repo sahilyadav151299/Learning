@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Backdrop Filter</title>
+
+    <style>
+        .container{
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            background-image: url(./images/bruce1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            float: left;
+            margin: 20px 50px;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .inner{
+            width: 180px;
+            height: 180px;
+            border: 2px solid white;
+            text-align: center;
+            color: white;
+
+            transition: backdrop-filter .5s;
+        }
+
+        .box1{ backdrop-filter: blur(2px); }
+        .box2{ 
+            background-color: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(2px); 
+        }
+        .box3{ backdrop-filter: brightness(200%); }
+        .box4{ backdrop-filter: contrast(30%); }
+        .box5{ backdrop-filter: hue-rotate(200deg); }
+        .box6{ backdrop-filter: invert(80%); }
+        .box7{ backdrop-filter: sepia(100%); }
+        .box8{ backdrop-filter: saturate(20%); }
+        .box9{ backdrop-filter: blur(2px) sepia(100%); }
+
+        .inner:hover{
+            backdrop-filter: blur(5px); 
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="inner box1">
+            <h1>Yahoo Baba</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="inner box2">
+            <h1>Yahoo Baba</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="inner box3"></div>
+    </div>
+
+    <div class="container">
+        <div class="inner box4"></div>
+    </div>
+
+    <div class="container">
+        <div class="inner box5"></div>
+    </div>
+
+    <div class="container">
+        <div class="inner box6"></div>
+    </div>
+
+    <div class="container">
+        <div class="inner box7"></div>
+    </div>
+
+    <div class="container">
+        <div class="inner box8"></div>
+    </div>
+
+    <div class="container">
+        <div class="inner box9"></div>
+    </div>
+</body>
+</html>

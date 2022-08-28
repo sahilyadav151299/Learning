@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+    // Array object
+
+    var arr = [10, 20, 30 ,40]
+    document.write("Type of array : " + typeof(arr) + "<br/>")
+
+    // Date object
+
+    var date = new Date()
+
+    document.write(date + "<br/>")
+    document.write(date.getDate() + "<br/>")
+    document.write(date.getDay() + "<br/>")
+    document.write(date.getMonth() + "<br/>")
+    document.write(date.getFullYear() + "<br/>")
+    document.write(date.getHours() + "<br/>")
+    document.write(date.getMinutes() + "<br/>")
+
+    // Math object
+
+    var val1 = Math.pow(5, 3)
+    document.write("3 power of 5 : " + val1 + "<br/>")
+
+    var val2 = Math.random()
+    document.write("Random value : " + val2 + "<br/>")
+
+    // Hitrogeneous array object
+
+    function foo(){
+        alert("Foo!")
+    }
+
+    var mixedArr = [arr, date, val1, val2, foo]
+
+    for (var i in mixedArr) {
+
+        document.write(mixedArr[i] + "<br/>")
+    }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+Model View Controller (MVC)             Data/View HTML/Connection Point Router(Middlewares)
+Adding Controllers                      Controllers/-------
+Adding a Product Model                  Models/ Class
+Storing Data in Files Via the Model     JSON format    
+Fetching Data from Files Via the Model  Callback    
+Refactoring the File Storage Code       Resuse Code
+
+MVC pattern implemented into our project.
+
+npm init
+npm install nodemon --save-dev          development dependency
+npm install express --save              production dependency
+npm install body-parser --save 
+npm install --save ejs pug express-handlebars   (3 pkg at once) 

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Position</title>
+
+    <style>
+        .box{
+            width: 500px;
+            height: 100px;
+        }
+
+        .box0{
+            background-color: slategray;
+            /* This won't work with static : default */
+            /* position: static;
+            left: 100px;
+            top:100px */
+        }
+
+        .box1{
+            background-color: lightblue;
+            /* measure with respect to the original/static/defualt position  */
+            position: relative;
+            left: 100px;
+            top: 10px
+        }
+
+        .box2{
+            /* measure with repect to the browser window,
+               default lift from z-index */
+            background-color: lightcoral;
+            position: absolute;
+            left: 600px
+        }
+
+        .box3{
+            /* Fixed even after scrolling */
+            background-color: lightgoldenrodyellow;
+            position: fixed;
+            right: 50px;
+            top: 50px
+        }
+
+        .box4{
+            /* fixed when it meets the top width */
+            /* not supported in IE browser */
+            background-color: lightgrey;
+            position: sticky;
+            top: 200px
+        }
+
+        .outer{
+            width: 200px;
+            height: 200px;
+            background-color: lightseagreen;
+        }
+
+        .relative{
+            width: 70px;
+            height: 70px;
+            background-color: bisque;   
+            position: relative;
+            right: -130px;
+            bottom: -130px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Positio Property : Static, Relative, Absolute, Fixed, Sticky -->
+    <!-- Necessary with Position : Left or Right + Top or Bottom -->
+
+    <p>
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </p>
+
+    <div class="box box0">Static</div>
+
+    <p>
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </p>
+
+    <div class="box box1">Relative</div>
+
+    <p>
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </p>
+
+    <div class="box box2">Absolute</div>
+
+    <p>
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </p>
+
+    <div class="box box3">Fixed</div>
+
+    <p>
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </p>
+
+    <div class="box box4">Sticky</div>
+
+    <pre>
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </pre>
+
+
+    <div class="outer">
+        <div class="relative"></div>
+    </div>
+
+</body>
+</html>

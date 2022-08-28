@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Display Flow Root</title>
+
+    <style>
+        .parent{
+            width: 400px;
+            margin: 50px 20px;
+            border: 2px solid black;
+        }
+
+        .child{
+            margin-right: 20px;
+            width: 80px;
+            height: 80px;
+            background: red;
+            float: left;
+        }
+
+        /* Problem */
+        .p0{
+            margin-bottom: 100px;
+        }
+
+        /* Solution 1 : Recommended */
+        .p1{
+            display: flow-root;
+        }
+
+        /* Solution 2 : Not Recommended Not Supported Everywhere */
+        .p2{
+            overflow: auto;
+        }
+
+        /* Solution 3 : Not Recommended Not Supported Everywhere*/
+        .p3::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+       
+    </style>
+
+</head>
+<body>
+    
+    <div class="parent p0">
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+
+    <div class="parent p1">
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+
+    <div class="parent p2">
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+
+    <div class="parent p3">
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+
+</body>
+</html>

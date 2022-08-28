@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+    
+    <style>
+        .container, .row{ border: 2px solid black;}
+        .first{ background-color: royalblue; }
+        .second{ background-color: palevioletred; }
+        .third{ background-color: teal; }
+        .fourth{ background-color: darkgoldenrod; }
+    </style>
+</head>
+<body>
+
+    <!-- 
+        Fixed Vertical Alignment : X axis
+
+        Col height == col content
+
+        .align-items-start      :   align items from top
+        .align-items-center     :   align items from center
+        .align-items-end        :   align items at the bottom
+        .align-items-stretch    :   equal height of all items
+        .align-items-baseline   :   equal height of from baseline
+
+
+        Responsive Vertical Alignment : X axis
+
+        Extra Large     :   .align-items-xl-start   .align-items-xl-center  .align-items-xl-end    .align-items-xl-stretch     .align-items-xl-baseline
+        Large           :   .align-items-lg-start   .align-items-lg-center  .align-items-lg-end    .align-items-lg-stretch     .align-items-lg-baseline
+        Medium          :   .align-items-md-start   .align-items-md-center  .align-items-md-end    .align-items-md-stretch     .align-items-md-baseline
+        Small           :   .align-items-sm-start   .align-items-sm-center  .align-items-sm-end    .align-items-sm-stretch     .align-items-sm-baseline
+
+    -->
+
+    <div class="container">
+        <h6>align-items-start</h6>
+        <div class="row align-items-start">
+            <div class="col-md-3 first">Lorem ipsum dolor sit amet.</div>
+            <div class="col-md-3 second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam!</div>
+            <div class="col-md-3 third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet consequuntur perferendis similique, ut quo recusandae?</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>align-items-cnter</h6>
+        <div class="row align-items-center">
+            <div class="col-md-3 first">Lorem ipsum dolor sit amet.</div>
+            <div class="col-md-3 second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam!</div>
+            <div class="col-md-3 third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet consequuntur perferendis similique, ut quo recusandae?</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>align-items-end</h6>
+        <div class="row align-items-end">
+            <div class="col-md-3 first">Lorem ipsum dolor sit amet.</div>
+            <div class="col-md-3 second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam!</div>
+            <div class="col-md-3 third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet consequuntur perferendis similique, ut quo recusandae?</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>align-items-stretch</h6>
+        <div class="row align-items-stretch">
+            <div class="col-md-3 first">Lorem ipsum dolor sit amet.</div>
+            <div class="col-md-3 second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam!</div>
+            <div class="col-md-3 third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet consequuntur perferendis similique, ut quo recusandae?</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>align-items-baseline</h6>
+        <div class="row align-items-baseline">
+            <div class="col-md-3 first" style="font-size: 20px;">Lorem ipsum dolor sit amet.</div>
+            <div class="col-md-3 second" style="font-size: 25px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam!</div>
+            <div class="col-md-3 third" style="font-size: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet consequuntur perferendis similique, ut quo recusandae?</div>
+        </div>
+    </div>
+
+
+</body>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="para1">This is a text</p>
+
+    <script>
+    
+        function $(id){
+            return document.getElementById(id)
+        }
+
+        // DOM Traversing 
+
+        document.write($('para1').childNodes.length + "<br/>")
+
+        document.write($('para1').firstChild.nodeValue + "<br/>")
+
+        document.write($('para1').innerText + "<br/>")
+
+        document.write($('para1').nodeName + "<br/>")
+
+        document.write($('para1').nodeType + "<br/>")
+
+        document.write($('para1').firstChild.nodeType + "<br/>")
+
+        // Node.ELEMENT_NODE   : 1  - An element node like <pr> | <div>
+        // Node.ATTRIBUTE_NODE : 2  - An attribute of an element
+        // Node.TEXT_NODE      : 3  - The actual text inside an element or attribute
+
+    </script>
+
+</body>
+</html>

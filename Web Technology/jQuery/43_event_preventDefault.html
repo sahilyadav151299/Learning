@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event preventDefault()</title>
+
+    <style>
+        #box{
+            background-color: peachpuff;
+            width: 400px;
+            height: 200px;
+            padding: 5px 20px;
+            color: white;
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">
+        <br>
+        <a id="a1" href="https://www.hackerrank.com/auth/login" target="blank">HackerRank</a>
+        <br> <br>
+        <a href="https://monkeytype.com/" target="blank">Monkey Typing</a>
+    </div>
+
+    <h2>Result Tag</h2>
+
+    <!-- jQuery Included -->
+    <script src="./jQuery.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            
+            $('#a1').click(function(e){
+                e.preventDefault();
+
+                var res = e.isDefaultPrevented();
+                $('h2').html(res);
+            });
+        });
+    </script>
+
+</body>
+</html>

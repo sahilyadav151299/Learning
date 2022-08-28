@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Attribute Selector</title>
+
+    <style>
+    /* ---------------- tag[attr] : Tag with specific attribute ---------------- */
+    img{
+        width: 100px;
+        margin: 10px;
+        background-color: blanchedalmond;
+    }
+
+    img[alt]{
+        /* select all image tag with alt attribute */
+        border-radius: 50px;
+    }
+
+    /* ---------------- tag[attr=val] : Tag with exact attribute value ---------------- */
+    input{
+        margin: 10px;
+    }
+
+    input[type='text']{
+        width: 200px;
+        background-color: honeydew;
+    }
+
+    /* ---------------- tag[attr^=val] : Tag attribute starts with value ---------------- */
+    img[alt^='Twitter']{
+        border: 2px solid black;
+    }
+
+    /* ---------------- tag[attr|=val] : Tag attribute start with value + dash used in value ---------------- */
+    img[alt|='Twitter']{
+        border: 2px solid black;
+    }
+
+    /* ---------------- tag[attr$=val] : Tag attribute ends with value ---------------- */
+    img[src$='.png']{
+        border: 2px solid black;
+    }
+
+    /* ---------------- tag[attr*=val] : Tag attribute value occurs anywhere ---------------- */
+    img[alt*='twitter']{
+        border: 2px solid black;
+    }
+
+    /* ---------------- tag[attr~=val] : Tag attribute value matches in space seprated list ---------------- */
+    img[alt~='Twitter']{
+        border: 2px solid black;
+    }
+
+    </style>
+</head>
+<body>
+    
+    <!-- tag[attr] : Tag with specific attribute -->
+    <img src="images/Telegram.png" alt="Telegram" class="box">
+    <img src="images/Telegram.png"> <hr>
+
+    <!-- tag[attr=val] : Tag with exact attribute value -->
+    <input type="text" placeholder="Enter Your First Name"> <br>
+    <input type="text" placeholder="Enter Your Last Name">  <br>
+    <input type="password" placeholder="Enter Password">    <hr>
+
+    <!-- tag[attr^=val] : Tag attribute starts with value -->
+    <img src="images/Twitter.png" alt="Twitter Image"> <hr>
+
+    <!-- tag[attr|=val] : Tag attribute start with value + dash used in value -->
+    <img src="images/Twitter.png" alt="Twitter- Image">
+    <img src="images/Twitter.png" alt="Twitter-Image"> <hr>
+
+    <!-- tag[attr$=val] : Tag attribute ends with value -->
+    <img src="images/Twitter.png" alt="Twitter">
+    <img src="images/smiley.jpg" alt="Smiley"> <hr>
+
+    <!-- tag[attr*=val] : Tag attribute value occurs anywhere -->
+    <img src="images/Twitter.png" alt="This is a-twitter image"> <hr>
+
+    <!-- tag[attr~=val] : Tag attribute value matches in space seprated list -->
+    <img src="images/Twitter.png" alt="This is a Twitter image">
+    
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Transition</title>
+
+    <style>
+        div{
+            margin: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            float: left;
+        }
+
+        /* Without Transition */
+        .box0{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .box0:hover{
+            width: 200px;
+        }
+
+        /* With Transition */
+        .box1{
+            transition-property: width;
+            transition-duration: 0.5s;
+        }
+
+        .box1:hover{
+            width: 200px;
+        }
+
+        /* With Transition */
+        .box2{
+            transition-property: width, height, background-color;
+            transition-duration: 2s, 2s, 2s;
+            /* transition: width, height, background-color, 2s, 2s, 2s; */
+            /* transition: all 2s; */
+        }
+
+        .box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover, .box7:hover{
+            width: 200px;
+            height: 200px;
+            background-color: steelblue;
+        }
+
+        /* Transition timing functions */
+        .box3{
+            transition: all 2s;
+            transition-timing-function: ease-in;
+        }
+
+        .box4{
+            transition: all 2s;
+            transition-timing-function: steps(10);
+        }
+
+        .box5{
+            transition: all 2s;
+            /* default start */
+            /* same as step-start, step-end */
+            transition-timing-function: steps(10, end);
+        }
+
+        .box6{
+            transition: all 2s;
+            transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+        }
+
+        .box7{
+            /* shorthand */
+            transition: all 2s linear 1s;
+            /* after 2s transition will start */
+            /* transition-delay: 1s; */
+        }
+
+        .box8{
+            transition: all 1s linear;
+        }
+
+        @media screen and (max-width: 800px){
+            .box8{
+                width: 250px;
+                height: 250px;
+            }
+        }
+      
+    </style>
+
+</head>
+<body>
+    
+    <div class="box0"></div>
+
+    <div class="box1"></div>
+
+    <div class="box2"></div>
+
+    <!-- 
+        Transition timing function values 
+        ease            - slow start, fast middle, slow end
+        linear          - same speed
+        ease-in         - slow start  
+        ease-out        - slow end
+        ease-in-out     - slow start and end
+        step-start      - very fast start
+        step-end        - very fast end
+        steps(4, end)   - steps speed
+        cubic-bezier    - lets you define your own value
+    -->
+
+    <div class="box3"></div>
+
+    <div class="box4"></div>
+
+    <div class="box5"></div>
+
+    <div class="box6"></div>
+
+    <div class="box7"></div>
+
+    <div class="box8"></div>
+
+</body>
+</html>

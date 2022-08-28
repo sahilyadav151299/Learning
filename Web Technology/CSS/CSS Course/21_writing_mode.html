@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Writing Mode</title>
+
+    <style>
+        .box{
+            width: 200px;
+            padding: 10px;
+            border: 2px solid black;
+            margin: 5px;
+        }
+
+        .box1{
+            /* default value */
+            writing-mode: horizontal-tb;
+        }
+
+        .box2{
+            writing-mode: vertical-lr;
+        }
+
+        .box3{
+            writing-mode: vertical-rl;
+        }
+
+        .box4{
+            /* only supported in firefox */
+            writing-mode: sideways-lr;
+        }
+
+        .box5{
+             /* only supported in firefox */
+            writing-mode: sideways-rl;
+        }  
+
+        .box6{
+            width: 30px;
+            writing-mode: vertical-lr;
+            text-orientation: upright;
+        } 
+
+        .box7{
+            writing-mode: vertical-rl;
+            /* default value */
+            text-orientation: mixed;
+        }  
+    </style>
+
+</head>
+<body>
+    
+    <div class="box box1">
+        Google
+    </div>
+
+    <div class="box box2">
+        Google
+    </div>
+
+    <div class="box box3">
+        Google
+    </div>
+
+    <div class="box box4">
+        Google
+    </div>
+
+    <div class="box box5">
+        Google
+    </div>
+
+    <div class="box box6">
+        Google    
+    </div>
+
+    <div class="box box7">
+        Google
+    </div>
+
+</body>
+</html>

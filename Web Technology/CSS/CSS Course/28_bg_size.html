@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Background Size</title>
+
+    <style>
+        body{
+            background: tan;
+        }
+
+        .box{
+            width: 500px;
+            height: 250px;
+            border: 2px solid black;
+            background-color: wheat;
+            margin: 10px;
+            float: left;
+
+            background-image: url('./images/border.png');
+            background-repeat: no-repeat;
+        }
+
+        /* Custome size */
+        .box1{
+            background-size: 500px 150px;
+        }
+
+        /* Cover whole div */
+        .box2{
+            background-size: cover;
+        }
+
+        /* Adjust full height and width */
+        .box3{
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box box1">
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </div>
+
+    <div class="box box2">
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </div>
+
+    <div class="box box3">
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+
+        Google LLC is an American multinational technology company that specializes in 
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </div>
+</body>
+</html>

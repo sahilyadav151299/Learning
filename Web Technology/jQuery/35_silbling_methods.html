@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sibling Methods</title>
+
+    <style>
+        #main-outer{
+            width: 500px;
+            height: 320px;
+            background-color: palevioletred;
+            position: relative;
+        }
+
+        #outer{
+            width: 450px;
+            height: 250px;
+            margin: auto;
+            background-color: peachpuff;
+        }
+
+        #inner{
+            width: 400px;
+            height: 180px;
+            margin: auto;
+            background-color: plum;
+        }
+
+        #inner div{
+            width: 80px;
+            height: 100px;
+            background: teal;
+            float: left;
+            margin: 0 10px;
+            text-align: center;
+            line-height: 90px;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Yahoo Baba</h1>
+
+    <div id="main-outer">  
+        <h2>Main Outer</h2>  
+        <div id="outer">
+            <h2>Outer</h2>
+            <div id="inner">
+                <h2 id="child-head">Inner</h2>
+                <div>A</div>
+                <div>B</div>
+                <div id="child-C">C</div>
+                <div>D</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery Included -->
+    <script src="./jQuery.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+
+            // Target all siblings of C : A, B, D, Inner
+            $('#child-C')
+                .siblings()
+                .css('color', 'white');
+            
+            // Target specific sibling of C : inner
+            $('#child-C')
+                .siblings('h2')
+                .css('background', 'black');
+
+            // Targent next sibling of C
+            $('#child-C')
+                .next()
+                .css('background', 'black');
+
+            // Target prev sibling of C
+            $('#child-C')
+                .prev()
+                .css('background', 'black');
+
+            // Target all next siblings
+            $('#child-head')
+                .nextAll()
+                .css('font-family', 'cursive');
+
+            // Target all next siblings of C
+            $('#child-C')
+                .prevAll()
+                .css('font-size', '2em');
+
+            // Target all next siblings pf C until specific selector
+            $('#child-C')
+                .nextUntil('.test')
+                .css('border-radius', '50px');
+            
+            // Target all prev siblings pf C until specific selector
+            $('#child-C')
+                .prevUntil('#child-head')
+                .css('border-radius', '50px');
+        });
+    </script>
+
+</body>
+</html>

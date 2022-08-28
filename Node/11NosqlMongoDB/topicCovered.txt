@@ -1,0 +1,23 @@
+What is MongoDB                 A NoSQL Database
+Relations in NoSQL              Table : Collection, Row : Document 
+Setting Up MongoDB              MongoDB Atlas free sign up
+Installing MongoDB Driver       npm install --save mongodb
+Creating the Db Connection      MongoClient
+Creating Products               insertOne/inserMany
+MongoDB Compass                 GUI for Database Copy URL
+Fetching All Products           find().toArray() with limited data
+
+
+
+MongoDB 
+U : sahilyadav
+P : xZ6xgy4Qys6TjcS
+
+npm init
+npm install nodemon --save-dev         Development dependency
+npm install express --save             Production dependency
+npm install body-parser --save 
+npm install --save ejs pug express-handlebars   (3 templating engine pkg at once) 
+npm install --save mysql2
+npm install --save sequelize           Needs mysql2 as a driver
+npm install --save mongodb             This installs mongodb driver to connect with mongoDB

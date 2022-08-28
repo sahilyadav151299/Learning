@@ -1,0 +1,52 @@
+To checks version of node & npmg
+    - node -v
+    - npm --version
+
+Open CMD to run script
+    - Go inside pwd & execute one of these
+    - node helloworld.js            
+    - node helloworld
+
+
+If something is asynchronouse : will have callbacks 
+    - Every IO Operations
+    - Every DB Operations
+    - Every NW Operations
+
+Body-parser : converts all incoming data from request
+	          (which is in url encoded format) to the
+	          JSON formate or JSON object
+
+How to download third-party modules
+
+    - npm init : creates package & package.json file for storing information
+
+    - npm install module_name 
+
+    - npm i module_name --save      :  save dependency in package.json so that while running npm install, it gets installed itself
+    - Use when everyone needs the same dependency for production
+
+    - npm i module_name --save-dev  :  save devDependency in package.json but while running npm install, it didn't installed if you haven't cloned the project
+    - Use when only you nedd the dependency for development purpose
+
+	     		
+To install the latest version of modules use * 
+
+    "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "mongoose": "*",
+  }
+
+Install mongodb
+    -	path : C/Program Files/MongoDB/Server/4.4/bin
+    -	execute mongod.exe : starts mongodb connection
+    -   if not started, mkdir C:/data/db
+    -	execute mongod.exe : starts mongodb connection
+    -   execute mongo.exe : mongo shell
+    -   use db_name
+    -   db.db_name.find()
+
+
+  
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        
+        function foo(){
+            
+            // alert : executed 1 time only as window.onload called for only state 5
+
+            alert(document.readyState)
+
+            alert("Hello World!")
+
+            var element = document.getElementById("p1")
+
+            element.innerText = "Hello From Script 2!"
+            
+        }   
+
+        // call foo() when document is ready
+        // window : gloabl object
+        // window : whole window in broswer tab
+        // document.onreadystatechange gets ready first & then window is loaded
+        // only 1 time alert execution
+
+        // can be used when we have to load all images (which are not downloaded at ready state) 
+        // & then render pages so wait till the time whole window is loaded
+
+        // if u don't want to wait for window load can use readystateobj
+        window.onload = foo
+
+    </script>
+
+</head>
+<body>
+
+    <p id="p1"></p>
+
+</body>
+</html>

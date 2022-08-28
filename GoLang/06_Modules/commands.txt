@@ -1,0 +1,32 @@
+
+1. go mod init creates a new module, initializing the go.mod file that describes it.
+
+2. go get changes the required version of a dependency (or adds a new dependency).
+
+3. go list -m all : prints the current module’s dependencies.
+
+4. go mod tidy removes unused dependencies + It will install any missing dep.
+
+5. The go mod vendor command copies in all of the transitive imports of 
+your packages and their tests, so it will automatically update the go.mod 
+file to ensure that all of the imported packages are present.
+
+6. go mod why – why is something a dependency
+
+7. go mod graph – generates graph of dependencies.
+
+Modules Version and documentation
+https://pkg.go.dev/
+
+
+go.sum:  The checksum present in go.sum file is used to validate the checksum of each of direct and indirect dependency to confirm that none of them has been modified.
+
+go.mod : go.mod file which both defines projects requirements and locks dependencies to their correct versions (to give you some analogy, 
+it’s like package.json and package-lock.json rolled into one):
+
+
+https://pkg.go.dev/
+
+Importing one user module in another
+
+https://golang.org/doc/tutorial/call-module-code

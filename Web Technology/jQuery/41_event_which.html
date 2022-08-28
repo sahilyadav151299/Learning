@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Which</title>
+
+    <style>
+        #box{
+            background-color: teal;
+            width: 400px;
+            height: 200px;
+            padding: 5px 20px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            font-family: cursive;
+            line-height: 190px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">Yahoo Baba</div>
+
+    <h2 id="h21"></h2>
+
+    <input type="text" id="inputBox"> <br>
+
+    <h2 id="h22"></h2>
+
+    <!-- jQuery Included -->
+    <script src="./jQuery.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            
+            $('#box').on('click dblclick mouseover mouseout', function(e){
+
+                $('#h21').html('Event Type : ' + e.type + ' Event Which : ' + e.which );
+                // 1 : Left click
+                // 2 : Wheel of mouse or center click
+                // 3 : Right click 
+            });
+
+
+            $('#inputBox').on('keydown', function(e){
+
+                // Returns ASCII code of each character
+                $('#h22').html(e.type + ' : ' + e.which );
+            })
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+       // Premitive Datatypes 
+
+       var a = 100          // number
+       var b = 123.56       // number
+       var c = "Sahil"      // string
+       var d = 'Yadav'      // string
+       var e = true         // boolean
+       var f = undefined    // undefined (value + type)
+       var g                // undefined : var declared but not used 
+       
+       document.write("Value of a " + a + "<br/>" )
+       document.write("Value of b " + b + "<br/>" )
+       document.write("Value of c " + c + "<br/>" )
+       document.write("Value of d " + d + "<br/>" )
+       document.write("Value of e " + e + "<br/>" )
+       document.write("Value of f " + f + "<br/>" )
+       document.write("Value of g " + g + "<br/>" )
+
+       document.write("<br/>")
+
+       document.write("Type of a " + typeof(a) + "<br/>")
+       document.write("Type of b " + typeof(b) + "<br/>")
+       document.write("Type of c " + typeof(c) + "<br/>")
+       document.write("Type of d " + typeof(d) + "<br/>")
+       document.write("Type of e " + typeof(e) + "<br/>")
+       document.write("Type of f " + typeof(f) + "<br/>")
+       document.write("Type of g " + typeof(g) + "<br/>")
+
+       // Confirm loosly typed language
+       
+       a = "A"
+       b = undefined
+       c = true
+       d = 1234
+       e = 90.234
+       f = "Bros"
+       g = false
+
+       document.write("<br/>")
+       document.write("Type of a " + typeof(a) + "<br/>")
+       document.write("Type of b " + typeof(b) + "<br/>")
+       document.write("Type of c " + typeof(c) + "<br/>")
+       document.write("Type of d " + typeof(d) + "<br/>")
+       document.write("Type of e " + typeof(e) + "<br/>")
+       document.write("Type of f " + typeof(f) + "<br/>")
+       document.write("Type of g " + typeof(g) + "<br/>")
+
+       // var cab be redeclared
+
+       var code = "code"
+       var code = 1234
+
+       alert(code)
+       
+    </script>
+
+</body>
+</html>

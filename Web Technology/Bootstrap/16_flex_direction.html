@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+    
+    <style>
+        .container, .row{ border: 2px solid black;}
+        .row{ height: 100px; }
+        .first{ background-color: royalblue; }
+        .second{ background-color: palevioletred; }
+        .third{ background-color: teal; }
+        .fourth{ background-color: darkgoldenrod; }
+    </style>
+</head>
+<body>
+
+    <!-- 
+        Extra Large     :   .flex-xl-row    .flex-xl-row-reverse    .flex-xl-column    .flex-xl-column-reverse   .flex-xl-wrap    .flex-xl-nowrap
+        Large           :   .flex-lg-row    .flex-lg-row-reverse    .flex-lg-column    .flex-lg-column-reverse   .flex-lg-wrap    .flex-lg-nowrap
+        Medium          :   .flex-md-row    .flex-md-row-reverse    .flex-md-column    .flex-md-column-reverse   .flex-md-wrap    .flex-md-nowrap
+        Small           :   .flex-sm-row    .flex-sm-row-reverse    .flex-sm-column    .flex-sm-column-reverse   .flex-sm-wrap    .flex-sm-nowrap
+    -->
+
+    <div class="container">
+        <h6>flex-row</h6>
+        <div class="row flex-row">
+            <div class="col first">Col 1</div>
+            <div class="col second">Col 2</div>
+            <div class="col third">Col 3</div>
+            <div class="col fourth">Col 4</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>flex-row-reverse</h6>
+        <div class="row flex-row-reverse">
+            <div class="col first">Col 1</div>
+            <div class="col second">Col 2</div>
+            <div class="col third">Col 3</div>
+            <div class="col fourth">Col 4</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>flex-column</h6>
+        <div class="row flex-column">
+            <div class="col first">Col 1</div>
+            <div class="col second">Col 2</div>
+            <div class="col third">Col 3</div>
+            <div class="col fourth">Col 4</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>flex-column-reverse</h6>
+        <div class="row flex-column-reverse">
+            <div class="col first">Col 1</div>
+            <div class="col second">Col 2</div>
+            <div class="col third">Col 3</div>
+            <div class="col fourth">Col 4</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>flex-wrap</h6>
+        <div class="row flex-wrap">
+            <div class="col-4 first">Col 1</div>
+            <div class="col-4 second">Col 2</div>
+            <div class="col-4 third">Col 3</div>
+            <div class="col-4 fourth">Col 4</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>flex-wrap-reverse</h6>
+        <div class="row flex-wrap-reverse">
+            <div class="col-4 first">Col 1</div>
+            <div class="col-4 second">Col 2</div>
+            <div class="col-4 third">Col 3</div>
+            <div class="col-4 fourth">Col 4</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>flex-nowrap</h6>
+        <div class="row flex-nowrap">
+            <div class="col-4 first">Col 1</div>
+            <div class="col-4 second">Col 2</div>
+            <div class="col-4 third">Col 3</div>
+            <div class="col-4 fourth">Col 4</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>flex-fill : works with only col class</h6>
+        <div class="row">
+            <div class="col first">Col 1</div>
+            <div class="col second flex-fill">Col 2</div>
+            <div class="col third">Col 3</div>
+            <div class="col fourth">Col 4</div>
+        </div>
+    </div>
+
+
+   
+</body>

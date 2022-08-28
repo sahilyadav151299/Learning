@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid Line Naming</title>
+
+    <style>
+        .container{
+            background: #eeeeee;
+            width: 100%;
+            display: grid;
+            /* Grid line naming in 2 ways */
+            grid-template-columns: repeat(3, [col-start]  1fr [col-end]);
+            grid-template-rows: [header-start] 120px 
+                                [header-end menu-start] 60px 
+                                [menu-end box-start] 100px 
+                                [box-end content-start] 400px 
+                                [content-end footer-start] 50px 
+                                [footer-end];
+            grid-gap: 10px;
+        }
+
+        .items{
+            font-size: 20px;
+            font-weight: bolder;
+            color: white;
+            padding: 10px 20px;
+            border: 2px solid black;
+        }
+
+        .header{
+            background: coral;
+            grid-row: header-start / header-end;
+            grid-column: col-start 1 / col-end 3;
+        }
+
+        .menu{
+            background: yellowgreen;
+            grid-row: menu-start / menu-end ;
+            grid-column: col-start 1 / col-end 3;
+        }
+
+        .box1{
+            background: mediumvioletred;
+        }
+
+        .box2{
+            background: mediumslateblue;
+        }
+
+        .content{
+            background: teal;
+            grid-row: content-start / content-end;
+            grid-column: col-start 1 / col-end 2;
+        }
+
+        .sidebar{
+            background: tan;
+            grid-row: 3 / 5;
+            grid-column: col-start 3 / col-end 3;
+        }
+
+        .footer{
+            background: darkred;
+            grid-row: footer-start / footer-end;
+            grid-column: col-start 1 / col-end 3;
+        }
+
+    </style>
+    
+</head>
+<body>
+    
+    <div class="container">
+        <div class="items header">Header</div>
+        <div class="items menu">Menu</div>
+        <div class="items box1">Box 1</div>
+        <div class="items box2">Box 2</div>
+        <div class="items sidebar">Sidebar</div>
+        <div class="items content">Content</div>
+        <div class="items footer">Footer</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        
+        div{
+            padding: 20px;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        #div1{
+            padding: 20px;
+            height: 200px;
+            width: 200px;
+            background: palegoldenrod;
+        }
+
+        #div2{
+            padding: 20px;
+            height: 200px;
+            width: 200px;
+            background: brown;
+        }
+
+        #p1{
+            padding: 20px;
+            height: 50px;
+            width: 110px;
+            background: coral;
+        }
+
+        #p2{
+            padding: 20px;
+            height: 50px;
+            width: 110px;
+            background: cornflowerblue;
+        }
+        
+    </style>
+
+</head>
+<body>
+
+
+    <div id="div1">
+        <p id="p1">Event Bubbling !!!</p>
+    </div>
+    
+    <div id="div2">
+        <p id="p2">Event Capturing !!!</p>
+    </div>
+
+
+    <script>
+    
+        // returns element by taking id
+        function $(id) {
+            
+            return document.getElementById(id)
+        }
+
+        // Event Bubbling : Travers from target element on which event has 
+        // occured towards upwards direction in a DOM tree
+        
+        // 3rd parameter : decides traversing direction
+        // Default value : false - for event bubbling
+
+        // Evt : JS object contains info about event
+
+        // Click on P : alert(p) alert(pAgain) alert(div)
+        $("p1").addEventListener('click', function(event) {
+
+            alert("P1 is clicked!")
+
+            // stop next event : Sibling + Parent
+            event.stopPropagation()
+        })
+
+        // Sibling event : 2 called
+        $("p1").addEventListener('click', function() {
+
+            alert("P1 is clicked Again!")
+
+        }, false)
+
+        // Click on Div : alert(div)
+        $("div1").addEventListener('click', function() {
+
+            alert("Div1 is clicked!")
+        }, false)
+
+
+
+
+        // Event Capturing : Travers from root tag towards downward dirction 
+        // in a DOM tree till target element
+
+        // Click on P : alert(div) alert(p) 
+        $("p2").addEventListener('click', function() {
+
+            alert("P2 is clicked!")
+        }, true)
+
+        // Click on Div : alert(div)
+        $("div2").addEventListener('click', function() {
+
+            alert("Div2 is clicked!")
+        }, true)
+
+
+        // addEventListener() vs onEvent(onClick, onMouseDown)
+
+        // 1) Using addEventListener() we can configure event traversing direction
+        // 2) Using addEventListener() we can add mustiple(sibling) event to an event
+        // 3) Using addEventListener() we can stop Sibling + Parent event
+        
+        
+    </script>
+
+</body>
+</html> 

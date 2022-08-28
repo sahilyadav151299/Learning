@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+    
+    <style>
+        .container, .row{ border: 2px solid black;}
+        .row{ height: 150px; }
+        .first{ background-color: royalblue; }
+        .second{ background-color: palevioletred; }
+        .third{ background-color: teal; }
+        .fourth{ background-color: darkgoldenrod; }
+    </style>
+</head>
+<body>
+
+    <!-- 
+        Fixed Vertical Alignment : X axis
+
+        .align-self-start      
+        .align-self-center     
+        .align-self-end        
+        .align-self-stretch  
+        .align-self-baseline 
+        .align-self-auto (parent value)  
+
+        Responsive Vertical Alignment : X axis
+
+        Extra Large     :   .align-self-xl-start   .align-self-xl-center  .align-self-xl-end    .align-self-xl-stretch     .align-self-xl-baseline    .align-self-xl-auto
+        Large           :   .align-self-lg-start   .align-self-lg-center  .align-self-lg-end    .align-self-lg-stretch     .align-self-lg-baseline    .align-self-lg-auto
+        Medium          :   .align-self-md-start   .align-self-md-center  .align-self-md-end    .align-self-md-stretch     .align-self-md-baseline    .align-self-md-auto
+        Small           :   .align-self-sm-start   .align-self-sm-center  .align-self-sm-end    .align-self-sm-stretch     .align-self-sm-baseline    .align-self-sm-auto
+
+    -->
+
+    <div class="container">
+        <h6>align-self-start</h6>
+        <div class="row">
+            <div class="col-md-3 first">Lorem ipsum dolor sit amet.</div>
+            <div class="col-md-3 second align-self-start">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam!</div>
+            <div class="col-md-3 third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet consequuntur perferendis similique, ut quo recusandae?</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>align-self-center</h6>
+        <div class="row">
+            <div class="col-md-3 first">Lorem ipsum dolor sit amet.</div>
+            <div class="col-md-3 second align-self-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam!</div>
+            <div class="col-md-3 third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet consequuntur perferendis similique, ut quo recusandae?</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>align-self-end</h6>
+        <div class="row">
+            <div class="col-md-3 first">Lorem ipsum dolor sit amet.</div>
+            <div class="col-md-3 second align-self-end">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam!</div>
+            <div class="col-md-3 third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet consequuntur perferendis similique, ut quo recusandae?</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>align-self-stretch</h6>
+        <div class="row">
+            <div class="col-md-3 first">Lorem ipsum dolor sit amet.</div>
+            <div class="col-md-3 second align-self-stretch">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam!</div>
+            <div class="col-md-3 third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet consequuntur perferendis similique, ut quo recusandae?</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h6>align-self-baseline</h6>
+        <div class="row">
+            <div class="col-md-3 first">Lorem ipsum dolor sit amet.</div>
+            <div class="col-md-3 second align-self-baseline">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam!</div>
+            <div class="col-md-3 third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet consequuntur perferendis similique, ut quo recusandae?</div>
+        </div>
+    </div>
+   
+    <div class="container">
+        <h6>align-self-auto</h6>
+        <div class="row align-items-end">
+            <div class="col-md-3 first align-self-start">Lorem ipsum dolor sit amet.</div>
+            <div class="col-md-3 second align-self-auto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam!</div>
+            <div class="col-md-3 third align-self-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet consequuntur perferendis similique, ut quo recusandae?</div>
+        </div>
+    </div>
+   
+</body>

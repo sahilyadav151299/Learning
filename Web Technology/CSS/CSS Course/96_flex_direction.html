@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Flex Direction</title>
+
+    <!-- 1D Layout -->
+    <!-- Replaces Float Layout -->
+    <!-- Use all the avialabe space to the best -->
+    <!-- Easy alignment ( direction + orders ) -->
+
+    <style>
+        .container{
+            background: #eeeeee;
+            width: 600px;
+            margin: 50px;
+            padding: 10px;
+            border: 2px solid black;
+
+            /* Flexbox configuration */
+            display: flex;
+        }
+
+        .c1{
+            /* default : Left-to-Right */
+            flex-direction: row;
+        }
+
+        .c2{
+            /* Right-to-Left */
+            flex-direction: row-reverse;
+        }
+
+        .c3{
+            /* Top-to-Bottom */
+            flex-direction: column;
+        }
+
+        .c4{
+            /* Bottom-to-Top */
+            flex-direction: column-reverse;
+        }
+
+        .items{ 
+            padding: 10px;
+            color: white;
+            font-size: 20px;
+            font-weight: bolder;
+         }
+
+        .item1{ background-color: tan; }
+        .item2{ background-color: teal; }
+        .item3{ background-color: crimson; }
+        .item4{ background-color: midnightblue;}
+
+    </style>
+</head>
+<body>
+    
+    <div class="container c1">
+        <div class="items item1">One</div>
+        <div class="items item2">Two</div>
+        <div class="items item3">Three</div>
+        <div class="items item4">Four</div>
+    </div>
+
+    <div class="container c2">
+        <div class="items item1">One</div>
+        <div class="items item2">Two</div>
+        <div class="items item3">Three</div>
+        <div class="items item4">Four</div>
+    </div>
+
+    <div class="container c3">
+        <div class="items item1">One</div>
+        <div class="items item2">Two</div>
+        <div class="items item3">Three</div>
+        <div class="items item4">Four</div>
+    </div>
+
+    <div class="container c4">
+        <div class="items item1">One</div>
+        <div class="items item2">Two</div>
+        <div class="items item3">Three</div>
+        <div class="items item4">Four</div>
+    </div>
+
+</body>
+</html>

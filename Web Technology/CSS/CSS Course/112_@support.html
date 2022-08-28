@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Support</title>
+
+    <!-- @supports : feature or property detection in the browser -->
+    <!-- Also called as conditional rule -->
+
+    <!-- @supports (display:grid) { display:grid } -->
+    <!-- @supports not (display:grid) { display:block } -->
+    <!-- @supports (display:flex) or (display:-webkit-flex) { display:flex } -->
+    <!-- @supports (display:flex) and (display:-webkit-flex) { display:flex } -->
+
+    <style>
+        /* If display : flex is supported */
+        @supports (display: flex){
+            body{
+                background-color: midnightblue;
+            }
+        }
+
+        /* If display : flex is not supported */
+        @supports not (display: flex){
+            body{
+                display: grid;
+            }
+        }
+
+        /* If both the condition is true */
+        @supports (display: grid) and (not (display: inline-grid)){
+            body{
+                background-color: orangered;
+            }
+        }
+
+        /* If variable is supported */
+        :root{
+            --test : green
+        }
+
+        @supports (--test : green){
+            body{
+                background-color: var(--test);
+            }
+        }
+    </style>
+
+</head>
+<body>
+</body>
+</html>

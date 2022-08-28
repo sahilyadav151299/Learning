@@ -1,0 +1,21 @@
+Cookies,  For every page there is a new request response, once respond data gone
+Cookies,  Used to store data,session time out, protocol, security at client side
+
+Session,  Stores in back-end so that user can't play with it
+Session,  Store on the server side
+
+MongoDB 
+U : sahilyadav
+P : xZ6xgy4Qys6TjcS
+
+npm init
+npm install nodemon --save-dev         Development dependency
+npm install express --save             Production dependency
+npm install body-parser --save 
+npm install --save ejs pug express-handlebars   (3 templating engine pkg at once) 
+npm install --save mysql2
+npm install --save sequelize           Needs mysql2 as a driver
+npm install --save mongodb             This installs mongodb driver to connect with mongoDB
+npm insatll --save mongoose
+npm install --save express-session
+npm install --save connect-mongodb-session   To let our exp session pkg stores data in database

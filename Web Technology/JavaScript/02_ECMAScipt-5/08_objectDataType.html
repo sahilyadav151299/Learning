@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // 1) blank array : only declaration
+
+        var arr = []        
+        
+        arr.push("Audi")
+        arr.push("Tesla")
+        
+        // arr.pop() : decrement length by 1
+
+        // 2) declaration + intiliazation
+
+        var brr = ["BMW", "Evora"] 
+
+        brr.push("Audi")
+        brr.push("Tesla")
+
+        // 3) Iterate over array
+
+        for( var i=0; i<brr.length; i++) {
+
+            document.write(brr[i] + "<br\>")
+        }
+
+        // 4) Using new operator
+
+        var arr1 = new Array(10, 20 ,30)
+
+        document.write("Arr1 : " + arr1.length + "<br/>")       // array with 3 element
+
+        var arr2 = new Array(10)
+
+        document.write("Arr2 : " + arr2.length + "<br/>")       // array of length 10
+
+    </script>
+
+</body>
+</html>

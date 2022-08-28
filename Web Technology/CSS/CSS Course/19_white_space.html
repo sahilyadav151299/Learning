@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS White Space</title>
+
+    <style>
+        .box{
+            width: 400px;
+            padding: 10px;
+            border: 2px solid black;
+            margin: 5px;
+        }
+
+        /* write everything in one line */
+        .box1{
+            white-space: nowrap;
+        }
+
+        /* works same as pre tag + mult-iline space + with nowrap for every line */
+        .box2{
+            white-space: pre;
+        }
+
+        /* works same as pre tag + single space + without nowrap */
+        .box3{
+            white-space: pre-line;
+        }
+
+        /* pre + mult-iline space + without nowrap */
+        .box4{
+            white-space: pre-wrap;
+        }
+
+        /* default value */
+        .box5{
+            white-space: normal;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="box">
+        Google          LLC is an American multinational technology company that specializes in 
+
+        Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </div>
+
+    <div class="box box1">
+        Google          LLC is an American multinational technology company that specializes 
+
+        in Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </div>
+
+    <div class="box box2">
+        Google          LLC is an American multinational technology company that specializes
+
+        in Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </div>
+
+    <div class="box box3">
+        Google           LLC is an American multinational technology company that specializes 
+
+        in Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </div>
+
+    <div class="box box4">
+        Google          LLC is an American multinational technology company that specializes 
+
+        in Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </div>
+
+    <div class="box box5">
+        Google          LLC is an American multinational technology company that specializes 
+
+        in Internet-related services and products, which include online advertising technologies, 
+        a search engine, cloud computing, software, and hardware.
+    </div>
+
+</body>
+</html>

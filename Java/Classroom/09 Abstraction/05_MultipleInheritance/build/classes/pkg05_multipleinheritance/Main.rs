@@ -1,0 +1,4 @@
+pkg05_multipleinheritance.Printable
+pkg05_multipleinheritance.Drawable
+pkg05_multipleinheritance.Square
+pkg05_multipleinheritance.Main

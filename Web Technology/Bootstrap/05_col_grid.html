@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+    
+    <style>
+        .container{ border: 2px solid black; }
+        .row{ border: 2px solid darkred; }
+        .col{ border: 2px solid royalblue; }
+
+        .col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+        .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+            border: 2px solid royalblue;
+            text-align: center;
+            padding: 10px;
+        }
+
+ 
+    </style>
+</head>
+<body>
+
+    <!-- 
+        Bootstrap has 12 grid system
+        Col grid is used to make col with different width
+        A row can have 12 grid from col-1 to col-12
+        Ex. col-3 : width form col-1 to col-2 or 3 col width
+    -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-8">Col-8 div</div>
+            <div class="col-4">Col-4 div</div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">Col-3 div</div>
+            <div class="col-6">Col-6 div</div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">Col-4 div</div>
+            <div class="col-6">Col-6 div</div>
+            <div class="col-4">Col-4 div</div>
+        </div>
+    </div>
+
+</body>
+</html>

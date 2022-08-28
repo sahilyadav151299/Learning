@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #div1{
+            background-color: brown;
+            padding: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div id="div1">
+        <input type="button" id="mybtn" value="Remove!">
+    </div>
+
+    <p id="p1"></p>
+
+    <script>
+        
+        function $(id){
+
+            return document.getElementById(id)
+        }
+
+        $("div1").addEventListener('mousemove', foo)
+
+        function foo(e) {
+
+            $("p1").innerText = "X : " + e.pageX + ", Y : " + e.pageY
+        } 
+        
+        $("mybtn").addEventListener('click', function(){
+
+            // Remove event handler added for mousemode for div1
+            $("div1").removeEventListener('mousemove', foo)
+        })
+
+              
+
+    </script>
+
+</body>
+</html>

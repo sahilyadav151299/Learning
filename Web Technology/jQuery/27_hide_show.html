@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hide & Show</title>
+
+    <style>
+        #box{
+            width: 400px;
+            height: 140px;
+            padding: 10px;
+            margin: 20px;
+            border: 1px solid black;
+            background-color: rosybrown;
+        }
+
+        button{
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="box">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum accusantium pariatur nesciunt, eum aliquid odit doloremque ad autem porro quaerat, nemo atque quasi consectetur ducimus officia sunt sed consequuntur nostrum doloribus obcaecati placeat eaque. Cupiditate ea accusamus nisi cumque nesciunt.</p>
+    </div>
+
+    <button id="hideBtn">Hide</button>
+    <button id="slowhideBtn">Hide Slow</button>
+    <button id="cbhideBtn">Hide Slow with Callback</button>
+    <button id="showBtn">Show</button>
+    <button id="fastshowBtn">Show Fast</button>
+    <button id="toggleBtn">Toggle</button>
+    <button id="sectoggleBtn">Toggle In Seconds</button>
+
+    <!-- jQuery Included -->
+    <script src="./jQuery.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+
+            $('#hideBtn').click(function(){
+                $('#box p').hide();
+            });
+
+            $('#slowhideBtn').click(function(){
+                $('#box p').hide('slow');
+            });
+
+            $('#cbhideBtn').click(function(){
+                $('#box p').hide('slow', function(){
+                    $('#box').css('background', 'pink');
+                });
+            });
+
+            $('#showBtn').click(function(){
+                $('#box p').show();
+            });
+
+            $('#fastshowBtn').click(function(){
+                $('#box p').show('fast');
+            });
+
+            $('#toggleBtn').click(function(){
+                $('#box p').toggle();
+            });
+
+            $('#sectoggleBtn').click(function(){
+                $('#box p').toggle(1000);
+            });
+        });
+    </script>
+
+</body>
+</html>

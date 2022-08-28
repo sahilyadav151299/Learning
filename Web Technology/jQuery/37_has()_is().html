@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>has() & is() Methods</title>
+
+    <style>
+        #first{
+            background-color: teal;
+            width: 400px;
+            padding: 5px 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="first">
+        <p>Lorem ipsum dolor sit amet <b>consectetur adipisicing elit.</b> Ea, obcaecati?</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <ul>
+        <li>Orange</li>
+        <li><span>Apple</span></li>
+        <li>Banana</li>
+        <li>Grapes</li>
+    </ul>
+
+    <p class="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor reiciendis obcaecati eum, dolorem laudantium voluptatibus.</p>
+    <p>Lorem ipsum, <span>dolor sit amet consectetur adipisicing elit.</span> Repellendus, distinctio.</p>
+   
+
+    <!-- jQuery Included -->
+    <script src="./jQuery.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+
+            $('p')
+                .has('span')
+                .css('background-color', 'gold')
+            
+            $('p')
+                .has('b, span')
+                .css('font-family', 'cursive')
+
+            if($('p').parent().is('div')){
+
+                $('p')
+                    .parent('div')
+                    .css('border', '5px solid black')
+            }
+        });
+    </script>
+
+</body>
+</html>

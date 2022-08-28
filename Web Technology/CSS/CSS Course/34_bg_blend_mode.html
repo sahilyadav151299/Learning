@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Background Blend Mode</title>
+
+    <style>
+        .box{
+            width: 200px;
+            height: 100px;
+            border: 2px solid black;
+            margin: 5px;
+            padding: 20px;
+            color: white;
+            float: left;
+            text-align: justify;
+            background-image: linear-gradient(to right, red, yellow), url('./images/bruce2.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        /* This property required both color + image to work with */
+
+        .box1{
+            background-blend-mode: screen;
+        }
+
+        .box2{
+            background-blend-mode: overlay;
+        }
+
+        .box3{
+            background-blend-mode: darken;
+        }
+
+        .box4{
+            background-blend-mode: lighten;
+        }
+
+        .box5{
+            background-blend-mode: color-dodge;
+        }
+
+        .box6{
+            background-blend-mode: color-burn;
+        }
+
+        .box7{
+            background-blend-mode: difference;
+        }
+
+        .box8{
+            background-blend-mode: saturation;
+        }
+
+        .box9{
+            background-blend-mode: luminosity;
+        }
+
+        .box10{
+            background-blend-mode: soft-light;
+        }
+
+        .box11{
+            background-blend-mode: exclusion;
+        }
+
+        .box12{
+            background-blend-mode: hard-light;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="box box1">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box2">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box3">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box4">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box5">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box6">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box7">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box8">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box9">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box10">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box11">
+        Google LLC is an American multinational technology company.
+    </div>
+
+    <div class="box box12">
+        Google LLC is an American multinational technology company.
+    </div>
+</body>
+</html>

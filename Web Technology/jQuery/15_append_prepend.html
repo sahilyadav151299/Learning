@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Append & Prepend</title>
+
+    <style>
+        #box{
+            width: 70%;
+            height: 180px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Yahoo Baba</h1>
+
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing elit.</p>  
+    </div>
+
+    <button id="appendBtn">Append</button>
+    <button id="prependBtn">Prepend</button> 
+
+
+    <ol>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+    </ol>
+
+    <button id="appendItem">Append Item</button>
+    <button id="prependItem">Prepend Item</button> 
+
+    <!-- jQuery Included -->
+    <script src="./jQuery.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+
+            // Every time we click it will append
+            $('#appendBtn').click(function(){
+                $('#box').append('<h4>Append Mode</h4>');
+            });
+
+            // Every time we click it will prepend
+            $('#prependBtn').click(function(){
+                $('#box').prepend('<h4>Prepend Mode</h4>');
+            });
+
+
+             // Every time we click it will append
+             $('#appendItem').click(function(){
+                $('ol').append('<li>New Item Appended</li>');
+            });
+
+            // Every time we click it will prepend
+            $('#prependItem').click(function(){
+                $('ol').prepend('<li>New Item Prepended</li>');
+            });
+        });
+    </script>
+
+</body>
+</html>

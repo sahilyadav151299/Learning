@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Events</title>
+
+</head>
+<body>
+    
+    <h1>Yahoo Baba</h1>
+
+    <form action="" id="sform">
+        <label for="">Name</label>
+        <input type="email" id="sname"> 
+        
+        <br><br>
+
+        <label for="">Class</label>
+        <input type="text" id="sclass"> 
+        
+        <br><br>
+
+        <label for="">Country</label>
+            <select id="scountry">
+                <option value="IND">IND</option>
+                <option value="PAK">PAK</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="UAE">UAE</option>
+            </select>
+        
+        <br><br>
+
+        <button type="submit">Submit</button>    
+    </form>
+
+    <!-- Empty div -->
+    <div id="test" style="border:2px solid red;margin-top: 20px;"></div>
+
+
+    <!-- jQuery Included -->
+    <script src="jQuery.js"></script>  
+
+    <script>
+        $(document).ready(function(){
+
+            // Focus event
+            $('#sname, #sclass, #scountry').focus(function(){
+                $(this).css('background-color', 'peru');
+            });
+
+            // Blur event : remove focus
+            $('#sname, #sclass, #scountry').blur(function(){
+                $(this).css('background-color', '');
+            });
+
+            // Change event : on value change, use with select box
+            $('#scountry').change(function(){
+                var a = $(this).val();
+                $('#test').html(a);
+            });
+
+            // Select event : select text, works with input box only
+            $('#sname, #sclass').select(function(){
+                var a = $(this).val();
+                $(this).css('background-color', 'yellow');
+            });
+
+            // Submit event : submit button must be inside form
+            $('#sform').submit(function(){
+                alert('Form Submitted !');
+            });
+            
+        });
+    </script>
+
+</body>
+</html>
+

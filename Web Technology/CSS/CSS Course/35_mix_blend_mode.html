@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Mix Blend Mode</title>
+
+    <style>
+        .box{
+            width: 280px;
+            height: 150px;
+            border: 2px solid black;
+            margin: 10px;
+            color: white;
+            float: left;
+            background-image: url('./images/bruce2.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        h2{
+            background: red;
+            text-align: center;
+            font-size: 40px;
+            margin-top: 50px;
+        }
+
+        /* This property can be used with only color or image */
+
+        .box1{
+            mix-blend-mode: screen;
+        }
+
+        .box2{
+            mix-blend-mode: overlay;
+        }
+
+        .box3{
+            mix-blend-mode: darken;
+        }
+
+        .box4{
+            mix-blend-mode: lighten;
+        }
+
+        .box5{
+            mix-blend-mode: color-dodge;
+        }
+
+        .box6{
+            mix-blend-mode: color-burn;
+        }
+
+        .box7{
+            mix-blend-mode: hard-light;
+        }
+
+        .box8{
+            mix-blend-mode: soft-light;
+        }
+
+        .box9{
+            mix-blend-mode: difference;
+        }
+
+        .box10{
+            mix-blend-mode: exclusion;
+        }
+
+        .box11{
+            mix-blend-mode: saturation;
+        }
+
+        .box12{
+            mix-blend-mode: luminosity;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="box">
+        <h2 class="box1">Yahoo Baba</h2>
+    </div>
+
+    <div class="box">
+        <h2 class="box2">Yahoo Baba</h2>
+    </div>
+
+    <div class="box">
+        <h2 class="box3">Yahoo Baba</h2>
+    </div>
+
+    <div class="box">
+        <h2 class="box4">Yahoo Baba</h2>
+    </div>
+
+    <div class="box">
+        <h2 class="box5">Yahoo Baba</h2>
+    </div>
+
+    <div class="box">
+        <h2 class="box6">Yahoo Baba</h2>
+    </div>
+
+    <div class="box">
+        <h2 class="box7">Yahoo Baba</h2>
+    </div>
+
+    <div class="box">
+        <h2 class="box8">Yahoo Baba</h2>
+    </div>
+
+    <div class="box">
+        <h2 class="box9">Yahoo Baba</h2>
+    </div>
+
+    <div class="box">
+        <h2 class="box10">Yahoo Baba</h2>
+    </div>
+
+    <div class="box">
+        <h2 class="box11">Yahoo Baba</h2>
+    </div>
+
+    <div class="box">
+        <h2 class="box12">Yahoo Baba</h2>
+    </div>
+
+</body>
+</html>

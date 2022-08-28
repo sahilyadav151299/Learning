@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animate Methods</title>
+
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            margin: 20px;
+            border: 1px solid black;
+            background-color: rosybrown;
+            position: relative;
+        }
+
+        button{
+            margin-left: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt.
+    </div>    
+
+    <button id="animateBtn1">Animate</button>
+    <button id="animateBtn2">Hide</button>
+    <button id="animateBtn3">Show</button>
+    <button id="animateBtn4">Toggle</button>
+    <button id="animateBtn5">Queue</button>
+
+    <!-- jQuery Included -->
+    <script src="./jQuery.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+
+            // Almost any CSS Property except color, bgcolor
+            // Name must be in camelCase
+            // animate({params}, speed, callback)
+            // speed : slow, fast, miliseconds
+
+            $('#animateBtn1').click(function(){ 
+                $('#box').animate(
+                    {
+                        left: '100px',
+                        // width: 200px
+                        width: '+200px',
+                        fontSize: '18px',
+                        borderWidth: '2px'
+                    }
+                )
+            });
+
+            $('#animateBtn2').click(function(){ 
+                $('#box').animate({width: 'hide'})
+            });
+
+            $('#animateBtn3').click(function(){ 
+                $('#box').animate({width: 'show'})
+            });
+
+            $('#animateBtn4').click(function(){ 
+                $('#box').animate({width: 'toggle'})
+            });
+
+            $('#animateBtn5').click(function(){ 
+                $('#box').animate({top: '150px', width: '200px'});
+                $('#box').animate({left: '150px', height: '200px'});
+                $('#box').animate({top: '0px', width: '100px'});
+                $('#box').animate({left: '0px', height: '100px'}, function(){
+                    $('#box').css('background-color', 'pink')
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

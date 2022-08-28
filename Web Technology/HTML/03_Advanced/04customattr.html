@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <article id="electriccars" class="cars" data-color="Red" data-index="i123">
+    </article>
+
+    <script>
+        // get tag using id
+        var ecars = document.getElementById('electriccars');
+
+        // get attributes of the tag
+        document.write("Index of the car is " +ecars.dataset.index+"<br/>");
+        document.write("Color of the car is " +ecars.dataset.color+"<br/>");
+
+        // modify attributes of the tag
+        ecars.setAttribute('data-color', "Blue");
+        
+        // get attributes of the tag
+        document.write("Color of the car is "+ecars.getAttribute('data-color')+"<br/>");
+    </script>
+
+</body>
+</html>

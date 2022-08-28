@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Use for multi-event puprpose on a selector -->
+    <title>On & Off Methods</title>
+
+    <style>
+        #box{
+            width: 70%;
+            height: 150px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid black;
+        }
+
+        .boxbg{
+            background: palevioletred;
+            font-family: cursive;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Yahoo Baba</h1>
+
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing elit.</p>  
+    </div>
+
+    <button id="btn">Try Me</button>
+    <button id="remove">Remove Event</button>
+
+    <!-- jQuery Included -->
+    <script src="./jQuery.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+
+            // To add multiple events
+
+            // Single event
+            $('#btn').on("click", function(){    
+               $('#box').css({'background':'purple', 'color':'white'});
+            });
+
+            // Multiple events with same function    
+            $('#box').on("mouseover mouseout", function(){    
+                $(this).toggleClass('boxbg');
+            }); 
+
+            // Multiple events with different function
+            $('h1').on({
+                "mouseover" : function(){
+                    $(this).css({'background':'purple', 'color':'white'});
+                },
+
+                "mouseout" : function(){
+                    $(this).css({'font-family':'cursive'});
+                },
+
+                "click" : function(){
+                    $(this).css({'background':'', 'color':''});
+                }
+
+            })
+
+
+            // To remove events activated using on
+            $('#remove').click(function(){
+                $('h1').off("mouseover mouseout click");
+            });
+        });
+    </script>
+
+</body>
+</html>

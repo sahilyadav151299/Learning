@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Display</title>
+
+    <style>
+        .box1{
+            /* Hide elements */
+            display: none;
+        }
+
+        ul{
+            border: 1px solid black;
+        }
+
+        li{
+            border: 1px solid red;
+            /* Put elements in a row not in a block */
+            display: inline;
+        }
+
+        .box3{
+            border: 1px solid black;
+            /* default inline */
+            /* Put like a list and give power of div as it takes full width */
+            /* div is block */
+            display: block;
+            /* Now we can use all the property of div like width, padding, margin etc */
+        }
+
+        a{  
+            /* default inline */
+            /* inline + block property */
+            /* a becomes inline + div */
+            display: inline-block;
+            width: 100px;
+            border: 1px solid red;
+            margin: 5px;
+        }
+
+        .box{
+            display: list-item;
+            border: 1px solid black;
+            /* span becomes list */
+            list-style-position: inside;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h2>Yahoo Baba : List</h2>
+
+    <ul class="box1">
+        <li>Orange</li>
+        <li>Mango</li>
+        <li>Banana</li>
+        <li>Apple</li>
+    </ul>
+
+
+    <ul class="box2">
+        <li>Orange</li>
+        <li>Mango</li>
+        <li>Banana</li>
+        <li>Apple</li>
+    </ul>
+
+
+    <span class="box3">One</span>
+    <span class="box3">Two</span>
+    
+    <a href="">One</a>
+    <a href="">Two</a>
+
+    <span class="box">One</span>
+    <span class="box">Two</span>
+    <span class="box">One</span>
+    <span class="box">Two</span>
+
+</body>
+</html>

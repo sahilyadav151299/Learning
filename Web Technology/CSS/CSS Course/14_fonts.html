@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Fonts</title>
+
+    <style>
+        .box{
+            width: 400px;
+            padding: 2px;
+            border: 2px solid black;
+            margin: 5px;
+        }
+
+        .box1{
+            font-size: 20px;
+            /* Works according to parent or browser window font setting */
+            font-weight: 300;
+            font-family: Arial;
+            font-style: italic;
+        }
+
+        .box2{
+            font-size: 80%;
+            /* Works on non-italic font to make it italic */
+            font-style: oblique;
+        }
+
+        .box3{
+            font-size: 0.8em;
+        }
+
+        .box4{
+            line-height: 2em;
+            font-variant: small-caps;
+        }
+
+        .box5 span{
+            font-size: 1.5em;
+        }
+
+        /* Shorthand for font */
+        .box6{
+            font: oblique small-caps bold large Cursive;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="box box1">
+        Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware.
+    </div>
+
+    <div class="box box2">
+        Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware.
+    </div>
+
+    <div class="box box3">
+        Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware.
+    </div>
+
+    <div class="box box4">
+        Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware.
+    </div>
+
+    <div class="box box5">
+        <span>Google LLC is an </span>American multinational<span> technology</span> company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware.
+    </div>
+
+    <div class="box box6">
+        <span>Google LLC is an <span>American multinational</span> technology</span> company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware.
+    </div>
+
+</body>
+</html>

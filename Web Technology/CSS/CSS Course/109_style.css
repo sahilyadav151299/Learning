@@ -1,0 +1,169 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    background-color: midnightblue;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+
+header a{
+    color: white;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+#logo{
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#menu li{
+    padding: 10px;
+}
+
+#social-links li{
+    padding: 10px;
+}
+
+#main{
+    display: flex;
+}
+
+aside{
+    /* grow shrink basis */
+    flex: 0 0 20vw;
+    background-color: beige;
+}
+
+aside ul{
+    list-style: none;
+    padding: 0;
+}
+
+aside ul a{
+    color: darkred;
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid grey;
+}
+
+aside img{
+    width: 100%;
+}
+
+article{
+    padding: 20px;
+}
+
+.service-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.service-box{
+    border: 1px solid #eeeeee;
+    padding: 15px;
+    margin-bottom: 20px;
+    flex-basis: 32%;
+    max-width: 370px;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-box img{
+    width: 100%;
+}
+
+.service-box h3{
+    margin: 10px 0;
+}
+
+.service-box p{
+    margin: 0;
+}
+
+.call-to-action a{
+    border: 2px solid transparent;
+    background-color: midnightblue;
+    color: white;
+    display: block;
+    padding: 8px 14px;
+}
+
+.call-to-action a:hover{
+    border: 2px solid midnightblue;
+    background-color: transparent;
+    color: midnightblue;
+}
+
+.call-to-action{
+    padding: 20px 0 0 0;
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+footer{
+    color: white;
+    background-color: darkred;
+    text-align: center;
+    padding: 15px 0;
+}
+
+
+@media screen and (max-width:850px){
+    .service-box{
+        flex-basis: 45%;
+    }
+
+    aside{
+        flex: 0 0 30vw;
+    }
+}
+
+@media screen and (max-width:600px){
+    header{
+        flex-direction: column;
+    }
+
+    #logo{
+        order: -1;
+    }
+
+    #main{
+        flex-direction: column;
+    }
+
+    article{
+        order: -1;
+    }
+
+    .service-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2{
+        text-align: center;
+    }
+}

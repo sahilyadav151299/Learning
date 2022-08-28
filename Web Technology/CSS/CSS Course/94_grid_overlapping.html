@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid Overlapping</title>
+
+    <style>
+        .container{
+            width: 300px;
+            margin: 40px;
+            background: #eeeeee;
+
+            display: grid;
+            grid-template-columns:repeat(2, 150px);
+            grid-template-rows: repeat(2, 150px);
+        }   
+
+        .items{ 
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bolder;
+            color: white;
+            box-sizing: border-box;
+            max-width: 150px;
+        }
+
+        .items1{
+            background-color: orangered;
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+            align-self: start;
+
+            z-index: 3;
+        }
+
+        .items2{
+            background-color: teal;
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+            align-self: center;
+            justify-self: center;
+
+            z-index: 1;
+        }
+
+        .items3{
+            background-color: tan;
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+            align-self: end;
+            justify-self: end;
+
+            z-index: 2;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="items items1">1 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <div class="items items2">2 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <div class="items items3">3 Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    </div>
+
+</body>
+</html>

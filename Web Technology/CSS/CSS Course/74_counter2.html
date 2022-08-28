@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Multiple Counter</title>
+
+    <style>
+        body{
+            counter-reset: head-count 0;
+        }
+
+        h2::before{
+            content: counter(head-count) "";
+            counter-increment: head-count 1;
+            background-color: crimson;
+            color: white;
+            padding: 2px 5px;
+            margin: 0 15px 0 5px;
+
+            counter-reset: sub-head-count 0;
+        }
+
+        p::before{
+            content: counter(sub-head-count) "." counter(head-count);
+            counter-increment: sub-head-count 1;
+            margin: 0 10px 0 40px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <h2>HTML Tutorial</h2>
+    <p>Bignners</p>
+    <p>Advanced</p>
+    <p>References</p>
+
+    <hr>
+
+    <h2>CSS Tutorial</h2>
+    <p>Bignners</p>
+    <p>Advanced</p>
+    <p>References</p>
+
+    <hr>
+    
+    <h2>JS Tutorial</h2>
+    <p>Bignners</p>
+    <p>Advanced</p>
+    <p>References</p>
+
+
+</body>
+</html>

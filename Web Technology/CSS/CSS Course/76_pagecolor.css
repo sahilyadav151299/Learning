@@ -1,0 +1,32 @@
+#wrapper{
+    background-color: white;
+}
+
+#header{
+    background-color: crimson;
+    color: white;
+}
+
+#menu{
+    background-color: lightsalmon;
+}
+
+#menu li a{
+    color: black;
+}
+
+#menu li a:hover{
+    background-color: crimson;
+}
+
+#sidebar{
+    background-color: lightskyblue;
+}
+
+#sidebar a{
+    color: black;
+}
+
+#footer{
+    background-color: lightsalmon;
+}

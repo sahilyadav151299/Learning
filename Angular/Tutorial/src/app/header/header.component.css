@@ -1,0 +1,14 @@
+div{
+    background-color: grey;
+    color: white;
+    margin: 0;
+    text-align: center;
+    height: 50px;
+}
+
+a{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}

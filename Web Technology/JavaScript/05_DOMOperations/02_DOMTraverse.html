@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Take it on a single line -->
+    <ul id='myList'><li id='item1'>Javascript</li><li>jQuery</li><li>Angular</li><li>NodeJS</li></ul>
+
+
+    <button onclick='GetFirstChild()'>Get First Child</button>
+    <button onclick='GetLastChild()'>Get Last Child</button>
+    <button onclick='GetNextSibling()'>Get Next Sibling</button>
+    <button onclick='GetNextNextSibling()'>Get Next Next Sibling</button>
+    <button onclick='GetPrevSibling()'>Get Previous Sibling</button>
+    <button onclick='GetParentNode()'>Get Parent Node</button>
+    <button onclick='GetChildNodes()'>Get Child Nodes</button>
+    <button onclick='GetAttributes()'>Get Attributes</button>
+
+
+    <p id='demo'></p>
+    
+    <img src='../../HTML/images/x.png' alt='X' id='img1'>    
+
+    <script>
+        
+        function $(id){
+
+            return document.getElementById(id)
+        }
+
+        function GetFirstChild(){
+
+            document.getElementById('demo').innerText = $('myList').firstChild.innerText 
+        }
+
+        function GetLastChild(){
+
+            document.getElementById('demo').innerText = $('myList').lastChild.innerText
+        }
+
+        function GetNextSibling(){
+
+            document.getElementById('demo').innerText = $('item1').nextSibling.innerText
+        }
+
+        function GetNextNextSibling(){
+
+            document.getElementById('demo').innerText = $('item1').nextSibling.nextSibling.innerText
+        }
+
+        function GetPrevSibling(){
+
+            document.getElementById('demo').innerText = $('myList').lastChild.previousSibling.innerText
+        }
+
+        function GetParentNode(){
+
+            document.getElementById('demo').innerText = $('item1').parentNode.nodeName
+        }
+
+        function GetChildNodes(){
+
+            var len = $('myList').childNodes.length
+            var nodes = $('myList').childNodes
+
+            for ( var i=0; i<len; i++) {
+
+                document.write(nodes[i].innerText + '<br/>' )
+            }
+        }
+
+        function GetAttributes(){
+
+            console.log($('img1').attributes)
+            console.log($('img1').getAttribute('src'))
+            $('img1').setAttribute('alt', 'X-Img')
+        }
+
+    </script>
+
+</body>
+</html>

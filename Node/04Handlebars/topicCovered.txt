@@ -1,0 +1,21 @@
+Working with handlebars
+Converting our Project to Handlebars
+Adding the Layout to Handlebars                 
+
+const expressHBS = require('express-handlebars');
+
+const app = express();             
+
+app.engine('hbs', expressHBS({
+    layoutsDir: 'views/layouts',
+    defaultLayout: 'main-layout',
+}));                            // Engine Registered named hbs
+app.set('view engine', 'hbs');  // Use hbs engine
+app.set('views', 'views');      // Route for files
+
+ 
+npm init
+npm install nodemon --save-dev          development dependency
+npm install express --save              production dependency
+npm install body-parser --save 
+npm install --save ejs pug express-handlebars   (3 pkg at once) 

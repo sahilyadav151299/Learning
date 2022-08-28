@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+
+    <!-- Downloaded Bootstrap - CSS File -->
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+    
+    <!-- Custom CSS : Put this css below to override bootstrap css -->
+    <style>
+        .container{ border: 2px solid black; }
+
+        .container-fluid{ border: 2px solid black; }
+
+        .row{ border: 1px solid red; }
+    </style>
+</head>
+<body>
+
+    <!-- 
+        .container class
+            - width   :   1140px
+            - margin  :   0 auto  
+        
+        .container class breakpoints
+            - 1140px  xl  extra large   >=  1200px                Computer  
+            - 960px   lg  large         >=  992px   (992 - 1199)  Laptop 
+            - 720px   md  medium        >=  768px   (768 - 991)   Tablet  
+            - 540px   sm  small         >=  576px   (576 - 767)   Tablet  
+            - auto        extra small   <   576x    (0 - 575)     Mobile  
+        
+        .container-fluid class
+            - width   :   100%  
+    -->
+
+    <div class="container">
+        This is a container class with auto margin & padding
+    </div>
+
+    <br>
+    
+    <div class="container-fluid">
+        This is a container-fluid class with 100% width & padding
+    </div>
+
+    <br>
+
+    <div class="container">
+        <!-- Always out row class inside container class -->
+        <div class="row"> This is row 1 </div>
+        <div class="row"> This is row 2 </div>
+        <div class="row"> This is row 3 </div>
+        <div class="row"> This is row 4 </div>
+        <div class="row"> This is row 5 </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Has Method</title>
+
+    <style>
+        #box{
+            width: 400px;
+            padding: 10px;
+            margin: 20px;
+            border: 1px solid black;
+            background-color: rosybrown;
+        }
+
+        button{
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="box">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum accusantium pariatur nesciunt, eum aliquid odit doloremque ad autem porro quaerat, nemo atque quasi consectetur ducimus officia sunt sed consequuntur nostrum doloribus obcaecati placeat eaque. Cupiditate ea accusamus nisi cumque nesciunt.</p>
+    </div>
+
+    <button id="check">Has Class</button>
+
+    <!-- jQuery Included -->
+    <script src="./jQuery.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+
+            $('#check').click(function(){
+               alert( $('#box').hasClass('test'));
+            });
+        });
+    </script>
+
+</body>
+</html>

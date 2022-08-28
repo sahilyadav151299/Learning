@@ -1,0 +1,22 @@
+<h3>Login</h3>
+<form >
+<div>
+    <label> Username:</label> 
+    <!-- Two way data binding -->
+    <input type="text" name="username" [(ngModel)]='username'/>
+</div>
+<div>
+    <label>Enter Password:</label> 
+    <!-- Two way data binding -->
+    <input type="password" name="password" [(ngModel)]='password'/>
+</div>
+<div>
+    <label></label>
+    <button (click)='login()'>Login</button>
+</div>
+</form>
+
+<!-- One way data binding -->
+Username is {{username}}
+<br>
+Password is {{password}}

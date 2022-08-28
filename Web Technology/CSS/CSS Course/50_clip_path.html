@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Clip Path</title>
+
+    <style>
+        div{
+            float: left;
+        }
+
+        .box1{
+            /* 30% : radius from center of the image, 
+               55% : from x-axis in image, 
+               50% : from y-axis in image 
+            */
+            clip-path: circle(30% at 55% 50%);
+        }
+
+        .box2{
+            /* 15% : x-radius, 
+               40% : y-radius, 
+               52% : from x-axis, 
+               50% : from y-axis 
+            */
+            clip-path: ellipse(15% 40% at 52% 50%)
+        }
+
+        .box3{
+            clip-path: ellipse(40% 25% at 52% 50%)
+        }
+
+        .box4{
+            /*  10% : from top,
+                20% : from right,
+                30% : from bottom,
+                40% : from left,
+             */
+            clip-path: inset(10% 20% 30% 40%);
+        }
+
+        /* make any shape with this property */
+        .box5{
+            /* 50%  -x, 0%   -y : top
+               0%   -x, 100% -y : bottom-right
+               100% -x, 100% -y : bottom-left */
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        .box6{
+            clip-path:  polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%) ;
+        }
+
+        .box7{
+            width: 300px;
+            height: 300px;
+            background-color: tan;
+            clip-path:  polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%) ;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <img src="./images/bruce3.jpg" class="box1">
+    </div>
+
+    <div>
+        <img src="./images/bruce3.jpg" class="box2">
+    </div>
+
+    <div>
+        <img src="./images/bruce3.jpg" class="box3">
+    </div>
+
+    <div>
+        <img src="./images/bruce3.jpg" class="box4">
+    </div>
+
+    <div>
+        <img src="./images/bruce3.jpg" class="box5">
+    </div>
+
+    <div>
+        <img src="./images/bruce3.jpg" class="box6">
+    </div>
+
+    <div class="box7"></div>
+</body>
+</html>

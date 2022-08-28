@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Prefers Color Scheme</title>
+
+    <!-- Used to write CSS for light mode and dark mode -->
+    <style>
+        body{ background-color: beige; }
+
+        /* On windows light mode this will apply */
+        @media (prefers-color-scheme: light) {
+            
+            body{ background-color: palevioletred; }
+        }
+
+        /* On windows dark mode this will apply */
+        @media (prefers-color-scheme: dark) {
+            
+            body{ 
+                color: beige;
+                background-color: midnightblue; 
+            }
+        }
+
+        /* If we only want to change colors, try this method */
+        /* 
+            :root{ --base-color : beige; }
+            
+            body { background: var(--base-color); }
+
+            @media (prefers-color-scheme: light){
+                :root{ --base-color : palevioletred; }
+            }
+
+            @media (prefers-color-scheme: dark){
+                :root{ --base-color : midnightblue; }
+            } 
+        */
+
+    </style>
+</head>
+<body>
+    
+    <h1>Yahoo Baba</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora id officia aut, dolorem vero quibusdam neque impedit voluptatum, accusamus, cumque accusantium incidunt exercitationem hic? Exercitationem facilis atque quos aut eaque ipsam labore animi rerum, dolores similique recusandae iusto laborum quae repudiandae minus provident unde, vitae cum impedit vero neque in? Obcaecati minima nam enim, assumenda ex laboriosam. Unde necessitatibus quas, incidunt rerum, in voluptate labore ullam laborum neque porro eius odio adipisci! Explicabo qui voluptas earum quisquam assumenda id, reprehenderit, fuga consectetur voluptatibus doloremque vel at consequatur, corrupti eum hic amet harum et quae dolore. Ullam incidunt, illo excepturi voluptate nisi distinctio quo eius dolor provident, tenetur officiis recusandae error, nihil doloremque maxime iusto labore libero nulla amet quibusdam ducimus odit dolore! Explicabo aspernatur ipsa doloremque earum iure exercitationem reprehenderit nesciunt atque magni eligendi dolore at dolorum sapiente fuga itaque, nobis impedit soluta quas! Est enim porro fugiat nostrum vitae quidem magnam! Reiciendis vel excepturi, neque vitae, voluptas et deleniti unde provident eaque tenetur animi repellat earum. Similique alias vel veritatis unde error? Sint, ducimus distinctio iste molestiae soluta ex neque deserunt fugiat laborum unde, quo eaque tempore magni nobis temporibus vero? Libero odit animi quas deleniti autem aliquam at!</p>
+
+</body>
+</html>

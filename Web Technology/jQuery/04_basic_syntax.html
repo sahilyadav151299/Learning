@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic Syntax</title>
+
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous">
+    </script>
+    
+    <script>
+
+        $(document).ready(function(){
+
+            // Your code here
+            // Starts working after document will be ready
+            // This can be used either in head or body
+
+            var a = $('#test1').html();
+            console.log(a);
+
+        });
+
+    </script>
+</head>
+<body>
+
+    <div id="test1">
+        <h1>Test Box 1</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <div id="test2">
+        <h1>Test Box 2</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+
+    <script>
+
+        $(function(){
+
+            // Your code here
+            // Use it in body tag so that document loads
+            // before the execution of the script
+
+            var b = $('#test2').html();
+            console.log(b);
+
+        });
+        
+    </script>
+    
+</body>
+</html>

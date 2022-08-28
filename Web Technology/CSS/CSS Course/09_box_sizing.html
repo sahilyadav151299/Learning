@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Box Sizing</title>
+
+    <style>
+        /* Width : 200 + 10 + 10 + 40 + 40 = 300 px */
+        .box1{
+            border: 10px solid black;
+            width: 200px;
+            padding: 40px;
+        }
+
+        /* Width : 200 + 10 + 10 + 40 + 40 = 300 px */
+        .box2{
+            border: 10px solid black;
+            width: 200px;
+            padding: 40px;
+            box-sizing: content-box;
+        }
+
+        /* Width : 200 px, Height : Auto */
+        .box3{
+            border: 10px solid black;
+            width: 200px;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <!-- Box sizing doesn't increase the actual width -->
+    <!-- Content-Box : Width : 200px, Padding : 10px, Total Width : 220px -->
+    <!-- Border-Box  : Width : 200px, Padding : 10px, Total Width : 200px  -->
+
+    <div class="box1">
+        Google
+    </div>
+
+    <div class="box2">
+        Google 
+    </div>
+
+    <div class="box3">
+        Google 
+    </div>
+    
+</body>
+</html>

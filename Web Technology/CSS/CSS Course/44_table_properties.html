@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Table Properties</title>
+
+    <style>
+        table, td, th {
+            border: 1px solid black;
+        }
+
+        table{
+            margin: 20px;
+        }
+
+        .tab1{
+            /* col gap, row gap */
+            border-spacing: 30px 10px;
+        }
+
+        caption{
+            /* top or bottom */
+            caption-side: bottom;
+        }
+
+        .tab2{
+            /* Border overlap : only single border */
+            border-collapse: collapse;
+            /* fixed table means data overflow, auto table means width increase*/
+            table-layout: fixed;
+        }
+
+        .tab3{
+            width: 300px;
+            empty-cells: hide;
+        }
+
+        .tab3 td{
+            /* cell value : top, middle, bottom */
+            vertical-align: middle;
+        }
+
+        .tab4{
+            border-collapse: collapse;
+        }
+
+        .tab4 th, td{
+            padding: 5px 15px;
+        }
+
+        .tab4 th{
+            background-color: honeydew;
+        }
+
+        .tab4 tr:nth-child(even){
+            background-color: lightpink;
+        }
+
+        .tab4 tr:nth-child(odd){
+            background-color: grey;
+        }
+
+        .tab4 tr:hover{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <table class="tab1">
+        <caption>Emplyoee Data</caption>
+         <thead>
+             <tr>
+                 <th>FName</th>
+                 <th>LName</th>
+                 <th>Savings</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <td>Mohan</td>
+                 <td>Kumar</td>
+                 <td>$100</td>
+             </tr>
+             <tr>
+                <td>Mohan</td>
+                <td>Pandey</td>
+                <td>$200</td>
+            </tr>
+         </tbody>
+     </table>
+
+     <table class="tab2">
+        <thead>
+            <tr>
+                <th>FName</th>
+                <th>LName</th>
+                <th>Savings</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mohan</td>
+                <td>Kumar</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+               <td>Mohan</td>
+               <td>Pandey</td>
+               <td>$200</td>
+           </tr>
+        </tbody>
+    </table>
+
+    <table class="tab3">
+        <thead>
+            <tr>
+                <th>FName</th>
+                <th>LName</th>
+                <th>Savings</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mohan Mohan Mohan Mohan Mohan Mohan Mohan</td>
+                <td>Kumar</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+               <td>Mohan</td>
+               <td>Pandey</td>
+               <td></td>
+           </tr>
+        </tbody>
+    </table>
+
+
+    <table class="tab4">
+        <thead>
+            <tr>
+                <th>FName</th>
+                <th>LName</th>
+                <th>Savings</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mohan</td>
+                <td>Kumar</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+               <td>Mohan</td>
+               <td>Pandey</td>
+               <td>$200</td>
+            </tr>
+            <tr>
+                <td>Mohan</td>
+                <td>Kumar</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>Mohan</td>
+                <td>Pandey</td>
+                <td>$200</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

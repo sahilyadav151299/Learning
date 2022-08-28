@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Pseudo Classes</title>
+
+    <style>
+    /* ------------------ :first-child ------------------ */
+    .ul1 li:first-child{
+        color: red;
+    }
+
+    /* ------------------ :last-child ------------------ */
+    .ul1 li:last-child{
+        color: seagreen;
+    }
+
+    /* ------------------ :nth-child() : target tag with child only ------------------ */
+    .ul1 li:nth-child(3){
+        color: blue;
+    }
+
+    .ul2 li:nth-child(2n){
+        /*  n/2n/3n/4n/2n+1/3n-1
+
+            2 * 1 = 2 (2)
+            2 * 2 = 4 (4)
+            2 * 3 = 6 (6)
+        */
+        background-color: goldenrod;
+    }
+
+    /* ------------------ :nth-last-child() : target tag with child only ------------------ */
+    .ul2 li:nth-last-child(2n){
+        /*  2 * 1 = 2 (5)
+            2 * 2 = 4 (3)
+            2 * 3 = 6 (1)
+        */
+        background-color: gainsboro;
+    }
+
+
+    /* ------------------ :nth-of-type() : target tag with child + without child ------------------ */
+    p:nth-of-type(2){
+        background-color: thistle;
+    }
+
+    /* ------------------ :nth-last-of-type() : target tag with child +  without child ------------------ */
+    p:nth-last-of-type(1){
+        background-color: wheat;
+    }
+
+    /* ------------------ :only-child ------------------ */
+    .ul3 li:only-child{
+        border: 1px solid black;
+    }
+
+    /* ------------------ :only-of-type ------------------ */
+    i:only-of-type{
+        color: red;
+    }
+    
+    /* ------------------ :first-of-type ------------------ */
+    h4:first-of-type{
+        color: darkred;
+    }
+
+    /* ------------------ :last-of-type ------------------ */
+    h4:last-of-type{
+        font-weight: normal;
+    }
+
+    /* ------------------ :empty : target empty tag ------------------ */
+    div:empty{
+        height: 20px;
+        width: 400px;
+        border: 2px solid red;
+    }
+
+    /* ------------------ :not() ------------------ */
+
+    pre:not(.test){
+        color: blueviolet;
+    }
+
+    /* ------------------ :lang() ------------------ */
+    pre:lang(de){
+        border: 1px solid tomato;
+    }
+
+    /* ------------------ :link ------------------ */
+    .ul4 a:link{
+        color: red;
+    }
+
+    /* ------------------ :hover : can be used with any tag ------------------ */
+    .ul4 a:hover{
+        color: white;;
+    }
+
+    /* ------------------ :visited ------------------ */
+    .ul4 a:visited{
+        color: black;
+    }
+
+    /* ------------------ :active ------------------ */
+    .ul4 a:active{
+        color: coral;
+    }
+
+    /* ------------------ :target ------------------ */
+    div:target{
+        background-color: thistle;
+    }
+
+    /* ------------------ :focus ------------------ */
+    form *{
+        margin: 10px 2px;
+    }
+
+    input:focus{
+        background-color: gold;
+    }
+
+    /* ------------------ :checked ------------------ */
+    input[type='checkbox']:checked{
+        /* border don't work on checkbox */
+        box-shadow: 0 0 0 1px red;
+    }
+
+    input[type='radio']:checked + label{
+        /* border don't work on checkbox */
+       color: red;
+    }
+
+    /* ------------------ :disabled ------------------ */
+    input:disabled{
+        border: 2px solid red;
+    }
+
+    /* ------------------ :enabled ------------------ */
+    input:enabled{
+        border: 2px solid black;
+    }
+
+    /* ------------------ :required ------------------ */
+    input:required{
+        background-color: burlywood;
+    }
+
+    /* ------------------ :optional ------------------ */
+    input:optional{
+        color: red;
+    }
+
+    /* ------------------ :in-range ------------------ */
+    input:in-range{
+        color: black;   
+    }
+
+    /* ------------------ :out-of-range ------------------ */
+    input:out-of-range{
+        border: 5px solid red;
+    }
+
+    /* ------------------ :read-only ------------------ */
+    textarea:read-only{
+        background-color: lightblue;
+    }
+
+    /* ------------------ :read-write ------------------ */
+    input:read-write{
+        height: 20px;
+    }
+
+    /* ------------------ :valid ------------------ */
+    input[type='email']:valid{
+        background-color: lightblue;
+    }
+
+    /* ------------------ :invalid ------------------ */
+    input[type='email']:valid{
+        background-color: rgb(255, 128, 128);   
+    }
+
+    /* ------------------ :default (works on checkbox + radio + option)------------------ */
+    input:default + label{
+        box-shadow: 0 0 0 1px goldenrod;
+    }
+
+    option:default{
+        color: red;
+    }
+
+    /* ------------------ :placeholder-shown (works on input + textarea) (not works on date + month + year) ------------------ */
+    .pForm input:placeholder-shown{
+        border: 3px solid orangered;
+    }
+
+    /* ------------------ :is() ------------------ */
+    #box1 h1, 
+    #box1 h2, 
+    #box1 h3 {
+        /* Higher loading time */
+        color: darkred;
+        background-color: wheat;
+    }
+
+    #box2 :is(h1, h2, h3, h4, h5){
+        /* Lower loading time */
+        font-size: 20px;
+        color: white;
+        background-color: midnightblue;
+    }
+
+    :is(#box1, #box2) h4{
+        background-color: violet;
+    }
+
+    :is(#box1, #box2) :is(h5, p){
+        color: darkred;
+    } 
+
+    :is(#box1, #box2) p:hover{
+        color: white;
+        background-color: midnightblue;
+    }   
+
+    /* ------------------ :focus-within : style parent tag using child ------------------ */
+
+    .focusDive{
+        border: 2px solid black;
+        width: 300px;
+        padding: 10px;
+        height: 350px;
+    }
+
+    .focusDive:focus-within{
+        background-color: lightcoral;
+    }
+
+    .focusDive > div:focus-within{
+        background-color: lightskyblue;
+    }
+
+    /* ------------------ :root ------------------ */
+    /* This is already coverd in CSS Variable part */
+
+    </style>
+</head>
+<body>
+    
+    <ul class="ul1">
+        <li>First Child</li>  
+        <li>Item2</li>
+        <li>Nth-Child (3)</li>
+        <li>Item4</li>
+        <li>Last Child</li>
+    </ul>
+
+    <hr> <!----------------------------------------------->
+
+    <ul class="ul2">
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+        <li>Item4</li>
+        <li>Item5</li>
+        <li>Item6</li>
+    </ul>
+
+    <hr> <!----------------------------------------------->
+
+    <p>This is a paragraph 1 without parent</p>
+    <p>This is a paragraph 2 without parent</p>
+    <p>This is a paragraph 3 without parent</p>
+
+    <div style="border: 1px solid black;">
+        <p>This is a paragraph 1 with parent</p>
+        <p>This is a paragraph 2 with parent</p>
+        <p>This is a paragraph 3 with parent</p> 
+    </div>
+
+    <!----------------------------------------------->
+
+    <ul class="ul3">
+        <li>This is not only li 1</li>
+        <li>This is not only li 2</li>
+    </ul>
+
+    <ul class="ul3">
+        <li>This is only li</li>
+    </ul>
+
+    <hr> <!----------------------------------------------->
+    
+    <div>
+        <i>Only of type as it is only i inside div</i>
+        <h3>Heading</h3>
+    </div>
+
+    <div>
+        <i>Not Only of type i as we have one more i inside div</i>
+        <h3>Heading</h3>
+        <i>Not Only of type i as we have one more i inside div</i>
+    </div>
+
+    <hr> <!----------------------------------------------->
+
+    <h4>This is first of type h4 without parent</h4> 
+    <h4>This is middle of type h4 without parent</h4> 
+    <h4>This is last of type h4 without parent</h4>       
+
+    <div style="background-color: silver;">
+        <h4>This is first of type h4 with parent</h4> 
+        <h4>This is middle of type h4 with parent</h4> 
+        <h4>This is last of type h4 with parent</h4>       
+    </div>
+
+    <hr> <!----------------------------------------------->
+
+    <div> <!-- This is not empty : whitespace also not allowed --> </div>
+    <div></div>
+
+    <pre>This is pre without test class</pre>
+    <pre class="test">This is pre with test class</pre>
+    <pre>This is pre without test class</pre>
+
+
+    <pre lang="fr">This is French paragraph</pre>
+    <pre lang="en">This is English paragraph</pre>
+    <pre lang="de">This is German paragraph</pre>
+
+    <hr> <!----------------------------------------------->
+
+    <ul class="ul4">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Blogs</a></li>
+    </ul>
+
+    <hr> <!----------------------------------------------->
+
+    <ul class="ul5">
+        <li><a href="#html">What is HTML ?</a></li>
+        <li><a href="#css">What is CSS ?</a></li>
+    </ul>
+
+    <h3>All Answers</h3>
+    <div id="html">HTML is a Hyper Text Markup Language</div>
+    <div id="css">CSS is a Casecading Style Sheet Language</div>
+
+    <hr> <!----------------------------------------------->
+
+    <form action="" autocomplete="off">
+        <textarea cols="30" rows="2" readonly>This is area is just for readonly</textarea><br>
+
+        <label>First Name : </label>   <input type="text" disabled><br>
+
+        <label>Last Name : </label>   <input type="text"><br>
+
+        <label>Your Age : </label>   <input type="number" min="18" max="60"><br>
+
+        <label>Your Email-Id : </label>   <input type="email" ><br>
+
+        <label>Your Password : </label>   <input type="pass" required><br>
+
+        <label>Your Hobbies : </label>
+        <input type="checkbox" checked> <label>Sports</label>
+        <input type="checkbox"> <label>Music</label>
+        <input type="checkbox"> <label>Travel</label>
+        <input type="checkbox"> <label>Singing</label><br>
+
+        <label>Gender : </label>   
+        <input type="radio">  <label>Male</label>
+        <input type="radio">  <label>Female</label><br>
+
+        <label>Your Country</label>
+        <select name="country">
+            <option value="none">Select</option>
+            <option value="india" selected>India</option>
+            <option value="endland">England</option>
+            <option value="denmark">Denmark</option>    
+        </select><br>
+
+        <input type="submit">
+    </form>
+
+    <hr> <!----------------------------------------------->
+
+    <form class="pForm">
+        <input type="text" placeholder="Enter Name"><br>
+        <input type="text" placeholder="Enter Address"><br>
+        <input type="number" placeholder="Enter Percentage"><br>
+        <input type="email" placeholder="Enter Email"><br>
+    </form>
+
+    <hr> <!----------------------------------------------->
+
+    <div id="box1">
+        <h1>Head 1</h1>
+        <h2>Head 2</h2>
+        <h3>Head 3</h3>
+        <h4>Head 4</h4>
+        <h5>Head 5</h5>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia delectus temporibus neque, modi adipisci consequatur magni quae facere voluptatum excepturi voluptas, quas, vitae voluptates corrupti. Explicabo corrupti aspernatur delectus excepturi libero sequi, voluptatem ratione sunt tenetur commodi rerum beatae nemo perspiciatis nam quo accusamus error nihil at quis autem. Tempore corrupti quibusdam hic dolor, distinctio quaerat ea unde voluptatibus enim quae voluptatum quisquam. Consequuntur inventore quos minima nulla, omnis pariatur quia maiores, velit voluptatibus fugit vitae fuga vel optio voluptatum perferendis eos illum, aut consectetur minus? Ipsam eligendi quasi recusandae, perspiciatis officia ex, dolore, sit expedita sequi iusto dolores voluptatibus!</p>
+    </div>
+
+    <div id="box2">
+        <h1>Head 1</h1>
+        <h2>Head 2</h2>
+        <h3>Head 3</h3>
+        <h4>Head 4</h4>
+        <h5>Head 5</h5>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia delectus temporibus neque, modi adipisci consequatur magni quae facere voluptatum excepturi voluptas, quas, vitae voluptates corrupti. Explicabo corrupti aspernatur delectus excepturi libero sequi, voluptatem ratione sunt tenetur commodi rerum beatae nemo perspiciatis nam quo accusamus error nihil at quis autem. Tempore corrupti quibusdam hic dolor, distinctio quaerat ea unde voluptatibus enim quae voluptatum quisquam. Consequuntur inventore quos minima nulla, omnis pariatur quia maiores, velit voluptatibus fugit vitae fuga vel optio voluptatum perferendis eos illum, aut consectetur minus? Ipsam eligendi quasi recusandae, perspiciatis officia ex, dolore, sit expedita sequi iusto dolores voluptatibus!</p>
+    </div>
+
+    <hr> <!----------------------------------------------->
+
+    <form class="focusDive">
+        
+        <div>
+            <label>Name : </label>
+            <input type="text"> <br>
+        </div>
+
+        <div>
+            <label>Email : </label>
+            <input type="text"> <br>
+        </div>
+
+        <div>
+            <label>Gender : </label>
+
+            <input type="radio">
+            <label>Male</label>
+            <input type="radio">
+            <label>Female</label>
+            <input type="radio">
+            <label>Others</label>
+        </div>
+
+        <div>
+            <label>Address :</label>
+            <textarea cols="30" rows="5"></textarea>
+        </div>
+
+        <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Simple Selectors</title>
+
+    <style>
+
+        /* ------------------ Type Selector ------------------ */
+        p{  
+            /* select all p tags */
+            color: red;
+        }
+
+        /* ------------------ Class Selector ------------------ */
+        .head{
+            /* select all tags uses head class */
+            font-size: large;
+            color: rosybrown;
+        }
+
+        /* ------------------ ID Selector ------------------ */
+        #para{
+            /* select tag with ID para */
+            font-family: Impact;
+            color: black;
+        }
+
+        /* ------------------ Universal Selector ------------------ */
+
+        *{
+             /* all tags selected */
+            border: 1px solid black;
+        }
+
+        div *{
+             /* all tags selected inside div tag */
+            background-color: burlywood;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- Type Selector -->
+    <p>This is an example of Type Selector</p>
+
+    <!-- Class Selector -->
+    <p class="head">This is an example of Class Selector</p>
+
+    <!-- ID Selector -->
+    <p id="para">This is an example of ID Selector</p>
+
+    <!-- Universal Selector -->
+    <div>
+        <p>This is an example of Type Selector</p>
+    </div>
+
+</body>
+</html>

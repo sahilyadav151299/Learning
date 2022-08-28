@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id='p1'></p>
+
+    <script>
+
+        var xml = new XMLHttpRequest()
+
+        // Default is true : Asynchronous
+        xml.open('GET', 'https://jsonplaceholder.typicode.com/photos')
+
+        // xml.open('REQ', 'URL', true)    true  : Asynchronous 
+        // xml.open('REQ', 'URL', false)   false : Synchronous
+
+        // we can't pass data in req body using GET, only in above url
+        xml.send()
+
+        // Callback Handler : It will be called when server is ready with response
+        xml.onreadystatechange = function() {
+
+            if(xml.readyState == 4 && xml.status == 200){
+
+                document.getElementById('p1').innerText = xml.responseText
+
+                // convert JSON to Javascript
+                var data = JSON.parse(xml.responseText)
+
+                console.log(data)
+            }  
+        }
+
+
+        // 0 UNSENT             : Client has been created but open() not called yet
+        // 1 OPENED             : open() has been called
+        // 2 HEADERS_RECEIVED   : send() has been called & headers + status are availabe
+        // 3 LOADING            : Downloading, responseText holds partial data           
+        // 4 DONE               : The operation has been completed
+
+
+    </script>
+
+</body>
+</html>

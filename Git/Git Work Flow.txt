@@ -1,0 +1,73 @@
+1) ---------------- Git bash command ----------------
+
+cd /directory_name	-	Change directory
+cd folder_name		-	Change to next folder
+cd ..			-	Change to previous folder
+q			-	Quit
+Shift + Insert		-	Paste text on bash
+
+2) ---------------- Core settings ----------------
+
+git --version
+git config --global user.name "Sahil Yadav"
+git config --global user.email "sahil_yadav@persistent.com"
+git config --global core.editor vim
+git config --list --global	 
+
+3) ---------------- Make a local copy of remote repo ----------------
+
+git clone URL
+
+4) ---------------- See repo remotes ----------------
+
+git remote -v
+
+The above command will show you origin (fetch/push) remote, if not use the below command
+
+git remote add origin URL 
+git remote -v
+
+5) ---------------- Create a branch ----------------
+
+git branch feature_name
+
+6) ---------------- Move to your feature branch ----------------
+
+git chcekout feature_branch
+
+7) ---------------- Perform all your code implementation ----------------
+
+8) ---------------- Now stage and commit your work ----------------
+
+git add .
+git commit -m 'Project setuo has been done'
+
+9) ---------------- Move to master branch ----------------
+
+git checkout dev
+
+10) ---------------- Fetch and merge all the changes ----------------
+
+git pull
+
+11) ---------------- Merge with feature ----------------
+
+get checkout feature_branch
+git merge dev
+
+12) ---------------- Resolve conflicts manually if any ----------------
+
+13) ---------------- Push your local changes to remote repo ----------------
+
+git push  
+or
+git push -u origin feature_branch
+
+14) ---------------- Open URL ----------------
+
+15) Here you will see your PR
+16) Click on compare & pull
+17) Choose base : dev <- featur_branch
+18) Click on create pull request
+19) Finish
+

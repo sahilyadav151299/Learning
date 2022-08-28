@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+	<head>
+		<title> Form Page </title>
+	</head>
+
+	<script>
+	function submitScript(){
+		var confirmResponse = confirm("Do you really want to submit ?");
+
+		if(confirmResponse){
+			document.getElementById("profileForm").submitScript();
+		}
+
+	}
+	</script>
+<body>
+
+	<h1>Profile Information</h1>
+
+	<form action="08script.html" id="profileForm">
+
+		<fieldset style="width: 500px;">
+			<legend>User Details</legend>
+
+			<label for="name">Name</label> <br>
+			<input type="text" name="name" id="name"> <br>
+
+			<label for="password">Password</label> <br>
+			<input type="password" name="password" id="password"> <br>
+
+			<label for="email">Email</label> <br>
+			<input type="email" name="email" id="email"> <br>
+
+		</fieldset>
+		<br>
+
+		<input type="button" name="buttonSubmit" value="SUBMIT" onclick="submitScript()">
+
+	</form>
+</body> 

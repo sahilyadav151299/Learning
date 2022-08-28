@@ -1,0 +1,159 @@
+--------------------------------- Git---------------------------------
+
+https://www.vogella.com/tutorials/Git/article.html#introduction-into-version-control
+https://www.dataschool.io/how-to-contribute-on-github/
+https://medium.com/@jonathanmines/the-ultimate-github-collaboration-guide-df816e98fb67#:~:text=How%20to%20Collaborate%20Using%20GitHub%201%20Initialize%20a,The%20way%20to%20keep%20Master%20deployable...%20See%20More.
+https://dev.to/ravirajsubramanian/how-to-use-git-and-github-for-collaborative-programming-14a3
+https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Where-system-global-and-local-Windows-Git-config-files-are-saved#:~:text=Ubuntu%20Linux%20Git%20Config%20File%20Locations%20%20,Worktree%20%20%20%3Cgit-repo%3E%2F.git%2Fconfig.worktree%20%20%20config.worktree%20
+https://www.qaautomation.co.in/2019/12/top-git-command-everyone-should-know.html
+https://gitextensions.github.io/
+https://support.atlassian.com/bitbucket-cloud/docs/set-up-an-ssh-key/
+
+--------------------------------- Go ---------------------------------
+
+https://golang.org/ref/spec#Introduction
+https://pkg.go.dev/
+https://www.calhoun.io/5-useful-ways-to-use-closures-in-go/
+
+--------------------------------- HTML ---------------------------------
+
+http://html5test.com/index.html
+https://www.rapidtables.com/web/tools/window-size.html
+https://www.rapidtables.com/web/html/html-codes.html
+https://caniuse.com/
+https://type-scale.com/
+https://metatags.io/
+https://en.wikipedia.org/wiki/Quotation_mark#:~:text=Quotation%20marks%2C%20also%20known%20as%20quotes%2C%20quote%20marks%2C,may%20or%20may%20not%20be%20the%20same%20character.
+https://www.yahoobaba.net/
+https://www.frontendmentor.io/challenges?types=free
+https://100dayscss.com/about/
+
+--------------------------------- Img-Icon ---------------------------------
+
+https://fonts.google.com/?preview.size=26
+https://fonts.google.com/icons?preview.size=26
+https://www.iconfinder.com/
+https://fontawesome.com/download
+https://fontawesome.com/v4/get-started/
+https://www.cdnpkg.com/font-awesome
+https://unsplash.com/
+https://wallpaperscraft.com/
+https://www.pexels.com/
+https://www.remove.bg/
+https://favicon.io/
+https://bgjar.com/
+
+--------------------------------- Color---------------------------------
+
+https://websafecolors.info/color-chart
+https://cssgradient.io/
+https://www.csscolorgradients.com/
+https://www.csscolorpalettes.com/
+https://www.gradientmagic.com/
+https://trianglify.io/
+https://mycolor.space/?hex=%23845EC2&sub=1
+
+--------------------------------- CSS ---------------------------------
+
+https://getbootstrap.com/
+https://www.bootstrapcdn.com/fontawesome/
+https://necolas.github.io/normalize.css/
+https://9elements.github.io/fancy-border-radius/#19.30.29.30--301.301
+https://app.haikei.app/
+https://cssbuttons.io/buttons
+https://cssbuttons.io/switches
+https://cssbuttons.io/loaders
+https://neumorphism.io/#ffffff
+https://bennettfeely.com/csspiechart/
+https://bennettfeely.com/clippy/
+https://cubic-bezier.com/#0,-0.01,1,.99
+https://animista.net/play/basic
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
+
+--------------------------------- CSS Lib ---------------------------------
+
+https://animate.style/
+https://animejs.com/
+https://michalsnik.github.io/aos/
+https://shakrmedia.github.io/tuesday/
+http://elrumordelaluz.github.io/csshake/
+https://www.minimamente.com/project/magic/
+https://particles.js.org/
+http://ianlunn.github.io/Hover/#effects
+
+--------------------------------- Web Tools ---------------------------------
+
+https://developer.mozilla.org/en-US/
+https://www.w3schools.com/html/
+https://www.tutorialrepublic.com/
+https://www.canva.com/
+https://app.diagrams.net/
+https://miro.com/login/
+https://responsively.app/
+https://cssauthor.com/
+https://pagespeed.web.dev/
+https://bundlephobia.com/
+https://roadmap.sh/
+
+---------------------------------  JS ---------------------------------
+
+https://www.tutorialsteacher.com/typescript
+https://www.bestjquery.com/example/jquery-plugins/
+https://www.bestjquery.com/themes/
+https://plugins.jquery.com/
+
+--------------------------------- Node ---------------------------------
+
+https://www.npmjs.com/
+https://nodejs.org/en/docs/
+https://mongoosejs.com/docs/index.html
+https://stackoverflow.com/questions/69187442/const-utf8encoder-new-textencoder-in-node-js
+https://www.pabbly.com/tutorials/node-js-event-loops/
+
+--------------------------------- Angular ---------------------------------
+
+https://ng-bootstrap.github.io/#/home
+https://material.angular.io/components/categories
+https://angular.io/guide/architecture
+https://egghead.io/lessons/angular-fetch-data-from-an-api-using-the-httpclient-in-angular
+https://medium.com/@koteswar.meesala/convert-array-buffer-to-base64-string-to-display-images-in-angular-7-4c443db242cd
+https://www.npmjs.com/package/angular-webstorage
+https://www.tutorialspoint.com/http/http_status_codes.htm
+
+
+--------------------------------- Project Setup ---------------------------------
+
+https://www.geeksforgeeks.org/how-to-write-a-good-srs-for-your-project/
+https://www.geeksforgeeks.org/functional-vs-non-functional-requirements/
+https://scand.com/company/blog/functional-vs-non-functional-requirements/
+https://roadmap.sh/
+https://www.tutorialspoint.com/http/http_status_codes.htm
+https://www.geeksforgeeks.org/types-software-testing/
+https://jsonplaceholder.typicode.com/
+https://www.javatpoint.com/authentication-vs-authorization
+
+--------------------------------- Cyber Security ---------------------------
+
+https://arcticwolf.com/resources/blog/cybersecurity-101-basic-terminology-you-need-to-know
+https://www.rapid7.com/fundamentals/
+https://www.crowdstrike.com/cybersecurity-101/
+https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html
+https://attack.mitre.org/#
+
+--------------------------------- Mixed ---------------------------------
+
+https://stackoverflow.com/questions/1801391/how-to-create-the-most-compact-mapping-n-%E2%86%92-isprimen-up-to-a-limit-n/1801446#1801446
+https://modernizr.com/download?setclasses
+https://jsonplaceholder.typicode.com/
+https://www.geeksforgeeks.org/types-software-testing/
+https://dev.to/thecodearcher/what-really-is-the-difference-between-session-and-token-based-authentication-2o39
+https://stackoverflow.com/questions/26390448/third-argument-when-creating-model-in-mongoosejs#:~:text=ref%20is%20part%20of%20Mongoose%27s%20support%20for%20reference,parameter%20to%20mongoose.model%20is%20an%20explicit%20collection%20name.
+https://www.javatpoint.com/authentication-vs-authorization
+
+
+
+
+-------------------------------- Tools ------------------------------------
+
+https://miro.com/login/
+https://app.diagrams.net/

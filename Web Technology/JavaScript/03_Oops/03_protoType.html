@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // Member defined at class level : every obj of the class has separate copy of the members
+        // Prototype : every class has property called as 'prototype' which itslef is an object
+        // Member defined at prototype level : all object will share same copy of that member
+    
+        function Employee(r) {
+
+            this.role = r
+        }
+
+        // Shared function among all the objects
+        Employee.prototype.displayRole = function() {
+
+            alert("Employee Role : " + this.role)
+        }
+
+
+        var emp1 = new Employee("Tester")
+        var emp2 = new Employee("Manager")
+        var emp3 = new Employee("Developer")
+
+
+        // Call same function with defferent context
+        emp1.displayRole()
+        emp2.displayRole()
+        emp3.displayRole()    
+
+    </script>
+
+</body>
+</html>

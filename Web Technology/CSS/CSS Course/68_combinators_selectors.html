@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Combinators Selectors</title>
+
+    <style>
+        /* ------------------  Descendent Selector ------------------ */
+        .box1 p{    
+            /* select all p inside all tag uses box1 class */
+            background-color: blanchedalmond;
+        }
+
+        p span{
+            /* select all span inside all p tag */
+            font-weight: bolder;
+            color: red;
+        }
+
+        .box3 p span{
+            /* select all span inside all p inside all tags uses box3 class */
+            border: 1px solid black;
+        }
+        
+        
+
+        /* ------------------ Direct Child Selector ------------------ */
+        .parent1 > .child1{
+            /* select direct child tag having .child1 class */
+            background-color: cadetblue;
+        } 
+
+        .parent2 > p{
+            background-color: palevioletred;
+        }
+
+        /* ------------------ Adjacent Sibling Selector ------------------ */
+
+        .list1 + p{
+            /* select immediate p tag of the tag uses list1 */
+            background-color: peru;
+        }
+
+        .box > p + p{
+            color: royalblue;
+        }
+
+        /* ------------------ General Sibling Selector ------------------ */
+        .list2 ~ p{
+            color: darkred;
+        }
+
+        h2 ~ p{
+            background-color: wheat;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- Descendent Selector -->
+    <div class="box1">
+        <p>inside box1 <span> + </span> outside box2</p>
+        
+        <div class="box2">
+            <p>inisde box1 + inside box2</p>
+
+            <p>inisde box1 <span> + </span> inside box2</p>
+
+            <div class="box3">
+                <p>inisde box1 <span> + </span> inside box2 <span> + </span> inside box3</p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Direct Child Selector -->
+    <div class="parent1">
+        <p class="child1">This is a direct child paragraph of parent1</p>
+
+        <div class="parent2">
+            <p>This is a direct child paragraph of parent2 + descendent selector of parent1</p> 
+
+            <p>This is a direct child paragraph of parent2 + descendent selector of parent1</p> 
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Adjacent Sibling Selector -->
+    <div class="box">
+        <ul class="list1">
+            <li>Item1</li>
+            <li>Item2</li>
+            <li>Item3</li>
+            <li>Item4</li>
+        </ul>
+    
+        <p>This is an immediate or adjacent sibling paragraph of ul tag</p>
+        <p>This is an immediate or adjacent sibling paragraph of p tag</p>
+    </div>
+
+    <hr>
+
+    <!-- General Sibling Selector -->
+    <ul class="list2">
+        <li>Item1</li>
+        <li>Item2</li>
+    </ul>
+
+    <p>This is an adjacent sibling paragraph of ul tag</p>
+    <p>This is general sibling paragraph of ul tag</p>
+
+    <h2>This is h2 tag</h2>
+
+    <p>This is adjacent sibling of h2 tag + general sibling paragraph of ul tag</p>
+
+    <div>
+        <p>This is a paragraph inside div</p>
+    </div>
+
+    <p>This is general sibling paragraph of ul tag + h2 tag</p>
+
+</body>
+</html>

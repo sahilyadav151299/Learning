@@ -1,0 +1,13 @@
+Creating the Shop Structure             Sub Folders
+Working on the Navigation               More Links
+Registering the Routes                  res.render()
+Storing Product Data                    Class
+Displaying Product Data                 For Loop
+Editing & Deleting Products             Edit Products
+
+
+npm init
+npm install nodemon --save-dev          development dependency
+npm install express --save              production dependency
+npm install body-parser --save 
+npm install --save ejs pug express-handlebars   (3 pkg at once) 

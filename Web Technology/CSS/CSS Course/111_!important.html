@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS !Important</title>
+
+    <!-- Priority Level of Selectors : High-to-Low -->
+    <!-- 1) Inline  -->
+    <!-- 2) Id Selector -->
+    <!-- 3) Class Selector -->
+    <!-- 4) Tag Name Selector -->
+
+    <!-- How to break priority level -->
+    <!-- !important : high priority selector -->
+    <!-- Can be used with any CSS property -->
+
+    <style>
+        h1{
+            color: red;
+        }
+
+        .first{
+            /* High Priority */
+            color: midnightblue !important;
+        }
+
+        #second{
+            color: chocolate;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <h1 class="first" id="second" style="color: green;">Yahoo Baba</h1>
+
+</body>
+</html>

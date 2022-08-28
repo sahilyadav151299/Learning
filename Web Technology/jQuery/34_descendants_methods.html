@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Descendants Methods</title>
+
+    <style>
+        #main-outer{
+            width: 500px;
+            height: 300px;
+            background-color: palevioletred;
+            position: relative;
+        }
+
+        #outer{
+            width: 450px;
+            height: 230px;
+            margin: auto;
+            background-color: peachpuff;
+        }
+
+        #inner{
+            width: 400px;
+            height: 160px;
+            margin: auto;
+            background-color: plum;
+        }
+
+        #inner div{
+            width: 80px;
+            height: 100px;
+            background: teal;
+            float: left;
+            margin: 0 10px;
+            text-align: center;
+            line-height: 90px;
+            color: white;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Yahoo Baba</h1>
+
+    <div id="main-outer">  
+        <h2>Main Outer</h2>  
+        <div id="outer">
+            <h2>Outer</h2>
+            <div id="inner">
+                <h2 id="child-head">Inner</h2>
+                <div>A</div>
+                <div>B</div>
+                <div id="child-C">C</div>
+                <div>D</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery Included -->
+    <script src="./jQuery.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+
+            // Target all direct child not grand child
+            $('#inner')
+                .children()
+                .css('color', 'white');
+
+            // Target specific direct child
+            $('#inner')
+                .children('#child-head')
+                .css('background', 'black');   
+
+            // Target specific selector in direct child + grand child + great grand child
+            $('#main-outer')
+                .find('div, h2')
+                .css('font-family', 'cursive'); 
+
+        });
+    </script>
+
+</body>
+</html>

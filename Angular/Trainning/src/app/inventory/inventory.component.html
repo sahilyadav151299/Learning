@@ -1,0 +1,12 @@
+<h2>Inventory Products</h2>
+
+  <table>
+    <thead><th>Name</th><th>Price</th><th>Action</th></thead>
+    <tr *ngFor="let product of products;">      
+      <td>{{product.name}}</td>
+      <td>{{product.price | currency}}</td>
+      <!-- Child of inventory Pass value from inventory to price updater-->
+      <!-- parent to child data passing : way-1 -->
+      <td><app-priceupdater [pricevalue]='product.price' (update)='setNewPrice($event, product.id)'></app-priceupdater></td>
+   </table> 
+  

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id='p1'></p>
+
+    <script>
+    
+        var xhttp = new XMLHttpRequest()
+    
+        var obj = {
+            
+            "albumId": 1,
+            "title": "reprehenderit est deserunt velit ipsam",
+            "url": "https://via.placeholder.com/600/771796",
+            "thumbnailUrl": "https://via.placeholder.com/150/771796"
+        }
+
+        xhttp.open('POST', 'https://jsonplaceholder.typicode.com/photos')
+
+        // when we send data using requset body, we have to set Content-Type Header
+        xhttp.setRequestHeader('Content-Type', 'application/json');
+
+        // convert Javascript object to JSON
+        xhttp.send(JSON.stringify(obj))
+        // we are sending data in req body
+
+        xhttp.onreadystatechange = function() {
+
+            // 201 : New resource created
+            if (xhttp.readyState == 4 && xhttp.status == 201){
+
+                document.getElementById('p1').innerText = xhttp.responseText
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

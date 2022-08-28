@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        
+        // We have 5 ready states of a document
+        // 1) Uninitialized : has not started loading yet
+        // 2) Loading       : is loading  
+        // 3) Loaded        : is loaded
+        // 4) Interactive   : has loaded enough that user can interact 
+        // 5) Complete      : fully loaded
+
+        // Only state 4 & 5 are intercepted by readyState function
+        
+        function foo(){
+            
+            // alert : executed 2 times as onreadystatechange called for state 4 & 5
+
+            alert(document.readyState)
+
+            if (document.readyState == 'complete') {
+
+                alert("Hello World!")
+
+                var element = document.getElementById("p1")
+
+                element.innerText = "Hello From Script 2!"
+            }
+
+        }   
+
+        // call foo() when document is ready
+        
+        document.onreadystatechange = foo
+
+    </script>
+
+</head>
+<body>
+
+    <p id="p1"></p>
+
+</body>
+</html>

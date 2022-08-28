@@ -1,0 +1,2 @@
+pkg06_writeonlyclass.WriteOnlyClass
+pkg06_writeonlyclass.Main

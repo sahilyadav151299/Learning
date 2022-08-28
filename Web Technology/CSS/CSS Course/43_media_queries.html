@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Media Query</title>
+
+    <style>
+
+        body{
+            background-color: white;
+            font-family: Arial;
+        }
+
+        @media screen and (max-width: 1200px){
+            body{
+                background-color: wheat;
+            }
+        }
+
+        @media screen and (max-width: 1000px){
+            body{
+                background-color: lightblue;
+            }
+        }
+
+        @media screen and (max-width: 700px){
+            body{
+                background-color: lightcoral;
+            }
+        }
+
+        /* while taking print out of the page */
+        @media print{
+            div{
+                font-size: large;
+                color: midnightblue;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Media Types : All, Print, Screen, Speech -->
+    <!-- viewport : width of the screen -->
+
+    <h1>Yahoo Baba : CSS Tutorial</h1>
+    
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo tempore repudiandae odit accusantium inventore explicabo magni suscipit vel modi sed veritatis, quaerat maxime at. Quasi, excepturi. Ipsum ab voluptate laborum commodi doloribus nostrum reprehenderit ex ipsa, ad facilis dolore sint molestiae laudantium earum natus vitae consequuntur et dolores? Ab quaerat omnis temporibus pariatur eius eos ea? Nostrum voluptatem saepe reprehenderit dolorum ipsa molestiae. Exercitationem, corrupti iure in dicta assumenda sapiente expedita error inventore, tenetur veritatis amet quisquam adipisci minus consequuntur ullam delectus autem recusandae laboriosam nihil animi vitae id quo. Eum culpa aliquam illum expedita excepturi quibusdam animi in quae.</div>
+</body>
+</html>

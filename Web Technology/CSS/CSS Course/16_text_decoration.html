@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Text Decoration</title>
+
+    <style>
+        .p1{
+            text-decoration-line: underline;
+            text-decoration-color: red;
+            text-decoration-style: wavy;
+        }
+
+        /* Short hand syntax */
+        .p2{
+            text-decoration: overline blue dashed;
+        }
+
+        .p3{
+            text-decoration: line-through green solid;
+        }
+
+        .p4{
+            text-decoration: none green solid;
+        }
+
+        .p5{
+            text-decoration: underline grey double;
+        }
+
+        .p6{
+            padding: 20px 0;
+            text-decoration-line: underline overline;
+            text-decoration-color: red;
+            text-decoration-style: wavy;
+            text-decoration-thickness: 5px;
+            /* space between text and underline */
+            text-underline-offset: 10px;
+        }
+
+        .p7{
+            text-decoration-line: underline;
+            text-decoration-color: midnightblue;
+            text-decoration-style: wavy;
+            text-decoration-thickness: 5px;
+            text-underline-offset: -1px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <h2 class="p1">Google LLC is an American multinational technology company.</h2>
+
+    <h2 class="p2">Google LLC is an American multinational technology company.</h2>
+
+    <h2 class="p3">Google LLC is an American multinational technology company.</h2>
+    
+    <h2 class="p4">Google LLC is an American multinational technology company.</h2>
+
+    <h2 class="p5">Google LLC is an American multinational technology company.</h2>
+
+    <h2 class="p6">Google LLC is an American multinational technology company.</h2>
+
+    <h2 class="p7">Google LLC is an American multinational technology company.</h2>
+</body>
+</html>

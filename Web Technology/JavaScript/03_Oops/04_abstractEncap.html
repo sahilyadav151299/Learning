@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!-- 
+        Class level     : use in need of different member
+        Object level    : use in need of specific member for specific object
+        Prototype level : use in need of shared member or function  
+    -->
+    
+    <script>
+
+        // By default all class member (this) are public only
+
+        function Person() {
+
+            // public member variable
+            this.id = 100       
+
+            // public member function
+            this.getInfo = function() {
+                
+                alert("getInfo() is called!")
+            }
+
+            // private member variable
+            var code = 1920
+
+            // private member function
+            var info = function() {
+                
+                alert("This is a person class")
+            }
+
+            // public member function : getter for private member
+            this.getCode = function() {
+
+                return "Code : " + code
+            }     
+
+            // public member variable
+            this.Hobbies = ["Music", "Gym"]
+
+            // static public shared member variable
+            Person.population++   
+        }   
+
+        // Static property shared among objects : access with class name
+        Person.population = 0
+
+        
+        var Person1 = new Person()
+        
+        Person1.getInfo()
+        alert(Person1.getCode())
+
+        console.log(Person.prototype)
+
+        var Person2 = new Person()
+
+        Person1.Hobbies.push("Singing")
+
+        // Shared copy : if prototype level
+        document.write(Person1.Hobbies + "<br/>")
+        document.write(Person2.Hobbies + "<br/>")
+
+        alert(Person.population)
+
+    </script>
+
+</body>
+</html>

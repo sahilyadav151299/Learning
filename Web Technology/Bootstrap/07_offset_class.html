@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+    
+    <style>
+        .container{ border: 1px solid black; }
+        .pink{ background-color: palevioletred; }
+        .blue{ background-color: royalblue;}
+        .red{ background-color: firebrick; }
+        .grey{ background-color: lightslategray; }
+    
+    </style>
+</head>
+<body>
+
+    <!-- 
+        offset classes are used to leave the gap among col
+        
+        .col-md-4 .offset-md-3  :  leave gap of 3 col from left side
+
+        Extra large         -    .offset-xl-n   (n : 0-11)
+        Large               -    .offset-lg-n   (n : 0-11)
+        Medium              -    .offset-md-n   (n : 0-11)
+        Small               -    .offset-sm-n   (n : 0-11)
+
+        All Breakpoints     -    .offset-n      (n : 0-11)
+    -->
+
+    <div class="container">
+        <div class="row">
+            <!-- offset 3 till the medium screen -->
+            <div class="col-md-5 offset-md-3 pink">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, magni!
+            </div>
+            
+            <div class="col-md-3 blue">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores veniam perspiciatis id aspernatur, ea ducimus. Hic pariatur et repellendus, minus exercitationem magnam reprehenderit animi, quos mollitia, aliquid maiores alias tenetur!
+            </div>
+            
+            <!-- offset 3 at any screen size -->
+            <div class="col-md-8 offset-3 grey">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, magni!
+            </div>
+
+            <!-- offset 2 till the medium screen -->
+            <div class="col-3 offset-md-2 red">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, magni!
+            </div>
+
+            <!-- offset 2 till the medium screen -->
+            <div class="col-3 offset-md-2 red">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, magni!
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

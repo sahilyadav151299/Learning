@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+ 
+        // Object.defineProperty() : defines a new Property
+        // or modifies an existing property on an object
+
+        function Person(fName, lName) {
+
+            this.firstName = fName
+            this.lastName = lName
+
+            // this can be modified : use defineProperty()
+            this.species = 'Human Being'
+
+            this.fullName = function() {
+                return this.firstName + ' ' + this.lastName
+            }
+        }
+        
+        var manObj = new Person("Rahul", "Patel")
+
+        Object.defineProperty(manObj, 'species', {
+
+            value : 'Human Being',
+            writable : false,           // modfying
+            configurable : false,       // deletion
+            enumerable : true           // for in loop
+        })
+
+        console.log(manObj.fullName() + ' ' + manObj.species)
+
+        manObj.species = 'Alien'       // not writable
+
+        console.log(manObj.fullName() + ' ' + manObj.species)
+
+        delete manObj.species          // not deleted
+
+        console.log(manObj.fullName() + ' ' + manObj.species)
+
+        for (var prop in manObj){      // iterable
+
+            document.write(manObj[prop] + "<br/>")
+        }
+    
+    </script>
+
+</body>
+</html>

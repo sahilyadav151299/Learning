@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>each() Method</title>
+</head>
+<body>
+
+    <h1>Yahoo Baba</h1>
+
+    <ul>
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Grapes</li>
+    </ul>
+
+    <!-- jQuery Included -->
+    <script src="./jQuery.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            
+            $('ul li').each(function(){
+                $(this)
+                    .css('font-family', 'cursive')
+                    .text('Hello')
+            })
+        });
+    </script>
+
+</body>
+</html>
